@@ -1,0 +1,2 @@
+SteelDash: highlight the selected weapon similar to how it is highlighted in
+the weapons menu

@@ -10,21 +10,69 @@
 <main>
     <div id="content-wrapper">
         <h2>Click to Spin!</h2>
-        <div id="wheel-container">
-            <div id="wheel-scroller">
-                <img id="Awoo a" class="tile" src="img/ashes/Thops's Barrier.webp"/>
-                <img class="tile" src="img/ashes/Flaming%20Strike.webp"/>
-                <img class="tile" src="img/ashes/Barricade%20Shield.webp"/>
-                <img class="tile" src="img/ashes/Spinning%20Slash.webp"/>
-                <img class="tile" src="img/ashes/Sword%20Dance.webp"/>
+        <div id="weapon-wheel-container" class="wheel-container">
+            <div id="weapon-wheel-scroller" class="wheel-scroller">
             </div>
-
+            <div class="wheel-triangle"></div>
+        </div>
+        <div id="ashes-wheel-container" class="wheel-container">
+            <div id="ashes-wheel-scroller" class="wheel-scroller">
+            </div>
+            <div class="wheel-triangle"></div>
         </div>
 
         <h2>Settings</h2>
+        <div id="settings-container">
+            <div id="stats-container">
+                <label>STR</label><input id="stat-input-str" class="stat-input" type="number" min="1" max="99" value="10"/>
+                <label>DEX</label><input id="stat-input-dex" class="stat-input" type="number" min="1" max="99" value="10"/>
+                <label>INT</label><input id="stat-input-int" class="stat-input" type="number" min="1" max="99" value="10"/>
+                <label>FTH</label><input id="stat-input-fth" class="stat-input" type="number" min="1" max="99" value="10"/>
+                <label>ARC</label><input id="stat-input-arc" class="stat-input" type="number" min="1" max="99" value="10"/>
+            </div>
+            <div class="category-outer-container">
+                <div class="category-container">
+                    <label>(Toggle All)</label><input id="toggle-all" type="checkbox">
+                    <label>Axe</label><input id="category-axe" type="checkbox">
+                    <label>Ballista</label><input id="category-ballista" type="checkbox">
+                    <label>Bow</label><input id="category-bow" type="checkbox">
+                    <label>Claw</label><input id="category-claw" type="checkbox">
+                    <label>Colossal Sword</label><input id="category-colossal-sword" type="checkbox">
+                    <label>Colossal Weapon</label><input id="category-colossal-weapon" type="checkbox">
+                    <label>Crossbow</label><input id="category-crossbow" type="checkbox">
+                    <label>Curved Greatsword</label><input id="category-curved-greatsword" type="checkbox">
+                    <label>Curved Sword</label><input id="category-curved-sword" type="checkbox">
+                    <label>Dagger</label><input id="category-dagger" type="checkbox">
+                    <label>Fist</label><input id="category-fist" type="checkbox">
+                    <label>Flail</label><input id="category-flail" type="checkbox">
+                    <label>Glintstone Staff</label><input id="category-glintstone-staff" type="checkbox">
+                    <label>Great Hammer</label><input id="category-great-hammer" type="checkbox">
+                    <label>Great Spear</label><input id="category-great-spear" type="checkbox">
+                    <label>Greataxe</label><input id="category-greataxe" type="checkbox">
+                    <label>Greatbow</label><input id="category-greatbow" type="checkbox">
+                </div>
+                <div class="category-container">
+                    <label>Greatshield</label><input id="category-greatshield" type="checkbox">
+                    <label>Greatsword</label><input id="category-greatsword" type="checkbox">
+                    <label>Halberd</label><input id="category-halberd" type="checkbox">
+                    <label>Hammer</label><input id="category-hammer" type="checkbox">
+                    <label>Heavy Thrusting Sword</label><input id="category-heavy-thrusting-sword" type="checkbox">
+                    <label>Katana</label><input id="category-katana" type="checkbox">
+                    <label>Light Bow</label><input id="category-light-bow" type="checkbox">
+                    <label>Medium Shield</label><input id="category-medium-shield" type="checkbox">
+                    <label>Reaper</label><input id="category-reaper" type="checkbox">
+                    <label>Sacred Seal</label><input id="category-sacred-seal" type="checkbox">
+                    <label>Small Shield</label><input id="category-small-shield" type="checkbox">
+                    <label>Spear</label><input id="category-spear" type="checkbox">
+                    <label>Straight Sword</label><input id="category-straight-sword" type="checkbox">
+                    <label>Thrusting Sword</label><input id="category-thrusting-sword" type="checkbox">
+                    <label>Torch</label><input id="category-torch" type="checkbox">
+                    <label>Twinblade</label><input id="category-twinblade" type="checkbox">
+                    <label>Whip</label><input id="category-whip" type="checkbox">
+                </div>
+            </div>
+        </div>
     </div>
-
-
 </main>
 </body>
 
@@ -202,6 +250,9 @@
     <img id="Cuckoo_Greatshield" src="img/weapons/Greatshield/Cuckoo%20Greatshield.webp" loading=lazy hidden/>
     <img id="Distinguished_Greatshield" src="img/weapons/Greatshield/Distinguished%20Greatshield.webp" loading=lazy hidden/>
     <img id="Dragon_Towershield" src="img/weapons/Greatshield/Dragon%20Towershield.webp" loading=lazy hidden/>
+    <img id="Dragonclaw_Shield" src="img/weapons/Greatshield/Dragonclaw%20Shield.webp" loading=lazy hidden/>
+    <img id="Eclipse_Crest_Greatshield" src="img/weapons/Greatshield/Eclipse%20Crest%20Greatshield.webp" loading=lazy hidden/>
+    <img id="Fingerprint_Stone_Shield" src="img/weapons/Greatshield/Fingerprint%20Stone%20Shield.webp" loading=lazy hidden/>
     <img id="Gilded_Greatshield" src="img/weapons/Greatshield/Gilded%20Greatshield.webp" loading=lazy hidden/>
     <img id="Golden_Beast_Crest_Shield" src="img/weapons/Greatshield/Golden%20Beast%20Crest%20Shield.webp" loading=lazy hidden/>
     <img id="Golden_Greatshield" src="img/weapons/Greatshield/Golden%20Greatshield.webp" loading=lazy hidden/>
@@ -493,8 +544,14 @@
     <img id="Vacuum_Slice" src="img/ashes/Vacuum%20Slice.webp" loading=lazy hidden/>
     <img id="Vow_of_the_Indomitable" src="img/ashes/Vow%20of%20the%20Indomitable.webp" loading=lazy hidden/>
     <img id="War_Cry" src="img/ashes/War%20Cry.webp" loading=lazy hidden/>
-    <img id="Waves_of_Darknesss" src="img/ashes/Waves%20of%20Darknesss.webp" loading=lazy hidden/>
+    <img id="Waves_of_Darkness" src="img/ashes/Waves%20of%20Darkness.webp" loading=lazy hidden/>
     <img id="White_Shadow's_Lure" src="img/ashes/White%20Shadow's%20Lure.webp" loading=lazy hidden/>
     <img id="Wild_Strikes" src="img/ashes/Wild%20Strikes.webp" loading=lazy hidden/>
 </div>
+
+<script src="js/ashes_of_war.js"></script>
+<script src="js/weapon_requirements.js"></script>
+<script src="js/weapon_categories.js"></script>
+<script src="js/main.js"></script>
+
 </html>
