@@ -1,5 +1,6 @@
 body {
     background: #323232;
+    font-family: sans-serif;
 
     margin: 0;
     padding: 0;
@@ -20,9 +21,12 @@ h2 {
 
 }
 
-#wheel-container {
+#content-wrapper {
     margin-left: 80px;
     margin-right: 80px;
+}
+
+#wheel-container {
     max-width: available;
     height: 160px;
 

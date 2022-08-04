@@ -1,4 +1,4 @@
-{
+ASHES_OF_WAR = {
     "Stamp (Upward Cut)": [
         "Greatsword",
         "Colossal Sword",

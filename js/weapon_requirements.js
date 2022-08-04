@@ -1,4 +1,4 @@
-{
+WEAPONS = {
     "Battle Axe": {"str": 12, "dex": 8, "infusible": true},
     "Celebrant's Cleaver": {"str": 12, "dex": 8, "infusible": true},
     "Forked Hatchet": {"str": 9, "dex": 14, "infusible": true},
