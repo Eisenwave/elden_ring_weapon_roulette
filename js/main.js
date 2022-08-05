@@ -254,7 +254,7 @@ function fillAshesWheel(scroller, limit) {
 }
 
 function completeSpinningAnimation(scroller) {
-    SUCCESS_AUDIO.playbackRate = 1.0 + (Math.random() - 0.25);
+    SUCCESS_AUDIO.playbackRate = 1.0 + (Math.random() * 0.75 - 0.25);
     SUCCESS_AUDIO.play();
 
     for (let i = 0; i < 5; ++i) {
