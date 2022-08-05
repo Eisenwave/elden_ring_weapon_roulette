@@ -25,6 +25,11 @@ const TOGGLE_ALL = document.getElementById("toggle-all");
 
 const GREENSCREEN = document.getElementById("greenscreen");
 
+const PIN_AUDIO = document.getElementById("audio-pin");
+PIN_AUDIO.volume = 0.15;
+const SUCCESS_AUDIO = document.getElementById("audio-success");
+SUCCESS_AUDIO.volume = 0.2;
+
 function isWeaponCategoryEnabled(weaponName) {
     const checkboxName = 'checkbox-' + WEAPONS[weaponName].category
         .toLowerCase()
@@ -155,7 +160,7 @@ function pickRandomElement(array) {
 const TILE_COUNT = 100;
 const CHOSEN_TILE_INDEX = TILE_COUNT - 5;
 const SCROLLING_DURATION = 1000 * 8;
-const SCROLLING_STEPS_PER_SECOND = 10;
+const SCROLLING_STEPS_PER_SECOND = 25;
 const SCROLLING_STEPS = SCROLLING_DURATION / 1000 * SCROLLING_STEPS_PER_SECOND;
 const SCROLLING_DISTANCE = 160 * CHOSEN_TILE_INDEX;
 
@@ -249,14 +254,19 @@ function fillAshesWheel(scroller, limit) {
 }
 
 function completeSpinningAnimation(scroller) {
+    SUCCESS_AUDIO.playbackRate = 1.0 + (Math.random() - 0.25);
+    SUCCESS_AUDIO.play();
+
     for (let i = 0; i < 5; ++i) {
         const copy = scroller.children.item(CHOSEN_TILE_INDEX + i).cloneNode(true);
         scroller.children.item(i).replaceWith(copy);
         scroller.scrollTo({top: 0, left: 0, behavior: "instant"});
     }
+    scroller.children.item(2).firstElementChild.firstElementChild.classList.add('highlighted')
     while (scroller.children.length > 5) {
         scroller.lastChild.remove();
     }
+
     if (scroller === WEAPON_WHEEL_SCROLLER) {
         const selected = scroller.children[2];
         const selectedWeapon = selected.getAttribute('data-name');
@@ -272,13 +282,24 @@ function completeSpinningAnimation(scroller) {
 
 function playSpinningAnimation(scroller) {
     scrollingStep = 0;
+    let previousIndex = 0;
+
     scrollingIntervalId = setInterval(() => {
-        let progress = wheelCurve(scrollingStep++ / SCROLLING_STEPS);
+        const progress = wheelCurve(scrollingStep++ / SCROLLING_STEPS);
+        const scroll = progress * SCROLLING_DISTANCE;
         scroller.scrollTo({
             top: 0,
-            left: progress * SCROLLING_DISTANCE,
+            left: scroll,
             behavior: "smooth"
         });
+
+        const index = Math.floor((scroll + 80) / 160);
+        if (index !== previousIndex) {
+            const audio = PIN_AUDIO.cloneNode(true);
+            audio.volume = PIN_AUDIO.volume;
+            audio.play();
+        }
+        previousIndex = index;
 
         if (progress === 1) {
             clearInterval(scrollingIntervalId);

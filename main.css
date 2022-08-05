@@ -219,6 +219,10 @@ h1, h2, h3 {
     filter: drop-shadow(0 0 10px rgba(255, 212, 102, 0.1));
 }
 
+.highlighted {
+    filter: drop-shadow(0 0 10px rgba(255, 212, 102, 0.75));
+}
+
 .inactive {
     opacity: 0.5;
 }
