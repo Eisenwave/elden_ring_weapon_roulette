@@ -10,65 +10,101 @@
 <main>
     <div id="content-wrapper">
         <h2>Click to Spin!</h2>
+
+        <h3>Mainhand Weapon</h3>
         <div id="weapon-wheel-container" class="wheel-container">
             <div id="weapon-wheel-scroller" class="wheel-scroller">
             </div>
             <div class="wheel-triangle"></div>
         </div>
+
+        <h3>Offhand Weapon</h3>
+        <div id="offhand-wheel-container" class="wheel-container">
+            <div id="offhand-wheel-scroller" class="wheel-scroller">
+            </div>
+            <div class="wheel-triangle"></div>
+        </div>
+
+        <h3>Ash of War</h3>
         <div id="ashes-wheel-container" class="wheel-container">
             <div id="ashes-wheel-scroller" class="wheel-scroller">
             </div>
             <div class="wheel-triangle"></div>
         </div>
 
-        <h2>Settings</h2>
+        <h2 id="h-settings">Restrictions</h2>
+
         <div id="settings-container">
-            <div id="stats-container">
-                <label>STR</label><input id="stat-input-str" class="stat-input" type="number" min="1" max="99" value="10"/>
-                <label>DEX</label><input id="stat-input-dex" class="stat-input" type="number" min="1" max="99" value="10"/>
-                <label>INT</label><input id="stat-input-int" class="stat-input" type="number" min="1" max="99" value="10"/>
-                <label>FTH</label><input id="stat-input-fth" class="stat-input" type="number" min="1" max="99" value="10"/>
-                <label>ARC</label><input id="stat-input-arc" class="stat-input" type="number" min="1" max="99" value="10"/>
+            <div id="settings-left-and-right">
+                <div>
+                    <h3>Build</h3>
+                    <div id="stats-container">
+                        <label>STR</label><input id="stat-input-str" class="stat-input" type="number" min="1" max="99" value="10"/>
+                        <label>DEX</label><input id="stat-input-dex" class="stat-input" type="number" min="1" max="99" value="10"/>
+                        <label>INT</label><input id="stat-input-int" class="stat-input" type="number" min="1" max="99" value="10"/>
+                        <label>FTH</label><input id="stat-input-fth" class="stat-input" type="number" min="1" max="99" value="10"/>
+                        <label>ARC</label><input id="stat-input-arc" class="stat-input" type="number" min="1" max="99" value="10"/>
+                    </div>
+                </div>
+                <div>
+                    <h3>Basic Filters</h3>
+                    <div id="filters-container">
+                        <div class="category-container">
+                            <label>No mainhand shield</label><input id="filter-no-mainhand-shield" type="checkbox">
+                            <label>No mainhand staff</label><input id="filter-no-mainhand-staff" type="checkbox">
+                            <label>No mainhand seal</label><input id="filter-no-mainhand-seal" type="checkbox">
+                            <label>No mainhand crossbow</label><input id="filter-no-mainhand-crossbow" type="checkbox">
+                            <label>No Bloodhound's Step</label><input id="filter-no-bhs" type="checkbox">
+                        </div>
+                    </div>
+                </div>
+
             </div>
+
+
+            <h3>Weapon Categories</h3>
             <div class="category-outer-container">
                 <div class="category-container">
-                    <label>(Toggle All)</label><input id="toggle-all" type="checkbox">
-                    <label>Axe</label><input id="category-axe" type="checkbox">
-                    <label>Ballista</label><input id="category-ballista" type="checkbox">
-                    <label>Bow</label><input id="category-bow" type="checkbox">
-                    <label>Claw</label><input id="category-claw" type="checkbox">
-                    <label>Colossal Sword</label><input id="category-colossal-sword" type="checkbox">
-                    <label>Colossal Weapon</label><input id="category-colossal-weapon" type="checkbox">
-                    <label>Crossbow</label><input id="category-crossbow" type="checkbox">
-                    <label>Curved Greatsword</label><input id="category-curved-greatsword" type="checkbox">
-                    <label>Curved Sword</label><input id="category-curved-sword" type="checkbox">
-                    <label>Dagger</label><input id="category-dagger" type="checkbox">
-                    <label>Fist</label><input id="category-fist" type="checkbox">
-                    <label>Flail</label><input id="category-flail" type="checkbox">
-                    <label>Glintstone Staff</label><input id="category-glintstone-staff" type="checkbox">
-                    <label>Great Hammer</label><input id="category-great-hammer" type="checkbox">
-                    <label>Great Spear</label><input id="category-great-spear" type="checkbox">
-                    <label>Greataxe</label><input id="category-greataxe" type="checkbox">
-                    <label>Greatbow</label><input id="category-greatbow" type="checkbox">
+                    <label><i>Toggle All</i></label><input id="toggle-all" type="checkbox" checked>
+                </div>
+                <div class="category-container"></div>
+                <div class="category-container">
+                    <label>Axe</label><input id="checkbox-axe" type="checkbox" checked>
+                    <label>Ballista</label><input id="checkbox-ballista" type="checkbox" checked>
+                    <label>Bow</label><input id="checkbox-bow" type="checkbox" checked>
+                    <label>Claw</label><input id="checkbox-claw" type="checkbox" checked>
+                    <label>Colossal Sword</label><input id="checkbox-colossal-sword" type="checkbox" checked>
+                    <label>Colossal Weapon</label><input id="checkbox-colossal-weapon" type="checkbox" checked>
+                    <label>Crossbow</label><input id="checkbox-crossbow" type="checkbox" checked>
+                    <label>Curved Greatsword</label><input id="checkbox-curved-greatsword" type="checkbox" checked>
+                    <label>Curved Sword</label><input id="checkbox-curved-sword" type="checkbox" checked>
+                    <label>Dagger</label><input id="checkbox-dagger" type="checkbox" checked>
+                    <label>Fist</label><input id="checkbox-fist" type="checkbox" checked>
+                    <label>Flail</label><input id="checkbox-flail" type="checkbox" checked>
+                    <label>Glintstone Staff</label><input id="checkbox-glintstone-staff" type="checkbox" checked>
+                    <label>Great Hammer</label><input id="checkbox-great-hammer" type="checkbox" checked>
+                    <label>Great Spear</label><input id="checkbox-great-spear" type="checkbox" checked>
+                    <label>Greataxe</label><input id="checkbox-greataxe" type="checkbox" checked>
+                    <label>Greatbow</label><input id="checkbox-greatbow" type="checkbox" checked>
                 </div>
                 <div class="category-container">
-                    <label>Greatshield</label><input id="category-greatshield" type="checkbox">
-                    <label>Greatsword</label><input id="category-greatsword" type="checkbox">
-                    <label>Halberd</label><input id="category-halberd" type="checkbox">
-                    <label>Hammer</label><input id="category-hammer" type="checkbox">
-                    <label>Heavy Thrusting Sword</label><input id="category-heavy-thrusting-sword" type="checkbox">
-                    <label>Katana</label><input id="category-katana" type="checkbox">
-                    <label>Light Bow</label><input id="category-light-bow" type="checkbox">
-                    <label>Medium Shield</label><input id="category-medium-shield" type="checkbox">
-                    <label>Reaper</label><input id="category-reaper" type="checkbox">
-                    <label>Sacred Seal</label><input id="category-sacred-seal" type="checkbox">
-                    <label>Small Shield</label><input id="category-small-shield" type="checkbox">
-                    <label>Spear</label><input id="category-spear" type="checkbox">
-                    <label>Straight Sword</label><input id="category-straight-sword" type="checkbox">
-                    <label>Thrusting Sword</label><input id="category-thrusting-sword" type="checkbox">
-                    <label>Torch</label><input id="category-torch" type="checkbox">
-                    <label>Twinblade</label><input id="category-twinblade" type="checkbox">
-                    <label>Whip</label><input id="category-whip" type="checkbox">
+                    <label>Greatshield</label><input id="checkbox-greatshield" type="checkbox" checked>
+                    <label>Greatsword</label><input id="checkbox-greatsword" type="checkbox" checked>
+                    <label>Halberd</label><input id="checkbox-halberd" type="checkbox" checked>
+                    <label>Hammer</label><input id="checkbox-hammer" type="checkbox" checked>
+                    <label>Heavy Thrusting Sword</label><input id="checkbox-heavy-thrusting-sword" type="checkbox" checked>
+                    <label>Katana</label><input id="checkbox-katana" type="checkbox" checked>
+                    <label>Light Bow</label><input id="checkbox-light-bow" type="checkbox" checked>
+                    <label>Medium Shield</label><input id="checkbox-medium-shield" type="checkbox" checked>
+                    <label>Reaper</label><input id="checkbox-reaper" type="checkbox" checked>
+                    <label>Sacred Seal</label><input id="checkbox-sacred-seal" type="checkbox" checked>
+                    <label>Small Shield</label><input id="checkbox-small-shield" type="checkbox" checked>
+                    <label>Spear</label><input id="checkbox-spear" type="checkbox" checked>
+                    <label>Straight Sword</label><input id="checkbox-straight-sword" type="checkbox" checked>
+                    <label>Thrusting Sword</label><input id="checkbox-thrusting-sword" type="checkbox" checked>
+                    <label>Torch</label><input id="checkbox-torch" type="checkbox" checked>
+                    <label>Twinblade</label><input id="checkbox-twinblade" type="checkbox" checked>
+                    <label>Whip</label><input id="checkbox-whip" type="checkbox" checked>
                 </div>
             </div>
         </div>
@@ -77,476 +113,476 @@
 </body>
 
 <div id="weapons-container">
-    <img id="Battle_Axe" src="img/weapons/Axe/Battle%20Axe.webp" loading=lazy hidden/>
-    <img id="Celebrant's_Cleaver" src="img/weapons/Axe/Celebrant's%20Cleaver.webp" loading=lazy hidden/>
-    <img id="Forked_Hatchet" src="img/weapons/Axe/Forked%20Hatchet.webp" loading=lazy hidden/>
-    <img id="Hand_Axe" src="img/weapons/Axe/Hand%20Axe.webp" loading=lazy hidden/>
-    <img id="Highland_Axe" src="img/weapons/Axe/Highland%20Axe.webp" loading=lazy hidden/>
-    <img id="Icerind_Hatchet" src="img/weapons/Axe/Icerind%20Hatchet.webp" loading=lazy hidden/>
-    <img id="Iron_Cleaver" src="img/weapons/Axe/Iron%20Cleaver.webp" loading=lazy hidden/>
-    <img id="Jawbone_Axe" src="img/weapons/Axe/Jawbone%20Axe.webp" loading=lazy hidden/>
-    <img id="Ripple_Blade" src="img/weapons/Axe/Ripple%20Blade.webp" loading=lazy hidden/>
-    <img id="Rosus'_Axe" src="img/weapons/Axe/Rosus'%20Axe.webp" loading=lazy hidden/>
-    <img id="Sacrificial_Axe" src="img/weapons/Axe/Sacrificial%20Axe.webp" loading=lazy hidden/>
-    <img id="Stormhawk_Axe" src="img/weapons/Axe/Stormhawk%20Axe.webp" loading=lazy hidden/>
-    <img id="Warped_Axe" src="img/weapons/Axe/Warped%20Axe.webp" loading=lazy hidden/>
-    <img id="Hand_Ballista" src="img/weapons/Ballista/Hand%20Ballista.webp" loading=lazy hidden/>
-    <img id="Jar_Cannon" src="img/weapons/Ballista/Jar%20Cannon.webp" loading=lazy hidden/>
-    <img id="Albinauric_Bow" src="img/weapons/Bow/Albinauric%20Bow.webp" loading=lazy hidden/>
-    <img id="Black_Bow" src="img/weapons/Bow/Black%20Bow.webp" loading=lazy hidden/>
-    <img id="Erdtree_Bow" src="img/weapons/Bow/Erdtree%20Bow.webp" loading=lazy hidden/>
-    <img id="Horn_Bow" src="img/weapons/Bow/Horn%20Bow.webp" loading=lazy hidden/>
-    <img id="Longbow" src="img/weapons/Bow/Longbow.webp" loading=lazy hidden/>
-    <img id="Pulley_Bow" src="img/weapons/Bow/Pulley%20Bow.webp" loading=lazy hidden/>
-    <img id="Serpent_Bow" src="img/weapons/Bow/Serpent%20Bow.webp" loading=lazy hidden/>
-    <img id="Bloodhound_Claws" src="img/weapons/Claw/Bloodhound%20Claws.webp" loading=lazy hidden/>
-    <img id="Hookclaws" src="img/weapons/Claw/Hookclaws.webp" loading=lazy hidden/>
-    <img id="Raptor_Talons" src="img/weapons/Claw/Raptor%20Talons.webp" loading=lazy hidden/>
-    <img id="Venomous_Fang" src="img/weapons/Claw/Venomous%20Fang.webp" loading=lazy hidden/>
-    <img id="Godslayer's_Greatsword" src="img/weapons/Collosal%20Sword/Godslayer's%20Greatsword.webp" loading=lazy hidden/>
-    <img id="Grafted_Blade_Greatsword" src="img/weapons/Collosal%20Sword/Grafted%20Blade%20Greatsword.webp" loading=lazy hidden/>
-    <img id="Greatsword" src="img/weapons/Collosal%20Sword/Greatsword.webp" loading=lazy hidden/>
-    <img id="Maliketh's_Black_Blade" src="img/weapons/Collosal%20Sword/Maliketh's%20Black%20Blade.webp" loading=lazy hidden/>
-    <img id="Royal_Greatsword" src="img/weapons/Collosal%20Sword/Royal%20Greatsword.webp" loading=lazy hidden/>
-    <img id="Ruins_Greatsword" src="img/weapons/Collosal%20Sword/Ruins%20Greatsword.webp" loading=lazy hidden/>
-    <img id="Starscourge_Greatsword" src="img/weapons/Collosal%20Sword/Starscourge%20Greatsword.webp" loading=lazy hidden/>
-    <img id="Troll_Knight's_Sword" src="img/weapons/Collosal%20Sword/Troll%20Knight's%20Sword.webp" loading=lazy hidden/>
-    <img id="Troll's_Golden_Sword" src="img/weapons/Collosal%20Sword/Troll's%20Golden%20Sword.webp" loading=lazy hidden/>
-    <img id="Watchdog's_Greatsword" src="img/weapons/Collosal%20Sword/Watchdog's%20Greatsword.webp" loading=lazy hidden/>
-    <img id="Zweihander" src="img/weapons/Collosal%20Sword/Zweihander.webp" loading=lazy hidden/>
-    <img id="Axe_of_Godfrey" src="img/weapons/Colossal%20Weapon/Axe%20of%20Godfrey.webp" loading=lazy hidden/>
-    <img id="Dragon_Greatclaw" src="img/weapons/Colossal%20Weapon/Dragon%20Greatclaw.webp" loading=lazy hidden/>
-    <img id="Duelist_Greataxe" src="img/weapons/Colossal%20Weapon/Duelist%20Greataxe.webp" loading=lazy hidden/>
-    <img id="Envoy's_Greathorn" src="img/weapons/Colossal%20Weapon/Envoy's%20Greathorn.webp" loading=lazy hidden/>
-    <img id="Fallingstar_Beast_Jaw" src="img/weapons/Colossal%20Weapon/Fallingstar%20Beast%20Jaw.webp" loading=lazy hidden/>
-    <img id="Ghiza's_Wheel" src="img/weapons/Colossal%20Weapon/Ghiza's%20Wheel.webp" loading=lazy hidden/>
-    <img id="Giant-Crusher" src="img/weapons/Colossal%20Weapon/Giant-Crusher.webp" loading=lazy hidden/>
-    <img id="Golem's_Halberd" src="img/weapons/Colossal%20Weapon/Golem's%20Halberd.webp" loading=lazy hidden/>
-    <img id="Great_Club" src="img/weapons/Colossal%20Weapon/Great%20Club.webp" loading=lazy hidden/>
-    <img id="Prelate's_Inferno_Crozier" src="img/weapons/Colossal%20Weapon/Prelate's%20Inferno%20Crozier.webp" loading=lazy hidden/>
-    <img id="Rotten_Greataxe" src="img/weapons/Colossal%20Weapon/Rotten%20Greataxe.webp" loading=lazy hidden/>
-    <img id="Rotten_Staff" src="img/weapons/Colossal%20Weapon/Rotten%20Staff.webp" loading=lazy hidden/>
-    <img id="Staff_of_the_Avatar" src="img/weapons/Colossal%20Weapon/Staff%20of%20the%20Avatar.webp" loading=lazy hidden/>
-    <img id="Troll's_Hammer" src="img/weapons/Colossal%20Weapon/Troll's%20Hammer.webp" loading=lazy hidden/>
-    <img id="Watchdog's_Staff" src="img/weapons/Colossal%20Weapon/Watchdog's%20Staff.webp" loading=lazy hidden/>
-    <img id="Arbalest" src="img/weapons/Crossbow/Arbalest.webp" loading=lazy hidden/>
-    <img id="Crepus's_Black-Key_Crossbow" src="img/weapons/Crossbow/Crepus's%20Black-Key%20Crossbow.webp" loading=lazy hidden/>
-    <img id="Full_Moon_Crossbow" src="img/weapons/Crossbow/Full%20Moon%20Crossbow.webp" loading=lazy hidden/>
-    <img id="Heavy_Crossbow" src="img/weapons/Crossbow/Heavy%20Crossbow.webp" loading=lazy hidden/>
-    <img id="Light_Crossbow" src="img/weapons/Crossbow/Light%20Crossbow.webp" loading=lazy hidden/>
-    <img id="Pulley_Crossbow" src="img/weapons/Crossbow/Pulley%20Crossbow.webp" loading=lazy hidden/>
-    <img id="Soldier's_Crossbow" src="img/weapons/Crossbow/Soldier's%20Crossbow.webp" loading=lazy hidden/>
-    <img id="Beastman's_Cleaver" src="img/weapons/Curved%20Greatsword/Beastman's%20Cleaver.webp" loading=lazy hidden/>
-    <img id="Bloodhound's_Fang" src="img/weapons/Curved%20Greatsword/Bloodhound's%20Fang.webp" loading=lazy hidden/>
-    <img id="Dismounter" src="img/weapons/Curved%20Greatsword/Dismounter.webp" loading=lazy hidden/>
-    <img id="Magma_Wyrm's_Scalesword" src="img/weapons/Curved%20Greatsword/Magma%20Wyrm's%20Scalesword.webp" loading=lazy hidden/>
-    <img id="Monk's_Flameblade" src="img/weapons/Curved%20Greatsword/Monk's%20Flameblade.webp" loading=lazy hidden/>
-    <img id="Morgott's_Cursed_Sword" src="img/weapons/Curved%20Greatsword/Morgott's%20Cursed%20Sword.webp" loading=lazy hidden/>
-    <img id="Omen_Cleaver" src="img/weapons/Curved%20Greatsword/Omen%20Cleaver.webp" loading=lazy hidden/>
-    <img id="Onyx_Lord's_Greatsword" src="img/weapons/Curved%20Greatsword/Onyx%20Lord's%20Greatsword.webp" loading=lazy hidden/>
-    <img id="Zamor_Curved_Sword" src="img/weapons/Curved%20Greatsword/Zamor%20Curved%20Sword.webp" loading=lazy hidden/>
-    <img id="Bandit's_Curved_Sword" src="img/weapons/Curved%20Sword/Bandit's%20Curved%20Sword.webp" loading=lazy hidden/>
-    <img id="Beastman's_Curved_Sword" src="img/weapons/Curved%20Sword/Beastman's%20Curved%20Sword.webp" loading=lazy hidden/>
-    <img id="Eclipse_Shotel" src="img/weapons/Curved%20Sword/Eclipse%20Shotel.webp" loading=lazy hidden/>
-    <img id="Falchion" src="img/weapons/Curved%20Sword/Falchion.webp" loading=lazy hidden/>
-    <img id="Flowing_Curved_Sword" src="img/weapons/Curved%20Sword/Flowing%20Curved%20Sword.webp" loading=lazy hidden/>
-    <img id="Grossmesser" src="img/weapons/Curved%20Sword/Grossmesser.webp" loading=lazy hidden/>
-    <img id="Magma_Blade" src="img/weapons/Curved%20Sword/Magma%20Blade.webp" loading=lazy hidden/>
-    <img id="Mantis_Blade" src="img/weapons/Curved%20Sword/Mantis%20Blade.webp" loading=lazy hidden/>
-    <img id="Nox_Flowing_Sword" src="img/weapons/Curved%20Sword/Nox%20Flowing%20Sword.webp" loading=lazy hidden/>
-    <img id="Scavenger's_Curved_Sword" src="img/weapons/Curved%20Sword/Scavenger's%20Curved%20Sword.webp" loading=lazy hidden/>
-    <img id="Scimitar" src="img/weapons/Curved%20Sword/Scimitar.webp" loading=lazy hidden/>
-    <img id="Serpent-God's_Curved_Sword" src="img/weapons/Curved%20Sword/Serpent-God's%20Curved%20Sword.webp" loading=lazy hidden/>
-    <img id="Shamshir" src="img/weapons/Curved%20Sword/Shamshir.webp" loading=lazy hidden/>
-    <img id="Shotel" src="img/weapons/Curved%20Sword/Shotel.webp" loading=lazy hidden/>
-    <img id="Wing_of_Astel" src="img/weapons/Curved%20Sword/Wing%20of%20Astel.webp" loading=lazy hidden/>
-    <img id="Black_Knife" src="img/weapons/Dagger/Black%20Knife.webp" loading=lazy hidden/>
-    <img id="Blade_of_Calling" src="img/weapons/Dagger/Blade%20of%20Calling.webp" loading=lazy hidden/>
-    <img id="Bloodstained_Dagger" src="img/weapons/Dagger/Bloodstained%20Dagger.webp" loading=lazy hidden/>
-    <img id="Celebrant's_Sickle" src="img/weapons/Dagger/Celebrant's%20Sickle.webp" loading=lazy hidden/>
-    <img id="Cinquedea" src="img/weapons/Dagger/Cinquedea.webp" loading=lazy hidden/>
-    <img id="Crystal_Knife" src="img/weapons/Dagger/Crystal%20Knife.webp" loading=lazy hidden/>
-    <img id="Dagger" src="img/weapons/Dagger/Dagger.webp" loading=lazy hidden/>
-    <img id="Erdsteel_Dagger" src="img/weapons/Dagger/Erdsteel%20Dagger.webp" loading=lazy hidden/>
-    <img id="Glintstone_Kris" src="img/weapons/Dagger/Glintstone%20Kris.webp" loading=lazy hidden/>
-    <img id="Great_Knife" src="img/weapons/Dagger/Great%20Knife.webp" loading=lazy hidden/>
-    <img id="Ivory_Sickle" src="img/weapons/Dagger/Ivory%20Sickle.webp" loading=lazy hidden/>
-    <img id="Misericorde" src="img/weapons/Dagger/Misericorde.webp" loading=lazy hidden/>
-    <img id="Parrying_Dagger" src="img/weapons/Dagger/Parrying%20Dagger.webp" loading=lazy hidden/>
-    <img id="Reduvia" src="img/weapons/Dagger/Reduvia.webp" loading=lazy hidden/>
-    <img id="Scorpion's_Stinger" src="img/weapons/Dagger/Scorpion's%20Stinger.webp" loading=lazy hidden/>
-    <img id="Wakizashi" src="img/weapons/Dagger/Wakizashi.webp" loading=lazy hidden/>
-    <img id="Caestus" src="img/weapons/Fist%20Weapon/Caestus.webp" loading=lazy hidden/>
-    <img id="Cipher_Pata" src="img/weapons/Fist%20Weapon/Cipher%20Pata.webp" loading=lazy hidden/>
-    <img id="Clinging_Bone" src="img/weapons/Fist%20Weapon/Clinging%20Bone.webp" loading=lazy hidden/>
-    <img id="Grafted_Dragon" src="img/weapons/Fist%20Weapon/Grafted%20Dragon.webp" loading=lazy hidden/>
-    <img id="Iron_Ball" src="img/weapons/Fist%20Weapon/Iron%20Ball.webp" loading=lazy hidden/>
-    <img id="Katar" src="img/weapons/Fist%20Weapon/Katar.webp" loading=lazy hidden/>
-    <img id="Spiked_Caestus" src="img/weapons/Fist%20Weapon/Spiked%20Caestus.webp" loading=lazy hidden/>
-    <img id="Star_Fist" src="img/weapons/Fist%20Weapon/Star%20Fist.webp" loading=lazy hidden/>
-    <img id="Veteran's_Prosthesis" src="img/weapons/Fist%20Weapon/Veteran's%20Prosthesis.webp" loading=lazy hidden/>
-    <img id="Bastard's_Stars" src="img/weapons/Flail/Bastard's%20Stars.webp" loading=lazy hidden/>
-    <img id="Chainlink_Flail" src="img/weapons/Flail/Chainlink%20Flail.webp" loading=lazy hidden/>
-    <img id="Family_Heads" src="img/weapons/Flail/Family%20Heads.webp" loading=lazy hidden/>
-    <img id="Flail" src="img/weapons/Flail/Flail.webp" loading=lazy hidden/>
-    <img id="Nightrider_Flail" src="img/weapons/Flail/Nightrider%20Flail.webp" loading=lazy hidden/>
-    <img id="Academy_Glintstone_Staff" src="img/weapons/Glintstone%20Staff/Academy%20Glintstone%20Staff.webp" loading=lazy hidden/>
-    <img id="Albinauric_Staff" src="img/weapons/Glintstone%20Staff/Albinauric%20Staff.webp" loading=lazy hidden/>
-    <img id="Astrologer's_Staff" src="img/weapons/Glintstone%20Staff/Astrologer's%20Staff.webp" loading=lazy hidden/>
-    <img id="Azur's_Glintstone_Staff" src="img/weapons/Glintstone%20Staff/Azur's%20Glintstone%20Staff.webp" loading=lazy hidden/>
-    <img id="Carian_Glintblade_Staff" src="img/weapons/Glintstone%20Staff/Carian%20Glintblade%20Staff.webp" loading=lazy hidden/>
-    <img id="Carian_Glintstone_Staff" src="img/weapons/Glintstone%20Staff/Carian%20Glintstone%20Staff.webp" loading=lazy hidden/>
-    <img id="Carian_Regal_Scepter" src="img/weapons/Glintstone%20Staff/Carian%20Regal%20Scepter.webp" loading=lazy hidden/>
-    <img id="Crystal_Staff" src="img/weapons/Glintstone%20Staff/Crystal%20Staff.webp" loading=lazy hidden/>
-    <img id="Demi-Human_Queen's_Staff" src="img/weapons/Glintstone%20Staff/Demi-Human%20Queen's%20Staff.webp" loading=lazy hidden/>
-    <img id="Digger's_Staff" src="img/weapons/Glintstone%20Staff/Digger's%20Staff.webp" loading=lazy hidden/>
-    <img id="Gelmir_Glintstone_Staff" src="img/weapons/Glintstone%20Staff/Gelmir%20Glintstone%20Staff.webp" loading=lazy hidden/>
-    <img id="Glintstone_Staff" src="img/weapons/Glintstone%20Staff/Glintstone%20Staff.webp" loading=lazy hidden/>
-    <img id="Lusat's_Glintstone_Staff" src="img/weapons/Glintstone%20Staff/Lusat's%20Glintstone%20Staff.webp" loading=lazy hidden/>
-    <img id="Meteorite_Staff" src="img/weapons/Glintstone%20Staff/Meteorite%20Staff.webp" loading=lazy hidden/>
-    <img id="Prince_of_Death's_Staff" src="img/weapons/Glintstone%20Staff/Prince%20of%20Death's%20Staff.webp" loading=lazy hidden/>
-    <img id="Rotten_Crystal_Staff" src="img/weapons/Glintstone%20Staff/Rotten%20Crystal%20Staff.webp" loading=lazy hidden/>
-    <img id="Staff_of_Loss" src="img/weapons/Glintstone%20Staff/Staff%20of%20Loss.webp" loading=lazy hidden/>
-    <img id="Staff_of_the_Guilty" src="img/weapons/Glintstone%20Staff/Staff%20of%20the%20Guilty.webp" loading=lazy hidden/>
-    <img id="Battle_Hammer" src="img/weapons/Great%20Hammer/Battle%20Hammer.webp" loading=lazy hidden/>
-    <img id="Beastclaw_Greathammer" src="img/weapons/Great%20Hammer/Beastclaw%20Greathammer.webp" loading=lazy hidden/>
-    <img id="Brick_Hammer" src="img/weapons/Great%20Hammer/Brick%20Hammer.webp" loading=lazy hidden/>
-    <img id="Celebrant's_Skull" src="img/weapons/Great%20Hammer/Celebrant's%20Skull.webp" loading=lazy hidden/>
-    <img id="Cranial_Vessel_Candlestand" src="img/weapons/Great%20Hammer/Cranial%20Vessel%20Candlestand.webp" loading=lazy hidden/>
-    <img id="Curved_Great_Club" src="img/weapons/Great%20Hammer/Curved%20Great%20Club.webp" loading=lazy hidden/>
-    <img id="Devourer's_Scepter" src="img/weapons/Great%20Hammer/Devourer's%20Scepter.webp" loading=lazy hidden/>
-    <img id="Envoy's_Long_Horn" src="img/weapons/Great%20Hammer/Envoy's%20Long%20Horn.webp" loading=lazy hidden/>
-    <img id="Great_Mace" src="img/weapons/Great%20Hammer/Great%20Mace.webp" loading=lazy hidden/>
-    <img id="Great_Stars" src="img/weapons/Great%20Hammer/Great%20Stars.webp" loading=lazy hidden/>
-    <img id="Greathorn_Hammer" src="img/weapons/Great%20Hammer/Greathorn%20Hammer.webp" loading=lazy hidden/>
-    <img id="Large_Club" src="img/weapons/Great%20Hammer/Large%20Club.webp" loading=lazy hidden/>
-    <img id="Pickaxe" src="img/weapons/Great%20Hammer/Pickaxe.webp" loading=lazy hidden/>
-    <img id="Rotten_Battle_Hammer" src="img/weapons/Great%20Hammer/Rotten%20Battle%20Hammer.webp" loading=lazy hidden/>
-    <img id="Lance" src="img/weapons/Great%20Spear/Lance.webp" loading=lazy hidden/>
-    <img id="Mohgwyn's_Sacred_Spear" src="img/weapons/Great%20Spear/Mohgwyn's%20Sacred%20Spear.webp" loading=lazy hidden/>
-    <img id="Serpent-Hunter" src="img/weapons/Great%20Spear/Serpent-Hunter.webp" loading=lazy hidden/>
-    <img id="Siluria's_Tree" src="img/weapons/Great%20Spear/Siluria's%20Tree.webp" loading=lazy hidden/>
-    <img id="Treespear" src="img/weapons/Great%20Spear/Treespear.webp" loading=lazy hidden/>
-    <img id="Vyke's_War_Spear" src="img/weapons/Great%20Spear/Vyke's%20War%20Spear.webp" loading=lazy hidden/>
-    <img id="Axe_of_Godrick" src="img/weapons/Greataxe/Axe%20of%20Godrick.webp" loading=lazy hidden/>
-    <img id="Butchering_Knife" src="img/weapons/Greataxe/Butchering%20Knife.webp" loading=lazy hidden/>
-    <img id="Crescent_Moon_Axe" src="img/weapons/Greataxe/Crescent%20Moon%20Axe.webp" loading=lazy hidden/>
-    <img id="Executioner's_Greataxe" src="img/weapons/Greataxe/Executioner's%20Greataxe.webp" loading=lazy hidden/>
-    <img id="Gargoyle's_Black_Axe" src="img/weapons/Greataxe/Gargoyle's%20Black%20Axe.webp" loading=lazy hidden/>
-    <img id="Gargoyle's_Great_Axe" src="img/weapons/Greataxe/Gargoyle's%20Great%20Axe.webp" loading=lazy hidden/>
-    <img id="Great_Omenkiller_Cleaver" src="img/weapons/Greataxe/Great%20Omenkiller%20Cleaver.webp" loading=lazy hidden/>
-    <img id="Greataxe" src="img/weapons/Greataxe/Greataxe.webp" loading=lazy hidden/>
-    <img id="Longhaft_Axe" src="img/weapons/Greataxe/Longhaft%20Axe.webp" loading=lazy hidden/>
-    <img id="Rusted_Anchor" src="img/weapons/Greataxe/Rusted%20Anchor.webp" loading=lazy hidden/>
-    <img id="Winged_Greathorn" src="img/weapons/Greataxe/Winged%20Greathorn.webp" loading=lazy hidden/>
-    <img id="Erdtree_Greatbow" src="img/weapons/Greatbow/Erdtree%20Greatbow.webp" loading=lazy hidden/>
-    <img id="Golem_Greatbow" src="img/weapons/Greatbow/Golem%20Greatbow.webp" loading=lazy hidden/>
-    <img id="Greatbow" src="img/weapons/Greatbow/Greatbow.webp" loading=lazy hidden/>
-    <img id="Lion_Greatbow" src="img/weapons/Greatbow/Lion%20Greatbow.webp" loading=lazy hidden/>
-    <img id="Ant's_Skull_Plate" src="img/weapons/Greatshield/Ant's%20Skull%20Plate.webp" loading=lazy hidden/>
-    <img id="Briar_Greatshield" src="img/weapons/Greatshield/Briar%20Greatshield.webp" loading=lazy hidden/>
-    <img id="Crossed-Tree_Towershield" src="img/weapons/Greatshield/Crossed-Tree%20Towershield.webp" loading=lazy hidden/>
-    <img id="Crucible_Hornshield" src="img/weapons/Greatshield/Crucible%20Hornshield.webp" loading=lazy hidden/>
-    <img id="Cuckoo_Greatshield" src="img/weapons/Greatshield/Cuckoo%20Greatshield.webp" loading=lazy hidden/>
-    <img id="Distinguished_Greatshield" src="img/weapons/Greatshield/Distinguished%20Greatshield.webp" loading=lazy hidden/>
-    <img id="Dragon_Towershield" src="img/weapons/Greatshield/Dragon%20Towershield.webp" loading=lazy hidden/>
-    <img id="Dragonclaw_Shield" src="img/weapons/Greatshield/Dragonclaw%20Shield.webp" loading=lazy hidden/>
-    <img id="Eclipse_Crest_Greatshield" src="img/weapons/Greatshield/Eclipse%20Crest%20Greatshield.webp" loading=lazy hidden/>
-    <img id="Fingerprint_Stone_Shield" src="img/weapons/Greatshield/Fingerprint%20Stone%20Shield.webp" loading=lazy hidden/>
-    <img id="Gilded_Greatshield" src="img/weapons/Greatshield/Gilded%20Greatshield.webp" loading=lazy hidden/>
-    <img id="Golden_Beast_Crest_Shield" src="img/weapons/Greatshield/Golden%20Beast%20Crest%20Shield.webp" loading=lazy hidden/>
-    <img id="Golden_Greatshield" src="img/weapons/Greatshield/Golden%20Greatshield.webp" loading=lazy hidden/>
-    <img id="Haligtree_Crest_Greatshield" src="img/weapons/Greatshield/Haligtree%20Crest%20Greatshield.webp" loading=lazy hidden/>
-    <img id="Icon_Shield" src="img/weapons/Greatshield/Icon%20Shield.webp" loading=lazy hidden/>
-    <img id="Inverted_Hawk_Towershield" src="img/weapons/Greatshield/Inverted%20Hawk%20Towershield.webp" loading=lazy hidden/>
-    <img id="Jellyfish_Shield" src="img/weapons/Greatshield/Jellyfish%20Shield.webp" loading=lazy hidden/>
-    <img id="Lordsworn's_Shield" src="img/weapons/Greatshield/Lordsworn's%20Shield.webp" loading=lazy hidden/>
-    <img id="Manor_Towershield" src="img/weapons/Greatshield/Manor%20Towershield.webp" loading=lazy hidden/>
-    <img id="One-Eyed_Shield" src="img/weapons/Greatshield/One-Eyed%20Shield.webp" loading=lazy hidden/>
-    <img id="Redmane_Greatshield" src="img/weapons/Greatshield/Redmane%20Greatshield.webp" loading=lazy hidden/>
-    <img id="Spiked_Palisade_Shield" src="img/weapons/Greatshield/Spiked%20Palisade%20Shield.webp" loading=lazy hidden/>
-    <img id="Visage_Shield" src="img/weapons/Greatshield/Visage%20Shield.webp" loading=lazy hidden/>
-    <img id="Wooden_Greatshield" src="img/weapons/Greatshield/Wooden%20Greatshield.webp" loading=lazy hidden/>
-    <img id="Alabaster_Lord's_Sword" src="img/weapons/Greatsword/Alabaster%20Lord's%20Sword.webp" loading=lazy hidden/>
-    <img id="Banished_Knight's_Greatsword" src="img/weapons/Greatsword/Banished%20Knight's%20Greatsword.webp" loading=lazy hidden/>
-    <img id="Bastard_Sword" src="img/weapons/Greatsword/Bastard%20Sword.webp" loading=lazy hidden/>
-    <img id="Blasphemous_Blade" src="img/weapons/Greatsword/Blasphemous%20Blade.webp" loading=lazy hidden/>
-    <img id="Claymore" src="img/weapons/Greatsword/Claymore.webp" loading=lazy hidden/>
-    <img id="Dark_Moon_Greatsword" src="img/weapons/Greatsword/Dark%20Moon%20Greatsword.webp" loading=lazy hidden/>
-    <img id="Death's_Poker" src="img/weapons/Greatsword/Death's%20Poker.webp" loading=lazy hidden/>
-    <img id="Flamberge" src="img/weapons/Greatsword/Flamberge.webp" loading=lazy hidden/>
-    <img id="Forked_Greatsword" src="img/weapons/Greatsword/Forked%20Greatsword.webp" loading=lazy hidden/>
-    <img id="Gargoyle's_Blackblade" src="img/weapons/Greatsword/Gargoyle's%20Blackblade.webp" loading=lazy hidden/>
-    <img id="Gargoyle's_Greatsword" src="img/weapons/Greatsword/Gargoyle's%20Greatsword.webp" loading=lazy hidden/>
-    <img id="Golden_Order_Greatsword" src="img/weapons/Greatsword/Golden%20Order%20Greatsword.webp" loading=lazy hidden/>
-    <img id="Helphen's_Steeple" src="img/weapons/Greatsword/Helphen's%20Steeple.webp" loading=lazy hidden/>
-    <img id="Inseperable_Sword" src="img/weapons/Greatsword/Inseperable%20Sword.webp" loading=lazy hidden/>
-    <img id="Iron_Greatsword" src="img/weapons/Greatsword/Iron%20Greatsword.webp" loading=lazy hidden/>
-    <img id="Knight's_Greatsword" src="img/weapons/Greatsword/Knight's%20Greatsword.webp" loading=lazy hidden/>
-    <img id="Lordsworn's_Greatsword" src="img/weapons/Greatsword/Lordsworn's%20Greatsword.webp" loading=lazy hidden/>
-    <img id="Marais_Executioner's_Sword" src="img/weapons/Greatsword/Marais%20Executioner's%20Sword.webp" loading=lazy hidden/>
-    <img id="Ordovis's_Greatsword" src="img/weapons/Greatsword/Ordovis's%20Greatsword.webp" loading=lazy hidden/>
-    <img id="Sacred_Relic_Sword" src="img/weapons/Greatsword/Sacred%20Relic%20Sword.webp" loading=lazy hidden/>
-    <img id="Sword_of_Milos" src="img/weapons/Greatsword/Sword%20of%20Milos.webp" loading=lazy hidden/>
-    <img id="Banished_Knight's_Halberd" src="img/weapons/Halberd/Banished%20Knight's%20Halberd.webp" loading=lazy hidden/>
-    <img id="Commander's_Standard" src="img/weapons/Halberd/Commander's%20Standard.webp" loading=lazy hidden/>
-    <img id="Dragon_Halberd" src="img/weapons/Halberd/Dragon%20Halberd.webp" loading=lazy hidden/>
-    <img id="Gargoyle's_Black_Halberd" src="img/weapons/Halberd/Gargoyle's%20Black%20Halberd.webp" loading=lazy hidden/>
-    <img id="Gargoyle's_Halberd" src="img/weapons/Halberd/Gargoyle's%20Halberd.webp" loading=lazy hidden/>
-    <img id="Glaive" src="img/weapons/Halberd/Glaive.webp" loading=lazy hidden/>
-    <img id="Golden_Halberd" src="img/weapons/Halberd/Golden%20Halberd.webp" loading=lazy hidden/>
-    <img id="Guardian's_Swordspear" src="img/weapons/Halberd/Guardian's%20Swordspear.webp" loading=lazy hidden/>
-    <img id="Halberd" src="img/weapons/Halberd/Halberd.webp" loading=lazy hidden/>
-    <img id="Loretta's_War_Sickle" src="img/weapons/Halberd/Loretta's%20War%20Sickle.webp" loading=lazy hidden/>
-    <img id="Lucerne" src="img/weapons/Halberd/Lucerne.webp" loading=lazy hidden/>
-    <img id="Nightrider_Glaive" src="img/weapons/Halberd/Nightrider%20Glaive.webp" loading=lazy hidden/>
-    <img id="Pest's_Glaive" src="img/weapons/Halberd/Pest's%20Glaive.webp" loading=lazy hidden/>
-    <img id="Ripple_Crescent_Halberd" src="img/weapons/Halberd/Ripple%20Crescent%20Halberd.webp" loading=lazy hidden/>
-    <img id="Vulgar_Militia_Saw" src="img/weapons/Halberd/Vulgar%20Militia%20Saw.webp" loading=lazy hidden/>
-    <img id="Vulgar_Militia_Shotel" src="img/weapons/Halberd/Vulgar%20Militia%20Shotel.webp" loading=lazy hidden/>
-    <img id="Club" src="img/weapons/Hammer/Club.webp" loading=lazy hidden/>
-    <img id="Curved_Club" src="img/weapons/Hammer/Curved%20Club.webp" loading=lazy hidden/>
-    <img id="Envoy's_Horn" src="img/weapons/Hammer/Envoy's%20Horn.webp" loading=lazy hidden/>
-    <img id="Hammer" src="img/weapons/Hammer/Hammer.webp" loading=lazy hidden/>
-    <img id="Mace" src="img/weapons/Hammer/Mace.webp" loading=lazy hidden/>
-    <img id="Marika's_Hammer" src="img/weapons/Hammer/Marika's%20Hammer.webp" loading=lazy hidden/>
-    <img id="Monk's_Flamemace" src="img/weapons/Hammer/Monk's%20Flamemace.webp" loading=lazy hidden/>
-    <img id="Morning_Star" src="img/weapons/Hammer/Morning%20Star.webp" loading=lazy hidden/>
-    <img id="Nox_Flowing_Hammer" src="img/weapons/Hammer/Nox%20Flowing%20Hammer.webp" loading=lazy hidden/>
-    <img id="Ringed_Finger" src="img/weapons/Hammer/Ringed%20Finger.webp" loading=lazy hidden/>
-    <img id="Scepter_of_the_All-Knowing" src="img/weapons/Hammer/Scepter%20of%20the%20All-Knowing.webp" loading=lazy hidden/>
-    <img id="Spiked_Club" src="img/weapons/Hammer/Spiked%20Club.webp" loading=lazy hidden/>
-    <img id="Stone_Club" src="img/weapons/Hammer/Stone%20Club.webp" loading=lazy hidden/>
-    <img id="Varre's_Bouquet" src="img/weapons/Hammer/Varre's%20Bouquet.webp" loading=lazy hidden/>
-    <img id="Warpick" src="img/weapons/Hammer/Warpick.webp" loading=lazy hidden/>
-    <img id="Bloody_Helice" src="img/weapons/Heavy%20Thrusting%20Sword/Bloody%20Helice.webp" loading=lazy hidden/>
-    <img id="Dragon_King's_Cragblade" src="img/weapons/Heavy%20Thrusting%20Sword/Dragon%20King's%20Cragblade.webp" loading=lazy hidden/>
-    <img id="Godskin_Stitcher" src="img/weapons/Heavy%20Thrusting%20Sword/Godskin%20Stitcher.webp" loading=lazy hidden/>
-    <img id="Great_Epee" src="img/weapons/Heavy%20Thrusting%20Sword/Great%20Epee.webp" loading=lazy hidden/>
-    <img id="Dragonscale_Blade" src="img/weapons/Katana/Dragonscale%20Blade.webp" loading=lazy hidden/>
-    <img id="Hand_of_Malenia" src="img/weapons/Katana/Hand%20of%20Malenia.webp" loading=lazy hidden/>
-    <img id="Meteoric_Ore_Blade" src="img/weapons/Katana/Meteoric%20Ore%20Blade.webp" loading=lazy hidden/>
-    <img id="Moonveil" src="img/weapons/Katana/Moonveil.webp" loading=lazy hidden/>
-    <img id="Nagakiba" src="img/weapons/Katana/Nagakiba.webp" loading=lazy hidden/>
-    <img id="Rivers_of_Blood" src="img/weapons/Katana/Rivers%20of%20Blood.webp" loading=lazy hidden/>
-    <img id="Serpentbone_Blade" src="img/weapons/Katana/Serpentbone%20Blade.webp" loading=lazy hidden/>
-    <img id="Uchigatana" src="img/weapons/Katana/Uchigatana.webp" loading=lazy hidden/>
-    <img id="Composite_Bow" src="img/weapons/Light%20Bow/Composite%20Bow.webp" loading=lazy hidden/>
-    <img id="Harp_Bow" src="img/weapons/Light%20Bow/Harp%20Bow.webp" loading=lazy hidden/>
-    <img id="Misbegotten_Shortbow" src="img/weapons/Light%20Bow/Misbegotten%20Shortbow.webp" loading=lazy hidden/>
-    <img id="Red_Branch_Shortbow" src="img/weapons/Light%20Bow/Red%20Branch%20Shortbow.webp" loading=lazy hidden/>
-    <img id="Shortbow" src="img/weapons/Light%20Bow/Shortbow.webp" loading=lazy hidden/>
-    <img id="Albinauric_Shield" src="img/weapons/Medium%20Shield/Albinauric%20Shield.webp" loading=lazy hidden/>
-    <img id="Banished_Knight's_Shield" src="img/weapons/Medium%20Shield/Banished%20Knight's%20Shield.webp" loading=lazy hidden/>
-    <img id="Beast_Crest_Heater_Shield" src="img/weapons/Medium%20Shield/Beast%20Crest%20Heater%20Shield.webp" loading=lazy hidden/>
-    <img id="Beastman's_Jar_Shield" src="img/weapons/Medium%20Shield/Beastman's%20Jar%20Shield.webp" loading=lazy hidden/>
-    <img id="Black_Leather_Shield" src="img/weapons/Medium%20Shield/Black%20Leather%20Shield.webp" loading=lazy hidden/>
-    <img id="Blue_Crest_Heater_Shield" src="img/weapons/Medium%20Shield/Blue%20Crest%20Heater%20Shield.webp" loading=lazy hidden/>
-    <img id="Blue-Gold_Kite_Shield" src="img/weapons/Medium%20Shield/Blue-Gold%20Kite%20Shield.webp" loading=lazy hidden/>
-    <img id="Brass_Shield" src="img/weapons/Medium%20Shield/Brass%20Shield.webp" loading=lazy hidden/>
-    <img id="Candletree_Wooden_Shield" src="img/weapons/Medium%20Shield/Candletree%20Wooden%20Shield.webp" loading=lazy hidden/>
-    <img id="Carian_Knight's_Shield" src="img/weapons/Medium%20Shield/Carian%20Knight's%20Shield.webp" loading=lazy hidden/>
-    <img id="Eclipse_Crest_Heater_Shield" src="img/weapons/Medium%20Shield/Eclipse%20Crest%20Heater%20Shield.webp" loading=lazy hidden/>
-    <img id="Flame_Crest_Wooden_Shield" src="img/weapons/Medium%20Shield/Flame%20Crest%20Wooden%20Shield.webp" loading=lazy hidden/>
-    <img id="Great_Turtle_Shield" src="img/weapons/Medium%20Shield/Great%20Turtle%20Shield.webp" loading=lazy hidden/>
-    <img id="Hawk_Crest_Wooden_Shield" src="img/weapons/Medium%20Shield/Hawk%20Crest%20Wooden%20Shield.webp" loading=lazy hidden/>
-    <img id="Heater_Shield" src="img/weapons/Medium%20Shield/Heater%20Shield.webp" loading=lazy hidden/>
-    <img id="Horse_Crest_Wooden_Shield" src="img/weapons/Medium%20Shield/Horse%20Crest%20Wooden%20Shield.webp" loading=lazy hidden/>
-    <img id="Inverted_Hawk_Heater_Shield" src="img/weapons/Medium%20Shield/Inverted%20Hawk%20Heater%20Shield.webp" loading=lazy hidden/>
-    <img id="Kite_Shield" src="img/weapons/Medium%20Shield/Kite%20Shield.webp" loading=lazy hidden/>
-    <img id="Large_Leather_Shield" src="img/weapons/Medium%20Shield/Large%20Leather%20Shield.webp" loading=lazy hidden/>
-    <img id="Marred_Leather_Shield" src="img/weapons/Medium%20Shield/Marred%20Leather%20Shield.webp" loading=lazy hidden/>
-    <img id="Marred_Wooden_Shield" src="img/weapons/Medium%20Shield/Marred%20Wooden%20Shield.webp" loading=lazy hidden/>
-    <img id="Red_Crest_Heater_Shield" src="img/weapons/Medium%20Shield/Red%20Crest%20Heater%20Shield.webp" loading=lazy hidden/>
-    <img id="Round_Shield" src="img/weapons/Medium%20Shield/Round%20Shield.webp" loading=lazy hidden/>
-    <img id="Scorpion_Kite_Shield" src="img/weapons/Medium%20Shield/Scorpion%20Kite%20Shield.webp" loading=lazy hidden/>
-    <img id="Silver_Mirrorshield" src="img/weapons/Medium%20Shield/Silver%20Mirrorshield.webp" loading=lazy hidden/>
-    <img id="Sun_Realm_Shield" src="img/weapons/Medium%20Shield/Sun%20Realm%20Shield.webp" loading=lazy hidden/>
-    <img id="Twinbird_Kite_Shield" src="img/weapons/Medium%20Shield/Twinbird%20Kite%20Shield.webp" loading=lazy hidden/>
-    <img id="Grave_Scythe" src="img/weapons/Reaper/Grave%20Scythe.webp" loading=lazy hidden/>
-    <img id="Halo_Scythe" src="img/weapons/Reaper/Halo%20Scythe.webp" loading=lazy hidden/>
-    <img id="Scythe" src="img/weapons/Reaper/Scythe.webp" loading=lazy hidden/>
-    <img id="Winged_Scythe" src="img/weapons/Reaper/Winged%20Scythe.webp" loading=lazy hidden/>
-    <img id="Clawmark_Seal" src="img/weapons/Sacred%20Seal/Clawmark%20Seal.webp" loading=lazy hidden/>
-    <img id="Dragon_Communion_Seal" src="img/weapons/Sacred%20Seal/Dragon%20Communion%20Seal.webp" loading=lazy hidden/>
-    <img id="Erdtree_Seal" src="img/weapons/Sacred%20Seal/Erdtree%20Seal.webp" loading=lazy hidden/>
-    <img id="Finger_Seal" src="img/weapons/Sacred%20Seal/Finger%20Seal.webp" loading=lazy hidden/>
-    <img id="Frenzied_Flame_Seal" src="img/weapons/Sacred%20Seal/Frenzied%20Flame%20Seal.webp" loading=lazy hidden/>
-    <img id="Giant's_Seal" src="img/weapons/Sacred%20Seal/Giant's%20Seal.webp" loading=lazy hidden/>
-    <img id="Godslayer's_Seal" src="img/weapons/Sacred%20Seal/Godslayer's%20Seal.webp" loading=lazy hidden/>
-    <img id="Golden_Order_Seal" src="img/weapons/Sacred%20Seal/Golden%20Order%20Seal.webp" loading=lazy hidden/>
-    <img id="Gravel_Stone_Seal" src="img/weapons/Sacred%20Seal/Gravel%20Stone%20Seal.webp" loading=lazy hidden/>
-    <img id="Blue-White_Wooden_Shield" src="img/weapons/Small%20Shield/Blue-White%20Wooden%20Shield.webp" loading=lazy hidden/>
-    <img id="Buckler" src="img/weapons/Small%20Shield/Buckler.webp" loading=lazy hidden/>
-    <img id="Coil_Shield" src="img/weapons/Small%20Shield/Coil%20Shield.webp" loading=lazy hidden/>
-    <img id="Gilded_Iron_Shield" src="img/weapons/Small%20Shield/Gilded%20Iron%20Shield.webp" loading=lazy hidden/>
-    <img id="Ice_Crest_Shield" src="img/weapons/Small%20Shield/Ice%20Crest%20Shield.webp" loading=lazy hidden/>
-    <img id="Iron_Roundshield" src="img/weapons/Small%20Shield/Iron%20Roundshield.webp" loading=lazy hidden/>
-    <img id="Man-Serpent's_Shield" src="img/weapons/Small%20Shield/Man-Serpent's%20Shield.webp" loading=lazy hidden/>
-    <img id="Perfumer's_Shield" src="img/weapons/Small%20Shield/Perfumer's%20Shield.webp" loading=lazy hidden/>
-    <img id="Pillory_Shield" src="img/weapons/Small%20Shield/Pillory%20Shield.webp" loading=lazy hidden/>
-    <img id="Red_Thorn_Roundshield" src="img/weapons/Small%20Shield/Red%20Thorn%20Roundshield.webp" loading=lazy hidden/>
-    <img id="Rickety_Shield" src="img/weapons/Small%20Shield/Rickety%20Shield.webp" loading=lazy hidden/>
-    <img id="Rift_Shield" src="img/weapons/Small%20Shield/Rift%20Shield.webp" loading=lazy hidden/>
-    <img id="Riveted_Wooden_Shield" src="img/weapons/Small%20Shield/Riveted%20Wooden%20Shield.webp" loading=lazy hidden/>
-    <img id="Scripture_Wooden_Shield" src="img/weapons/Small%20Shield/Scripture%20Wooden%20Shield.webp" loading=lazy hidden/>
-    <img id="Shield_of_the_Guilty" src="img/weapons/Small%20Shield/Shield%20of%20the%20Guilty.webp" loading=lazy hidden/>
-    <img id="Smoldering_Shield" src="img/weapons/Small%20Shield/Smoldering%20Shield.webp" loading=lazy hidden/>
-    <img id="Spiralhorn_Shield" src="img/weapons/Small%20Shield/Spiralhorn%20Shield.webp" loading=lazy hidden/>
-    <img id="Bolt_of_Gransax" src="img/weapons/Spear/Bolt%20of%20Gransax.webp" loading=lazy hidden/>
-    <img id="Celebrant's_Rib-Rake" src="img/weapons/Spear/Celebrant's%20Rib-Rake.webp" loading=lazy hidden/>
-    <img id="Clayman's_Harpoon" src="img/weapons/Spear/Clayman's%20Harpoon.webp" loading=lazy hidden/>
-    <img id="Cross-Naginata" src="img/weapons/Spear/Cross-Naginata.webp" loading=lazy hidden/>
-    <img id="Crystal_Spear" src="img/weapons/Spear/Crystal%20Spear.webp" loading=lazy hidden/>
-    <img id="Death_Ritual_Spear" src="img/weapons/Spear/Death%20Ritual%20Spear.webp" loading=lazy hidden/>
-    <img id="Inquisitor's_Girandole" src="img/weapons/Spear/Inquisitor's%20Girandole.webp" loading=lazy hidden/>
-    <img id="Iron_Spear" src="img/weapons/Spear/Iron%20Spear.webp" loading=lazy hidden/>
-    <img id="Cleanrot_Spear" src="img/weapons/Spear/Cleanrot%20Spear.webp" loading=lazy hidden/>
-    <img id="Partisan" src="img/weapons/Spear/Partisan.webp" loading=lazy hidden/>
-    <img id="Pike" src="img/weapons/Spear/Pike.webp" loading=lazy hidden/>
-    <img id="Rotten_Crystal_Spear" src="img/weapons/Spear/Rotten%20Crystal%20Spear.webp" loading=lazy hidden/>
-    <img id="Short_Spear" src="img/weapons/Spear/Short%20Spear.webp" loading=lazy hidden/>
-    <img id="Spear" src="img/weapons/Spear/Spear.webp" loading=lazy hidden/>
-    <img id="Spiked_Spear" src="img/weapons/Spear/Spiked%20Spear.webp" loading=lazy hidden/>
-    <img id="Torchpole" src="img/weapons/Spear/Torchpole.webp" loading=lazy hidden/>
-    <img id="Broadsword" src="img/weapons/Straight%20Sword/Broadsword.webp" loading=lazy hidden/>
-    <img id="Cane_Sword" src="img/weapons/Straight%20Sword/Cane%20Sword.webp" loading=lazy hidden/>
-    <img id="Carian_Knight's_Sword" src="img/weapons/Straight%20Sword/Carian%20Knight's%20Sword.webp" loading=lazy hidden/>
-    <img id="Coded_Sword" src="img/weapons/Straight%20Sword/Coded%20Sword.webp" loading=lazy hidden/>
-    <img id="Crystal_Sword" src="img/weapons/Straight%20Sword/Crystal%20Sword.webp" loading=lazy hidden/>
-    <img id="Golden_Epitaph" src="img/weapons/Straight%20Sword/Golden%20Epitaph.webp" loading=lazy hidden/>
-    <img id="Lazuli_Glintstone_Sword" src="img/weapons/Straight%20Sword/Lazuli%20Glintstone%20Sword.webp" loading=lazy hidden/>
-    <img id="Longsword" src="img/weapons/Straight%20Sword/Longsword.webp" loading=lazy hidden/>
-    <img id="Lordsworn's_Straight_Sword" src="img/weapons/Straight%20Sword/Lordsworn's%20Straight%20Sword.webp" loading=lazy hidden/>
-    <img id="Miquellan_Knight's_Sword" src="img/weapons/Straight%20Sword/Miquellan%20Knight's%20Sword.webp" loading=lazy hidden/>
-    <img id="Noble's_Slender_Sword" src="img/weapons/Straight%20Sword/Noble's%20Slender%20Sword.webp" loading=lazy hidden/>
-    <img id="Ornamental_Straight_Sword" src="img/weapons/Straight%20Sword/Ornamental%20Straight%20Sword.webp" loading=lazy hidden/>
-    <img id="Regalia_of_Eochaid" src="img/weapons/Straight%20Sword/Regalia%20of%20Eochaid.webp" loading=lazy hidden/>
-    <img id="Rotten_Crystal_Sword" src="img/weapons/Straight%20Sword/Rotten%20Crystal%20Sword.webp" loading=lazy hidden/>
-    <img id="Short_Sword" src="img/weapons/Straight%20Sword/Short%20Sword.webp" loading=lazy hidden/>
-    <img id="Sword_of_Night_and_Flame" src="img/weapons/Straight%20Sword/Sword%20of%20Night%20and%20Flame.webp" loading=lazy hidden/>
-    <img id="Sword_of_St_Trina" src="img/weapons/Straight%20Sword/Sword%20of%20St%20Trina.webp" loading=lazy hidden/>
-    <img id="Warhawk's_Talon" src="img/weapons/Straight%20Sword/Warhawk's%20Talon.webp" loading=lazy hidden/>
-    <img id="Weathered_Straight_Sword" src="img/weapons/Straight%20Sword/Weathered%20Straight%20Sword.webp" loading=lazy hidden/>
-    <img id="Antspur_Rapier" src="img/weapons/Thrusting%20Sword/Antspur%20Rapier.webp" loading=lazy hidden/>
-    <img id="Cleanrot_Knight's_Sword" src="img/weapons/Thrusting%20Sword/Cleanrot%20Knight's%20Sword.webp" loading=lazy hidden/>
-    <img id="Estoc" src="img/weapons/Thrusting%20Sword/Estoc.webp" loading=lazy hidden/>
-    <img id="Frozen_Needle" src="img/weapons/Thrusting%20Sword/Frozen%20Needle.webp" loading=lazy hidden/>
-    <img id="Noble's_Estoc" src="img/weapons/Thrusting%20Sword/Noble's%20Estoc.webp" loading=lazy hidden/>
-    <img id="Rapier" src="img/weapons/Thrusting%20Sword/Rapier.webp" loading=lazy hidden/>
-    <img id="Rogier's_Rapier" src="img/weapons/Thrusting%20Sword/Rogier's%20Rapier.webp" loading=lazy hidden/>
-    <img id="Beast-Repellent_Torch" src="img/weapons/Torch/Beast-Repellent%20Torch.webp" loading=lazy hidden/>
-    <img id="Ghostflame_Torch" src="img/weapons/Torch/Ghostflame%20Torch.webp" loading=lazy hidden/>
-    <img id="Sentry's_Torch" src="img/weapons/Torch/Sentry's%20Torch.webp" loading=lazy hidden/>
-    <img id="St_Trina's_Torch" src="img/weapons/Torch/St%20Trina's%20Torch.webp" loading=lazy hidden/>
-    <img id="Steel-Wire_Torch" src="img/weapons/Torch/Steel-Wire%20Torch.webp" loading=lazy hidden/>
-    <img id="Torch" src="img/weapons/Torch/Torch.webp" loading=lazy hidden/>
-    <img id="Eleonora's_Poleblade" src="img/weapons/Twinblade/Eleonora's%20Poleblade.webp" loading=lazy hidden/>
-    <img id="Gargoyle's_Black_Blades" src="img/weapons/Twinblade/Gargoyle's%20Black%20Blades.webp" loading=lazy hidden/>
-    <img id="Gargoyle's_Twinblade" src="img/weapons/Twinblade/Gargoyle's%20Twinblade.webp" loading=lazy hidden/>
-    <img id="Godskin_Peeler" src="img/weapons/Twinblade/Godskin%20Peeler.webp" loading=lazy hidden/>
-    <img id="Twinblade" src="img/weapons/Twinblade/Twinblade.webp" loading=lazy hidden/>
-    <img id="Twinned_Knight_Swords" src="img/weapons/Twinblade/Twinned%20Knight%20Swords.webp" loading=lazy hidden/>
-    <img id="Giant's_Red_Braid" src="img/weapons/Whip/Giant's%20Red%20Braid.webp" loading=lazy hidden/>
-    <img id="Hoslow's_Petal_Whip" src="img/weapons/Whip/Hoslow's%20Petal%20Whip.webp" loading=lazy hidden/>
-    <img id="Magma_Whip_Candlestick" src="img/weapons/Whip/Magma%20Whip%20Candlestick.webp" loading=lazy hidden/>
-    <img id="Thorned_Whip" src="img/weapons/Whip/Thorned%20Whip.webp" loading=lazy hidden/>
-    <img id="Urumi" src="img/weapons/Whip/Urumi.webp" loading=lazy hidden/>
-    <img id="Whip" src="img/weapons/Whip/Whip.webp" loading=lazy hidden/>
+    <img id="Battle_Axe" src="img/weapons/Axe/Battle%20Axe.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Celebrant's_Cleaver" src="img/weapons/Axe/Celebrant's%20Cleaver.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Forked_Hatchet" src="img/weapons/Axe/Forked%20Hatchet.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Hand_Axe" src="img/weapons/Axe/Hand%20Axe.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Highland_Axe" src="img/weapons/Axe/Highland%20Axe.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Icerind_Hatchet" src="img/weapons/Axe/Icerind%20Hatchet.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Iron_Cleaver" src="img/weapons/Axe/Iron%20Cleaver.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Jawbone_Axe" src="img/weapons/Axe/Jawbone%20Axe.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Ripple_Blade" src="img/weapons/Axe/Ripple%20Blade.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Rosus'_Axe" src="img/weapons/Axe/Rosus'%20Axe.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Sacrificial_Axe" src="img/weapons/Axe/Sacrificial%20Axe.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Stormhawk_Axe" src="img/weapons/Axe/Stormhawk%20Axe.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Warped_Axe" src="img/weapons/Axe/Warped%20Axe.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Hand_Ballista" src="img/weapons/Ballista/Hand%20Ballista.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Jar_Cannon" src="img/weapons/Ballista/Jar%20Cannon.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Albinauric_Bow" src="img/weapons/Bow/Albinauric%20Bow.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Black_Bow" src="img/weapons/Bow/Black%20Bow.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Erdtree_Bow" src="img/weapons/Bow/Erdtree%20Bow.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Horn_Bow" src="img/weapons/Bow/Horn%20Bow.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Longbow" src="img/weapons/Bow/Longbow.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Pulley_Bow" src="img/weapons/Bow/Pulley%20Bow.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Serpent_Bow" src="img/weapons/Bow/Serpent%20Bow.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Bloodhound_Claws" src="img/weapons/Claw/Bloodhound%20Claws.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Hookclaws" src="img/weapons/Claw/Hookclaws.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Raptor_Talons" src="img/weapons/Claw/Raptor%20Talons.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Venomous_Fang" src="img/weapons/Claw/Venomous%20Fang.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Godslayer's_Greatsword" src="img/weapons/Collosal%20Sword/Godslayer's%20Greatsword.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Grafted_Blade_Greatsword" src="img/weapons/Collosal%20Sword/Grafted%20Blade%20Greatsword.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Greatsword" src="img/weapons/Collosal%20Sword/Greatsword.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Maliketh's_Black_Blade" src="img/weapons/Collosal%20Sword/Maliketh's%20Black%20Blade.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Royal_Greatsword" src="img/weapons/Collosal%20Sword/Royal%20Greatsword.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Ruins_Greatsword" src="img/weapons/Collosal%20Sword/Ruins%20Greatsword.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Starscourge_Greatsword" src="img/weapons/Collosal%20Sword/Starscourge%20Greatsword.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Troll_Knight's_Sword" src="img/weapons/Collosal%20Sword/Troll%20Knight's%20Sword.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Troll's_Golden_Sword" src="img/weapons/Collosal%20Sword/Troll's%20Golden%20Sword.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Watchdog's_Greatsword" src="img/weapons/Collosal%20Sword/Watchdog's%20Greatsword.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Zweihander" src="img/weapons/Collosal%20Sword/Zweihander.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Axe_of_Godfrey" src="img/weapons/Colossal%20Weapon/Axe%20of%20Godfrey.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Dragon_Greatclaw" src="img/weapons/Colossal%20Weapon/Dragon%20Greatclaw.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Duelist_Greataxe" src="img/weapons/Colossal%20Weapon/Duelist%20Greataxe.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Envoy's_Greathorn" src="img/weapons/Colossal%20Weapon/Envoy's%20Greathorn.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Fallingstar_Beast_Jaw" src="img/weapons/Colossal%20Weapon/Fallingstar%20Beast%20Jaw.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Ghiza's_Wheel" src="img/weapons/Colossal%20Weapon/Ghiza's%20Wheel.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Giant-Crusher" src="img/weapons/Colossal%20Weapon/Giant-Crusher.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Golem's_Halberd" src="img/weapons/Colossal%20Weapon/Golem's%20Halberd.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Great_Club" src="img/weapons/Colossal%20Weapon/Great%20Club.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Prelate's_Inferno_Crozier" src="img/weapons/Colossal%20Weapon/Prelate's%20Inferno%20Crozier.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Rotten_Greataxe" src="img/weapons/Colossal%20Weapon/Rotten%20Greataxe.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Rotten_Staff" src="img/weapons/Colossal%20Weapon/Rotten%20Staff.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Staff_of_the_Avatar" src="img/weapons/Colossal%20Weapon/Staff%20of%20the%20Avatar.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Troll's_Hammer" src="img/weapons/Colossal%20Weapon/Troll's%20Hammer.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Watchdog's_Staff" src="img/weapons/Colossal%20Weapon/Watchdog's%20Staff.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Arbalest" src="img/weapons/Crossbow/Arbalest.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Crepus's_Black-Key_Crossbow" src="img/weapons/Crossbow/Crepus's%20Black-Key%20Crossbow.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Full_Moon_Crossbow" src="img/weapons/Crossbow/Full%20Moon%20Crossbow.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Heavy_Crossbow" src="img/weapons/Crossbow/Heavy%20Crossbow.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Light_Crossbow" src="img/weapons/Crossbow/Light%20Crossbow.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Pulley_Crossbow" src="img/weapons/Crossbow/Pulley%20Crossbow.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Soldier's_Crossbow" src="img/weapons/Crossbow/Soldier's%20Crossbow.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Beastman's_Cleaver" src="img/weapons/Curved%20Greatsword/Beastman's%20Cleaver.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Bloodhound's_Fang" src="img/weapons/Curved%20Greatsword/Bloodhound's%20Fang.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Dismounter" src="img/weapons/Curved%20Greatsword/Dismounter.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Magma_Wyrm's_Scalesword" src="img/weapons/Curved%20Greatsword/Magma%20Wyrm's%20Scalesword.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Monk's_Flameblade" src="img/weapons/Curved%20Greatsword/Monk's%20Flameblade.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Morgott's_Cursed_Sword" src="img/weapons/Curved%20Greatsword/Morgott's%20Cursed%20Sword.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Omen_Cleaver" src="img/weapons/Curved%20Greatsword/Omen%20Cleaver.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Onyx_Lord's_Greatsword" src="img/weapons/Curved%20Greatsword/Onyx%20Lord's%20Greatsword.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Zamor_Curved_Sword" src="img/weapons/Curved%20Greatsword/Zamor%20Curved%20Sword.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Bandit's_Curved_Sword" src="img/weapons/Curved%20Sword/Bandit's%20Curved%20Sword.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Beastman's_Curved_Sword" src="img/weapons/Curved%20Sword/Beastman's%20Curved%20Sword.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Eclipse_Shotel" src="img/weapons/Curved%20Sword/Eclipse%20Shotel.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Falchion" src="img/weapons/Curved%20Sword/Falchion.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Flowing_Curved_Sword" src="img/weapons/Curved%20Sword/Flowing%20Curved%20Sword.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Grossmesser" src="img/weapons/Curved%20Sword/Grossmesser.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Magma_Blade" src="img/weapons/Curved%20Sword/Magma%20Blade.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Mantis_Blade" src="img/weapons/Curved%20Sword/Mantis%20Blade.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Nox_Flowing_Sword" src="img/weapons/Curved%20Sword/Nox%20Flowing%20Sword.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Scavenger's_Curved_Sword" src="img/weapons/Curved%20Sword/Scavenger's%20Curved%20Sword.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Scimitar" src="img/weapons/Curved%20Sword/Scimitar.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Serpent-God's_Curved_Sword" src="img/weapons/Curved%20Sword/Serpent-God's%20Curved%20Sword.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Shamshir" src="img/weapons/Curved%20Sword/Shamshir.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Shotel" src="img/weapons/Curved%20Sword/Shotel.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Wing_of_Astel" src="img/weapons/Curved%20Sword/Wing%20of%20Astel.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Black_Knife" src="img/weapons/Dagger/Black%20Knife.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Blade_of_Calling" src="img/weapons/Dagger/Blade%20of%20Calling.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Bloodstained_Dagger" src="img/weapons/Dagger/Bloodstained%20Dagger.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Celebrant's_Sickle" src="img/weapons/Dagger/Celebrant's%20Sickle.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Cinquedea" src="img/weapons/Dagger/Cinquedea.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Crystal_Knife" src="img/weapons/Dagger/Crystal%20Knife.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Dagger" src="img/weapons/Dagger/Dagger.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Erdsteel_Dagger" src="img/weapons/Dagger/Erdsteel%20Dagger.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Glintstone_Kris" src="img/weapons/Dagger/Glintstone%20Kris.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Great_Knife" src="img/weapons/Dagger/Great%20Knife.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Ivory_Sickle" src="img/weapons/Dagger/Ivory%20Sickle.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Misericorde" src="img/weapons/Dagger/Misericorde.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Parrying_Dagger" src="img/weapons/Dagger/Parrying%20Dagger.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Reduvia" src="img/weapons/Dagger/Reduvia.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Scorpion's_Stinger" src="img/weapons/Dagger/Scorpion's%20Stinger.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Wakizashi" src="img/weapons/Dagger/Wakizashi.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Caestus" src="img/weapons/Fist%20Weapon/Caestus.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Cipher_Pata" src="img/weapons/Fist%20Weapon/Cipher%20Pata.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Clinging_Bone" src="img/weapons/Fist%20Weapon/Clinging%20Bone.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Grafted_Dragon" src="img/weapons/Fist%20Weapon/Grafted%20Dragon.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Iron_Ball" src="img/weapons/Fist%20Weapon/Iron%20Ball.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Katar" src="img/weapons/Fist%20Weapon/Katar.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Spiked_Caestus" src="img/weapons/Fist%20Weapon/Spiked%20Caestus.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Star_Fist" src="img/weapons/Fist%20Weapon/Star%20Fist.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Veteran's_Prosthesis" src="img/weapons/Fist%20Weapon/Veteran's%20Prosthesis.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Bastard's_Stars" src="img/weapons/Flail/Bastard's%20Stars.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Chainlink_Flail" src="img/weapons/Flail/Chainlink%20Flail.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Family_Heads" src="img/weapons/Flail/Family%20Heads.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Flail" src="img/weapons/Flail/Flail.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Nightrider_Flail" src="img/weapons/Flail/Nightrider%20Flail.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Academy_Glintstone_Staff" src="img/weapons/Glintstone%20Staff/Academy%20Glintstone%20Staff.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Albinauric_Staff" src="img/weapons/Glintstone%20Staff/Albinauric%20Staff.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Astrologer's_Staff" src="img/weapons/Glintstone%20Staff/Astrologer's%20Staff.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Azur's_Glintstone_Staff" src="img/weapons/Glintstone%20Staff/Azur's%20Glintstone%20Staff.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Carian_Glintblade_Staff" src="img/weapons/Glintstone%20Staff/Carian%20Glintblade%20Staff.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Carian_Glintstone_Staff" src="img/weapons/Glintstone%20Staff/Carian%20Glintstone%20Staff.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Carian_Regal_Scepter" src="img/weapons/Glintstone%20Staff/Carian%20Regal%20Scepter.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Crystal_Staff" src="img/weapons/Glintstone%20Staff/Crystal%20Staff.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Demi-Human_Queen's_Staff" src="img/weapons/Glintstone%20Staff/Demi-Human%20Queen's%20Staff.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Digger's_Staff" src="img/weapons/Glintstone%20Staff/Digger's%20Staff.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Gelmir_Glintstone_Staff" src="img/weapons/Glintstone%20Staff/Gelmir%20Glintstone%20Staff.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Glintstone_Staff" src="img/weapons/Glintstone%20Staff/Glintstone%20Staff.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Lusat's_Glintstone_Staff" src="img/weapons/Glintstone%20Staff/Lusat's%20Glintstone%20Staff.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Meteorite_Staff" src="img/weapons/Glintstone%20Staff/Meteorite%20Staff.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Prince_of_Death's_Staff" src="img/weapons/Glintstone%20Staff/Prince%20of%20Death's%20Staff.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Rotten_Crystal_Staff" src="img/weapons/Glintstone%20Staff/Rotten%20Crystal%20Staff.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Staff_of_Loss" src="img/weapons/Glintstone%20Staff/Staff%20of%20Loss.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Staff_of_the_Guilty" src="img/weapons/Glintstone%20Staff/Staff%20of%20the%20Guilty.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Battle_Hammer" src="img/weapons/Great%20Hammer/Battle%20Hammer.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Beastclaw_Greathammer" src="img/weapons/Great%20Hammer/Beastclaw%20Greathammer.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Brick_Hammer" src="img/weapons/Great%20Hammer/Brick%20Hammer.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Celebrant's_Skull" src="img/weapons/Great%20Hammer/Celebrant's%20Skull.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Cranial_Vessel_Candlestand" src="img/weapons/Great%20Hammer/Cranial%20Vessel%20Candlestand.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Curved_Great_Club" src="img/weapons/Great%20Hammer/Curved%20Great%20Club.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Devourer's_Scepter" src="img/weapons/Great%20Hammer/Devourer's%20Scepter.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Envoy's_Long_Horn" src="img/weapons/Great%20Hammer/Envoy's%20Long%20Horn.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Great_Mace" src="img/weapons/Great%20Hammer/Great%20Mace.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Great_Stars" src="img/weapons/Great%20Hammer/Great%20Stars.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Greathorn_Hammer" src="img/weapons/Great%20Hammer/Greathorn%20Hammer.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Large_Club" src="img/weapons/Great%20Hammer/Large%20Club.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Pickaxe" src="img/weapons/Great%20Hammer/Pickaxe.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Rotten_Battle_Hammer" src="img/weapons/Great%20Hammer/Rotten%20Battle%20Hammer.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Lance" src="img/weapons/Great%20Spear/Lance.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Mohgwyn's_Sacred_Spear" src="img/weapons/Great%20Spear/Mohgwyn's%20Sacred%20Spear.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Serpent-Hunter" src="img/weapons/Great%20Spear/Serpent-Hunter.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Siluria's_Tree" src="img/weapons/Great%20Spear/Siluria's%20Tree.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Treespear" src="img/weapons/Great%20Spear/Treespear.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Vyke's_War_Spear" src="img/weapons/Great%20Spear/Vyke's%20War%20Spear.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Axe_of_Godrick" src="img/weapons/Greataxe/Axe%20of%20Godrick.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Butchering_Knife" src="img/weapons/Greataxe/Butchering%20Knife.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Crescent_Moon_Axe" src="img/weapons/Greataxe/Crescent%20Moon%20Axe.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Executioner's_Greataxe" src="img/weapons/Greataxe/Executioner's%20Greataxe.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Gargoyle's_Black_Axe" src="img/weapons/Greataxe/Gargoyle's%20Black%20Axe.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Gargoyle's_Great_Axe" src="img/weapons/Greataxe/Gargoyle's%20Great%20Axe.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Great_Omenkiller_Cleaver" src="img/weapons/Greataxe/Great%20Omenkiller%20Cleaver.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Greataxe" src="img/weapons/Greataxe/Greataxe.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Longhaft_Axe" src="img/weapons/Greataxe/Longhaft%20Axe.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Rusted_Anchor" src="img/weapons/Greataxe/Rusted%20Anchor.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Winged_Greathorn" src="img/weapons/Greataxe/Winged%20Greathorn.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Erdtree_Greatbow" src="img/weapons/Greatbow/Erdtree%20Greatbow.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Golem_Greatbow" src="img/weapons/Greatbow/Golem%20Greatbow.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Greatbow" src="img/weapons/Greatbow/Greatbow.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Lion_Greatbow" src="img/weapons/Greatbow/Lion%20Greatbow.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Ant's_Skull_Plate" src="img/weapons/Greatshield/Ant's%20Skull%20Plate.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Briar_Greatshield" src="img/weapons/Greatshield/Briar%20Greatshield.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Crossed-Tree_Towershield" src="img/weapons/Greatshield/Crossed-Tree%20Towershield.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Crucible_Hornshield" src="img/weapons/Greatshield/Crucible%20Hornshield.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Cuckoo_Greatshield" src="img/weapons/Greatshield/Cuckoo%20Greatshield.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Distinguished_Greatshield" src="img/weapons/Greatshield/Distinguished%20Greatshield.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Dragon_Towershield" src="img/weapons/Greatshield/Dragon%20Towershield.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Dragonclaw_Shield" src="img/weapons/Greatshield/Dragonclaw%20Shield.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Eclipse_Crest_Greatshield" src="img/weapons/Greatshield/Eclipse%20Crest%20Greatshield.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Fingerprint_Stone_Shield" src="img/weapons/Greatshield/Fingerprint%20Stone%20Shield.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Gilded_Greatshield" src="img/weapons/Greatshield/Gilded%20Greatshield.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Golden_Beast_Crest_Shield" src="img/weapons/Greatshield/Golden%20Beast%20Crest%20Shield.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Golden_Greatshield" src="img/weapons/Greatshield/Golden%20Greatshield.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Haligtree_Crest_Greatshield" src="img/weapons/Greatshield/Haligtree%20Crest%20Greatshield.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Icon_Shield" src="img/weapons/Greatshield/Icon%20Shield.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Inverted_Hawk_Towershield" src="img/weapons/Greatshield/Inverted%20Hawk%20Towershield.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Jellyfish_Shield" src="img/weapons/Greatshield/Jellyfish%20Shield.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Lordsworn's_Shield" src="img/weapons/Greatshield/Lordsworn's%20Shield.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Manor_Towershield" src="img/weapons/Greatshield/Manor%20Towershield.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="One-Eyed_Shield" src="img/weapons/Greatshield/One-Eyed%20Shield.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Redmane_Greatshield" src="img/weapons/Greatshield/Redmane%20Greatshield.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Spiked_Palisade_Shield" src="img/weapons/Greatshield/Spiked%20Palisade%20Shield.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Visage_Shield" src="img/weapons/Greatshield/Visage%20Shield.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Wooden_Greatshield" src="img/weapons/Greatshield/Wooden%20Greatshield.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Alabaster_Lord's_Sword" src="img/weapons/Greatsword/Alabaster%20Lord's%20Sword.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Banished_Knight's_Greatsword" src="img/weapons/Greatsword/Banished%20Knight's%20Greatsword.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Bastard_Sword" src="img/weapons/Greatsword/Bastard%20Sword.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Blasphemous_Blade" src="img/weapons/Greatsword/Blasphemous%20Blade.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Claymore" src="img/weapons/Greatsword/Claymore.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Dark_Moon_Greatsword" src="img/weapons/Greatsword/Dark%20Moon%20Greatsword.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Death's_Poker" src="img/weapons/Greatsword/Death's%20Poker.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Flamberge" src="img/weapons/Greatsword/Flamberge.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Forked_Greatsword" src="img/weapons/Greatsword/Forked%20Greatsword.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Gargoyle's_Blackblade" src="img/weapons/Greatsword/Gargoyle's%20Blackblade.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Gargoyle's_Greatsword" src="img/weapons/Greatsword/Gargoyle's%20Greatsword.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Golden_Order_Greatsword" src="img/weapons/Greatsword/Golden%20Order%20Greatsword.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Helphen's_Steeple" src="img/weapons/Greatsword/Helphen's%20Steeple.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Inseperable_Sword" src="img/weapons/Greatsword/Inseperable%20Sword.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Iron_Greatsword" src="img/weapons/Greatsword/Iron%20Greatsword.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Knight's_Greatsword" src="img/weapons/Greatsword/Knight's%20Greatsword.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Lordsworn's_Greatsword" src="img/weapons/Greatsword/Lordsworn's%20Greatsword.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Marais_Executioner's_Sword" src="img/weapons/Greatsword/Marais%20Executioner's%20Sword.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Ordovis's_Greatsword" src="img/weapons/Greatsword/Ordovis's%20Greatsword.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Sacred_Relic_Sword" src="img/weapons/Greatsword/Sacred%20Relic%20Sword.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Sword_of_Milos" src="img/weapons/Greatsword/Sword%20of%20Milos.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Banished_Knight's_Halberd" src="img/weapons/Halberd/Banished%20Knight's%20Halberd.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Commander's_Standard" src="img/weapons/Halberd/Commander's%20Standard.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Dragon_Halberd" src="img/weapons/Halberd/Dragon%20Halberd.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Gargoyle's_Black_Halberd" src="img/weapons/Halberd/Gargoyle's%20Black%20Halberd.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Gargoyle's_Halberd" src="img/weapons/Halberd/Gargoyle's%20Halberd.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Glaive" src="img/weapons/Halberd/Glaive.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Golden_Halberd" src="img/weapons/Halberd/Golden%20Halberd.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Guardian's_Swordspear" src="img/weapons/Halberd/Guardian's%20Swordspear.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Halberd" src="img/weapons/Halberd/Halberd.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Loretta's_War_Sickle" src="img/weapons/Halberd/Loretta's%20War%20Sickle.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Lucerne" src="img/weapons/Halberd/Lucerne.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Nightrider_Glaive" src="img/weapons/Halberd/Nightrider%20Glaive.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Pest's_Glaive" src="img/weapons/Halberd/Pest's%20Glaive.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Ripple_Crescent_Halberd" src="img/weapons/Halberd/Ripple%20Crescent%20Halberd.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Vulgar_Militia_Saw" src="img/weapons/Halberd/Vulgar%20Militia%20Saw.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Vulgar_Militia_Shotel" src="img/weapons/Halberd/Vulgar%20Militia%20Shotel.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Club" src="img/weapons/Hammer/Club.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Curved_Club" src="img/weapons/Hammer/Curved%20Club.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Envoy's_Horn" src="img/weapons/Hammer/Envoy's%20Horn.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Hammer" src="img/weapons/Hammer/Hammer.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Mace" src="img/weapons/Hammer/Mace.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Marika's_Hammer" src="img/weapons/Hammer/Marika's%20Hammer.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Monk's_Flamemace" src="img/weapons/Hammer/Monk's%20Flamemace.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Morning_Star" src="img/weapons/Hammer/Morning%20Star.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Nox_Flowing_Hammer" src="img/weapons/Hammer/Nox%20Flowing%20Hammer.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Ringed_Finger" src="img/weapons/Hammer/Ringed%20Finger.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Scepter_of_the_All-Knowing" src="img/weapons/Hammer/Scepter%20of%20the%20All-Knowing.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Spiked_Club" src="img/weapons/Hammer/Spiked%20Club.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Stone_Club" src="img/weapons/Hammer/Stone%20Club.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Varre's_Bouquet" src="img/weapons/Hammer/Varre's%20Bouquet.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Warpick" src="img/weapons/Hammer/Warpick.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Bloody_Helice" src="img/weapons/Heavy%20Thrusting%20Sword/Bloody%20Helice.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Dragon_King's_Cragblade" src="img/weapons/Heavy%20Thrusting%20Sword/Dragon%20King's%20Cragblade.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Godskin_Stitcher" src="img/weapons/Heavy%20Thrusting%20Sword/Godskin%20Stitcher.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Great_Epee" src="img/weapons/Heavy%20Thrusting%20Sword/Great%20Epee.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Dragonscale_Blade" src="img/weapons/Katana/Dragonscale%20Blade.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Hand_of_Malenia" src="img/weapons/Katana/Hand%20of%20Malenia.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Meteoric_Ore_Blade" src="img/weapons/Katana/Meteoric%20Ore%20Blade.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Moonveil" src="img/weapons/Katana/Moonveil.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Nagakiba" src="img/weapons/Katana/Nagakiba.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Rivers_of_Blood" src="img/weapons/Katana/Rivers%20of%20Blood.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Serpentbone_Blade" src="img/weapons/Katana/Serpentbone%20Blade.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Uchigatana" src="img/weapons/Katana/Uchigatana.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Composite_Bow" src="img/weapons/Light%20Bow/Composite%20Bow.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Harp_Bow" src="img/weapons/Light%20Bow/Harp%20Bow.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Misbegotten_Shortbow" src="img/weapons/Light%20Bow/Misbegotten%20Shortbow.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Red_Branch_Shortbow" src="img/weapons/Light%20Bow/Red%20Branch%20Shortbow.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Shortbow" src="img/weapons/Light%20Bow/Shortbow.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Albinauric_Shield" src="img/weapons/Medium%20Shield/Albinauric%20Shield.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Banished_Knight's_Shield" src="img/weapons/Medium%20Shield/Banished%20Knight's%20Shield.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Beast_Crest_Heater_Shield" src="img/weapons/Medium%20Shield/Beast%20Crest%20Heater%20Shield.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Beastman's_Jar_Shield" src="img/weapons/Medium%20Shield/Beastman's%20Jar%20Shield.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Black_Leather_Shield" src="img/weapons/Medium%20Shield/Black%20Leather%20Shield.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Blue_Crest_Heater_Shield" src="img/weapons/Medium%20Shield/Blue%20Crest%20Heater%20Shield.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Blue-Gold_Kite_Shield" src="img/weapons/Medium%20Shield/Blue-Gold%20Kite%20Shield.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Brass_Shield" src="img/weapons/Medium%20Shield/Brass%20Shield.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Candletree_Wooden_Shield" src="img/weapons/Medium%20Shield/Candletree%20Wooden%20Shield.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Carian_Knight's_Shield" src="img/weapons/Medium%20Shield/Carian%20Knight's%20Shield.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Eclipse_Crest_Heater_Shield" src="img/weapons/Medium%20Shield/Eclipse%20Crest%20Heater%20Shield.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Flame_Crest_Wooden_Shield" src="img/weapons/Medium%20Shield/Flame%20Crest%20Wooden%20Shield.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Great_Turtle_Shield" src="img/weapons/Medium%20Shield/Great%20Turtle%20Shield.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Hawk_Crest_Wooden_Shield" src="img/weapons/Medium%20Shield/Hawk%20Crest%20Wooden%20Shield.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Heater_Shield" src="img/weapons/Medium%20Shield/Heater%20Shield.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Horse_Crest_Wooden_Shield" src="img/weapons/Medium%20Shield/Horse%20Crest%20Wooden%20Shield.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Inverted_Hawk_Heater_Shield" src="img/weapons/Medium%20Shield/Inverted%20Hawk%20Heater%20Shield.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Kite_Shield" src="img/weapons/Medium%20Shield/Kite%20Shield.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Large_Leather_Shield" src="img/weapons/Medium%20Shield/Large%20Leather%20Shield.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Marred_Leather_Shield" src="img/weapons/Medium%20Shield/Marred%20Leather%20Shield.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Marred_Wooden_Shield" src="img/weapons/Medium%20Shield/Marred%20Wooden%20Shield.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Red_Crest_Heater_Shield" src="img/weapons/Medium%20Shield/Red%20Crest%20Heater%20Shield.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Round_Shield" src="img/weapons/Medium%20Shield/Round%20Shield.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Scorpion_Kite_Shield" src="img/weapons/Medium%20Shield/Scorpion%20Kite%20Shield.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Silver_Mirrorshield" src="img/weapons/Medium%20Shield/Silver%20Mirrorshield.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Sun_Realm_Shield" src="img/weapons/Medium%20Shield/Sun%20Realm%20Shield.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Twinbird_Kite_Shield" src="img/weapons/Medium%20Shield/Twinbird%20Kite%20Shield.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Grave_Scythe" src="img/weapons/Reaper/Grave%20Scythe.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Halo_Scythe" src="img/weapons/Reaper/Halo%20Scythe.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Scythe" src="img/weapons/Reaper/Scythe.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Winged_Scythe" src="img/weapons/Reaper/Winged%20Scythe.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Clawmark_Seal" src="img/weapons/Sacred%20Seal/Clawmark%20Seal.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Dragon_Communion_Seal" src="img/weapons/Sacred%20Seal/Dragon%20Communion%20Seal.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Erdtree_Seal" src="img/weapons/Sacred%20Seal/Erdtree%20Seal.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Finger_Seal" src="img/weapons/Sacred%20Seal/Finger%20Seal.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Frenzied_Flame_Seal" src="img/weapons/Sacred%20Seal/Frenzied%20Flame%20Seal.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Giant's_Seal" src="img/weapons/Sacred%20Seal/Giant's%20Seal.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Godslayer's_Seal" src="img/weapons/Sacred%20Seal/Godslayer's%20Seal.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Golden_Order_Seal" src="img/weapons/Sacred%20Seal/Golden%20Order%20Seal.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Gravel_Stone_Seal" src="img/weapons/Sacred%20Seal/Gravel%20Stone%20Seal.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Blue-White_Wooden_Shield" src="img/weapons/Small%20Shield/Blue-White%20Wooden%20Shield.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Buckler" src="img/weapons/Small%20Shield/Buckler.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Coil_Shield" src="img/weapons/Small%20Shield/Coil%20Shield.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Gilded_Iron_Shield" src="img/weapons/Small%20Shield/Gilded%20Iron%20Shield.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Ice_Crest_Shield" src="img/weapons/Small%20Shield/Ice%20Crest%20Shield.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Iron_Roundshield" src="img/weapons/Small%20Shield/Iron%20Roundshield.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Man-Serpent's_Shield" src="img/weapons/Small%20Shield/Man-Serpent's%20Shield.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Perfumer's_Shield" src="img/weapons/Small%20Shield/Perfumer's%20Shield.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Pillory_Shield" src="img/weapons/Small%20Shield/Pillory%20Shield.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Red_Thorn_Roundshield" src="img/weapons/Small%20Shield/Red%20Thorn%20Roundshield.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Rickety_Shield" src="img/weapons/Small%20Shield/Rickety%20Shield.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Rift_Shield" src="img/weapons/Small%20Shield/Rift%20Shield.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Riveted_Wooden_Shield" src="img/weapons/Small%20Shield/Riveted%20Wooden%20Shield.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Scripture_Wooden_Shield" src="img/weapons/Small%20Shield/Scripture%20Wooden%20Shield.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Shield_of_the_Guilty" src="img/weapons/Small%20Shield/Shield%20of%20the%20Guilty.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Smoldering_Shield" src="img/weapons/Small%20Shield/Smoldering%20Shield.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Spiralhorn_Shield" src="img/weapons/Small%20Shield/Spiralhorn%20Shield.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Bolt_of_Gransax" src="img/weapons/Spear/Bolt%20of%20Gransax.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Celebrant's_Rib-Rake" src="img/weapons/Spear/Celebrant's%20Rib-Rake.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Clayman's_Harpoon" src="img/weapons/Spear/Clayman's%20Harpoon.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Cross-Naginata" src="img/weapons/Spear/Cross-Naginata.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Crystal_Spear" src="img/weapons/Spear/Crystal%20Spear.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Death_Ritual_Spear" src="img/weapons/Spear/Death%20Ritual%20Spear.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Inquisitor's_Girandole" src="img/weapons/Spear/Inquisitor's%20Girandole.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Iron_Spear" src="img/weapons/Spear/Iron%20Spear.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Cleanrot_Spear" src="img/weapons/Spear/Cleanrot%20Spear.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Partisan" src="img/weapons/Spear/Partisan.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Pike" src="img/weapons/Spear/Pike.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Rotten_Crystal_Spear" src="img/weapons/Spear/Rotten%20Crystal%20Spear.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Short_Spear" src="img/weapons/Spear/Short%20Spear.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Spear" src="img/weapons/Spear/Spear.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Spiked_Spear" src="img/weapons/Spear/Spiked%20Spear.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Torchpole" src="img/weapons/Spear/Torchpole.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Broadsword" src="img/weapons/Straight%20Sword/Broadsword.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Cane_Sword" src="img/weapons/Straight%20Sword/Cane%20Sword.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Carian_Knight's_Sword" src="img/weapons/Straight%20Sword/Carian%20Knight's%20Sword.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Coded_Sword" src="img/weapons/Straight%20Sword/Coded%20Sword.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Crystal_Sword" src="img/weapons/Straight%20Sword/Crystal%20Sword.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Golden_Epitaph" src="img/weapons/Straight%20Sword/Golden%20Epitaph.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Lazuli_Glintstone_Sword" src="img/weapons/Straight%20Sword/Lazuli%20Glintstone%20Sword.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Longsword" src="img/weapons/Straight%20Sword/Longsword.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Lordsworn's_Straight_Sword" src="img/weapons/Straight%20Sword/Lordsworn's%20Straight%20Sword.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Miquellan_Knight's_Sword" src="img/weapons/Straight%20Sword/Miquellan%20Knight's%20Sword.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Noble's_Slender_Sword" src="img/weapons/Straight%20Sword/Noble's%20Slender%20Sword.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Ornamental_Straight_Sword" src="img/weapons/Straight%20Sword/Ornamental%20Straight%20Sword.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Regalia_of_Eochaid" src="img/weapons/Straight%20Sword/Regalia%20of%20Eochaid.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Rotten_Crystal_Sword" src="img/weapons/Straight%20Sword/Rotten%20Crystal%20Sword.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Short_Sword" src="img/weapons/Straight%20Sword/Short%20Sword.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Sword_of_Night_and_Flame" src="img/weapons/Straight%20Sword/Sword%20of%20Night%20and%20Flame.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Sword_of_St_Trina" src="img/weapons/Straight%20Sword/Sword%20of%20St%20Trina.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Warhawk's_Talon" src="img/weapons/Straight%20Sword/Warhawk's%20Talon.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Weathered_Straight_Sword" src="img/weapons/Straight%20Sword/Weathered%20Straight%20Sword.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Antspur_Rapier" src="img/weapons/Thrusting%20Sword/Antspur%20Rapier.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Cleanrot_Knight's_Sword" src="img/weapons/Thrusting%20Sword/Cleanrot%20Knight's%20Sword.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Estoc" src="img/weapons/Thrusting%20Sword/Estoc.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Frozen_Needle" src="img/weapons/Thrusting%20Sword/Frozen%20Needle.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Noble's_Estoc" src="img/weapons/Thrusting%20Sword/Noble's%20Estoc.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Rapier" src="img/weapons/Thrusting%20Sword/Rapier.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Rogier's_Rapier" src="img/weapons/Thrusting%20Sword/Rogier's%20Rapier.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Beast-Repellent_Torch" src="img/weapons/Torch/Beast-Repellent%20Torch.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Ghostflame_Torch" src="img/weapons/Torch/Ghostflame%20Torch.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Sentry's_Torch" src="img/weapons/Torch/Sentry's%20Torch.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="St_Trina's_Torch" src="img/weapons/Torch/St%20Trina's%20Torch.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Steel-Wire_Torch" src="img/weapons/Torch/Steel-Wire%20Torch.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Torch" src="img/weapons/Torch/Torch.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Eleonora's_Poleblade" src="img/weapons/Twinblade/Eleonora's%20Poleblade.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Gargoyle's_Black_Blades" src="img/weapons/Twinblade/Gargoyle's%20Black%20Blades.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Gargoyle's_Twinblade" src="img/weapons/Twinblade/Gargoyle's%20Twinblade.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Godskin_Peeler" src="img/weapons/Twinblade/Godskin%20Peeler.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Twinblade" src="img/weapons/Twinblade/Twinblade.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Twinned_Knight_Swords" src="img/weapons/Twinblade/Twinned%20Knight%20Swords.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Giant's_Red_Braid" src="img/weapons/Whip/Giant's%20Red%20Braid.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Hoslow's_Petal_Whip" src="img/weapons/Whip/Hoslow's%20Petal%20Whip.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Magma_Whip_Candlestick" src="img/weapons/Whip/Magma%20Whip%20Candlestick.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Thorned_Whip" src="img/weapons/Whip/Thorned%20Whip.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Urumi" src="img/weapons/Whip/Urumi.webp" class="weapon-icon" loading="lazy" hidden/>
+    <img id="Whip" src="img/weapons/Whip/Whip.webp" class="weapon-icon" loading="lazy" hidden/>
 </div>
 
 <div id="ashes-container">
-    <img id="Assassin's_Gambit" src="img/ashes/Assassin's%20Gambit.webp" loading=lazy hidden/>
-    <img id="Barbaric_Roar" src="img/ashes/Barbaric%20Roar.webp" loading=lazy hidden/>
-    <img id="Barrage" src="img/ashes/Barrage.webp" loading=lazy hidden/>
-    <img id="Barricade_Shield" src="img/ashes/Barricade%20Shield.webp" loading=lazy hidden/>
-    <img id="Beast's_Roar" src="img/ashes/Beast's%20Roar.webp" loading=lazy hidden/>
-    <img id="Black_Flame_Tornado" src="img/ashes/Black%20Flame%20Tornado.webp" loading=lazy hidden/>
-    <img id="Blood_Blade" src="img/ashes/Blood%20Blade.webp" loading=lazy hidden/>
-    <img id="Blood_Tax" src="img/ashes/Blood%20Tax.webp" loading=lazy hidden/>
-    <img id="Bloodhound's_Step" src="img/ashes/Bloodhound's%20Step.webp" loading=lazy hidden/>
-    <img id="Bloody_Slash" src="img/ashes/Bloody%20Slash.webp" loading=lazy hidden/>
-    <img id="Braggart's_Roar" src="img/ashes/Braggart's%20Roar.webp" loading=lazy hidden/>
-    <img id="Carian_Grandeur" src="img/ashes/Carian%20Grandeur.webp" loading=lazy hidden/>
-    <img id="Carian_Greatsword" src="img/ashes/Carian%20Greatsword.webp" loading=lazy hidden/>
-    <img id="Carian_Retaliation" src="img/ashes/Carian%20Retaliation.webp" loading=lazy hidden/>
-    <img id="Charge_Forth" src="img/ashes/Charge%20Forth.webp" loading=lazy hidden/>
-    <img id="Chilling_Mist" src="img/ashes/Chilling%20Mist.webp" loading=lazy hidden/>
-    <img id="Cragblade" src="img/ashes/Cragblade.webp" loading=lazy hidden/>
-    <img id="Determination" src="img/ashes/Determination.webp" loading=lazy hidden/>
-    <img id="Double_Slash" src="img/ashes/Double%20Slash.webp" loading=lazy hidden/>
-    <img id="Earthshaker" src="img/ashes/Earthshaker.webp" loading=lazy hidden/>
-    <img id="Enchanted_Shot" src="img/ashes/Enchanted%20Shot.webp" loading=lazy hidden/>
-    <img id="Endure" src="img/ashes/Endure.webp" loading=lazy hidden/>
-    <img id="Eruption" src="img/ashes/Eruption.webp" loading=lazy hidden/>
-    <img id="Flame_of_the_Redmanes" src="img/ashes/Flame%20of%20the%20Redmanes.webp" loading=lazy hidden/>
-    <img id="Flaming_Strike" src="img/ashes/Flaming%20Strike.webp" loading=lazy hidden/>
-    <img id="Giant_Hunt" src="img/ashes/Giant%20Hunt.webp" loading=lazy hidden/>
-    <img id="Glintblade_Phalanx" src="img/ashes/Glintblade%20Phalanx.webp" loading=lazy hidden/>
-    <img id="Glintstone_Pebble" src="img/ashes/Glintstone%20Pebble.webp" loading=lazy hidden/>
-    <img id="Golden_Land" src="img/ashes/Golden%20Land.webp" loading=lazy hidden/>
-    <img id="Golden_Parry" src="img/ashes/Golden%20Parry.webp" loading=lazy hidden/>
-    <img id="Golden_Slam" src="img/ashes/Golden%20Slam.webp" loading=lazy hidden/>
-    <img id="Golden_Vow" src="img/ashes/Golden%20Vow.webp" loading=lazy hidden/>
-    <img id="Gravitas" src="img/ashes/Gravitas.webp" loading=lazy hidden/>
-    <img id="Ground_Slam" src="img/ashes/Ground%20Slam.webp" loading=lazy hidden/>
-    <img id="Hoarah_Loux's_Earthshaker" src="img/ashes/Hoarah%20Loux's%20Earthshaker.webp" loading=lazy hidden/>
-    <img id="Hoarfrost_Stomp" src="img/ashes/Hoarfrost%20Stomp.webp" loading=lazy hidden/>
-    <img id="Holy_Ground" src="img/ashes/Holy%20Ground.webp" loading=lazy hidden/>
-    <img id="Ice_Spear" src="img/ashes/Ice%20Spear.webp" loading=lazy hidden/>
-    <img id="Impaling_Thrust" src="img/ashes/Impaling%20Thrust.webp" loading=lazy hidden/>
-    <img id="Kick" src="img/ashes/Kick.webp" loading=lazy hidden/>
-    <img id="Lifesteal_Fist" src="img/ashes/Lifesteal%20Fist.webp" loading=lazy hidden/>
-    <img id="Lightning_Ram" src="img/ashes/Lightning%20Ram.webp" loading=lazy hidden/>
-    <img id="Lightning_Slash" src="img/ashes/Lightning%20Slash.webp" loading=lazy hidden/>
-    <img id="Lion's_Claw" src="img/ashes/Lion's%20Claw.webp" loading=lazy hidden/>
-    <img id="Loretta's_Slash" src="img/ashes/Loretta's%20Slash.webp" loading=lazy hidden/>
-    <img id="Mighty_Shot" src="img/ashes/Mighty%20Shot.webp" loading=lazy hidden/>
-    <img id="No_Skill" src="img/ashes/No%20Skill.webp" loading=lazy hidden/>
-    <img id="Parry" src="img/ashes/Parry.webp" loading=lazy hidden/>
-    <img id="Phantom_Slash" src="img/ashes/Phantom%20Slash.webp" loading=lazy hidden/>
-    <img id="Piercing_Fang" src="img/ashes/Piercing%20Fang.webp" loading=lazy hidden/>
-    <img id="Poison_Moth_Flight" src="img/ashes/Poison%20Moth%20Flight.webp" loading=lazy hidden/>
-    <img id="Poisonous_Mist" src="img/ashes/Poisonous%20Mist.webp" loading=lazy hidden/>
-    <img id="Prayerful_Strike" src="img/ashes/Prayerful%20Strike.webp" loading=lazy hidden/>
-    <img id="Prelate's_Charge" src="img/ashes/Prelate's%20Charge.webp" loading=lazy hidden/>
-    <img id="Quickstep" src="img/ashes/Quickstep.webp" loading=lazy hidden/>
-    <img id="Rain_of_Arrows" src="img/ashes/Rain%20of%20Arrows.webp" loading=lazy hidden/>
-    <img id="Raptor_of_the_Mists" src="img/ashes/Raptor%20of%20the%20Mists.webp" loading=lazy hidden/>
-    <img id="Repeating_Thrust" src="img/ashes/Repeating%20Thrust.webp" loading=lazy hidden/>
-    <img id="Royal_Knight's_Resolve" src="img/ashes/Royal%20Knight's%20Resolve.webp" loading=lazy hidden/>
-    <img id="Sacred_Blade" src="img/ashes/Sacred%20Blade.webp" loading=lazy hidden/>
-    <img id="Sacred_Order" src="img/ashes/Sacred%20Order.webp" loading=lazy hidden/>
-    <img id="Sacred_Ring_of_Light" src="img/ashes/Sacred%20Ring%20of%20Light.webp" loading=lazy hidden/>
-    <img id="Seppuku" src="img/ashes/Seppuku.webp" loading=lazy hidden/>
-    <img id="Shared_Order" src="img/ashes/Shared%20Order.webp" loading=lazy hidden/>
-    <img id="Shield_Bash" src="img/ashes/Shield%20Bash.webp" loading=lazy hidden/>
-    <img id="Shield_Crash" src="img/ashes/Shield%20Crash.webp" loading=lazy hidden/>
-    <img id="Sky_Shot" src="img/ashes/Sky%20Shot.webp" loading=lazy hidden/>
-    <img id="Spectral_Lance" src="img/ashes/Spectral%20Lance.webp" loading=lazy hidden/>
-    <img id="Spinning_Slash" src="img/ashes/Spinning%20Slash.webp" loading=lazy hidden/>
-    <img id="Spinning_Strikes" src="img/ashes/Spinning%20Strikes.webp" loading=lazy hidden/>
-    <img id="Spinning_Weapon" src="img/ashes/Spinning%20Weapon.webp" loading=lazy hidden/>
-    <img id="Square_Off" src="img/ashes/Square%20Off.webp" loading=lazy hidden/>
-    <img id="Stamp_(Sweep)" src="img/ashes/Stamp%20(Sweep).webp" loading=lazy hidden/>
-    <img id="Stamp_(Upward_Cut)" src="img/ashes/Stamp%20(Upward%20Cut).webp" loading=lazy hidden/>
-    <img id="Storm_Assault" src="img/ashes/Storm%20Assault.webp" loading=lazy hidden/>
-    <img id="Storm_Blade" src="img/ashes/Storm%20Blade.webp" loading=lazy hidden/>
-    <img id="Storm_Stomp" src="img/ashes/Storm%20Stomp.webp" loading=lazy hidden/>
-    <img id="Storm_Wall" src="img/ashes/Storm%20Wall.webp" loading=lazy hidden/>
-    <img id="Stormcaller" src="img/ashes/Stormcaller.webp" loading=lazy hidden/>
-    <img id="Sword_Dance" src="img/ashes/Sword%20Dance.webp" loading=lazy hidden/>
-    <img id="Thops's_Barrier" src="img/ashes/Thops's%20Barrier.webp" loading=lazy hidden/>
-    <img id="Through_and_Through" src="img/ashes/Through%20and%20Through.webp" loading=lazy hidden/>
-    <img id="Thunderbolt" src="img/ashes/Thunderbolt.webp" loading=lazy hidden/>
-    <img id="Troll's_Roar" src="img/ashes/Troll's%20Roar.webp" loading=lazy hidden/>
-    <img id="Unsheathe" src="img/ashes/Unsheathe.webp" loading=lazy hidden/>
-    <img id="Vacuum_Slice" src="img/ashes/Vacuum%20Slice.webp" loading=lazy hidden/>
-    <img id="Vow_of_the_Indomitable" src="img/ashes/Vow%20of%20the%20Indomitable.webp" loading=lazy hidden/>
-    <img id="War_Cry" src="img/ashes/War%20Cry.webp" loading=lazy hidden/>
-    <img id="Waves_of_Darkness" src="img/ashes/Waves%20of%20Darkness.webp" loading=lazy hidden/>
-    <img id="White_Shadow's_Lure" src="img/ashes/White%20Shadow's%20Lure.webp" loading=lazy hidden/>
-    <img id="Wild_Strikes" src="img/ashes/Wild%20Strikes.webp" loading=lazy hidden/>
+    <img id="Assassin's_Gambit" src="img/ashes/Assassin's%20Gambit.webp" loading="lazy" hidden/>
+    <img id="Barbaric_Roar" src="img/ashes/Barbaric%20Roar.webp" loading="lazy" hidden/>
+    <img id="Barrage" src="img/ashes/Barrage.webp" loading="lazy" hidden/>
+    <img id="Barricade_Shield" src="img/ashes/Barricade%20Shield.webp" loading="lazy" hidden/>
+    <img id="Beast's_Roar" src="img/ashes/Beast's%20Roar.webp" loading="lazy" hidden/>
+    <img id="Black_Flame_Tornado" src="img/ashes/Black%20Flame%20Tornado.webp" loading="lazy" hidden/>
+    <img id="Blood_Blade" src="img/ashes/Blood%20Blade.webp" loading="lazy" hidden/>
+    <img id="Blood_Tax" src="img/ashes/Blood%20Tax.webp" loading="lazy" hidden/>
+    <img id="Bloodhound's_Step" src="img/ashes/Bloodhound's%20Step.webp" loading="lazy" hidden/>
+    <img id="Bloody_Slash" src="img/ashes/Bloody%20Slash.webp" loading="lazy" hidden/>
+    <img id="Braggart's_Roar" src="img/ashes/Braggart's%20Roar.webp" loading="lazy" hidden/>
+    <img id="Carian_Grandeur" src="img/ashes/Carian%20Grandeur.webp" loading="lazy" hidden/>
+    <img id="Carian_Greatsword" src="img/ashes/Carian%20Greatsword.webp" loading="lazy" hidden/>
+    <img id="Carian_Retaliation" src="img/ashes/Carian%20Retaliation.webp" loading="lazy" hidden/>
+    <img id="Charge_Forth" src="img/ashes/Charge%20Forth.webp" loading="lazy" hidden/>
+    <img id="Chilling_Mist" src="img/ashes/Chilling%20Mist.webp" loading="lazy" hidden/>
+    <img id="Cragblade" src="img/ashes/Cragblade.webp" loading="lazy" hidden/>
+    <img id="Determination" src="img/ashes/Determination.webp" loading="lazy" hidden/>
+    <img id="Double_Slash" src="img/ashes/Double%20Slash.webp" loading="lazy" hidden/>
+    <img id="Earthshaker" src="img/ashes/Earthshaker.webp" loading="lazy" hidden/>
+    <img id="Enchanted_Shot" src="img/ashes/Enchanted%20Shot.webp" loading="lazy" hidden/>
+    <img id="Endure" src="img/ashes/Endure.webp" loading="lazy" hidden/>
+    <img id="Eruption" src="img/ashes/Eruption.webp" loading="lazy" hidden/>
+    <img id="Flame_of_the_Redmanes" src="img/ashes/Flame%20of%20the%20Redmanes.webp" loading="lazy" hidden/>
+    <img id="Flaming_Strike" src="img/ashes/Flaming%20Strike.webp" loading="lazy" hidden/>
+    <img id="Giant_Hunt" src="img/ashes/Giant%20Hunt.webp" loading="lazy" hidden/>
+    <img id="Glintblade_Phalanx" src="img/ashes/Glintblade%20Phalanx.webp" loading="lazy" hidden/>
+    <img id="Glintstone_Pebble" src="img/ashes/Glintstone%20Pebble.webp" loading="lazy" hidden/>
+    <img id="Golden_Land" src="img/ashes/Golden%20Land.webp" loading="lazy" hidden/>
+    <img id="Golden_Parry" src="img/ashes/Golden%20Parry.webp" loading="lazy" hidden/>
+    <img id="Golden_Slam" src="img/ashes/Golden%20Slam.webp" loading="lazy" hidden/>
+    <img id="Golden_Vow" src="img/ashes/Golden%20Vow.webp" loading="lazy" hidden/>
+    <img id="Gravitas" src="img/ashes/Gravitas.webp" loading="lazy" hidden/>
+    <img id="Ground_Slam" src="img/ashes/Ground%20Slam.webp" loading="lazy" hidden/>
+    <img id="Hoarah_Loux's_Earthshaker" src="img/ashes/Hoarah%20Loux's%20Earthshaker.webp" loading="lazy" hidden/>
+    <img id="Hoarfrost_Stomp" src="img/ashes/Hoarfrost%20Stomp.webp" loading="lazy" hidden/>
+    <img id="Holy_Ground" src="img/ashes/Holy%20Ground.webp" loading="lazy" hidden/>
+    <img id="Ice_Spear" src="img/ashes/Ice%20Spear.webp" loading="lazy" hidden/>
+    <img id="Impaling_Thrust" src="img/ashes/Impaling%20Thrust.webp" loading="lazy" hidden/>
+    <img id="Kick" src="img/ashes/Kick.webp" loading="lazy" hidden/>
+    <img id="Lifesteal_Fist" src="img/ashes/Lifesteal%20Fist.webp" loading="lazy" hidden/>
+    <img id="Lightning_Ram" src="img/ashes/Lightning%20Ram.webp" loading="lazy" hidden/>
+    <img id="Lightning_Slash" src="img/ashes/Lightning%20Slash.webp" loading="lazy" hidden/>
+    <img id="Lion's_Claw" src="img/ashes/Lion's%20Claw.webp" loading="lazy" hidden/>
+    <img id="Loretta's_Slash" src="img/ashes/Loretta's%20Slash.webp" loading="lazy" hidden/>
+    <img id="Mighty_Shot" src="img/ashes/Mighty%20Shot.webp" loading="lazy" hidden/>
+    <img id="No_Skill" src="img/ashes/No%20Skill.webp" loading="lazy" hidden/>
+    <img id="Parry" src="img/ashes/Parry.webp" loading="lazy" hidden/>
+    <img id="Phantom_Slash" src="img/ashes/Phantom%20Slash.webp" loading="lazy" hidden/>
+    <img id="Piercing_Fang" src="img/ashes/Piercing%20Fang.webp" loading="lazy" hidden/>
+    <img id="Poison_Moth_Flight" src="img/ashes/Poison%20Moth%20Flight.webp" loading="lazy" hidden/>
+    <img id="Poisonous_Mist" src="img/ashes/Poisonous%20Mist.webp" loading="lazy" hidden/>
+    <img id="Prayerful_Strike" src="img/ashes/Prayerful%20Strike.webp" loading="lazy" hidden/>
+    <img id="Prelate's_Charge" src="img/ashes/Prelate's%20Charge.webp" loading="lazy" hidden/>
+    <img id="Quickstep" src="img/ashes/Quickstep.webp" loading="lazy" hidden/>
+    <img id="Rain_of_Arrows" src="img/ashes/Rain%20of%20Arrows.webp" loading="lazy" hidden/>
+    <img id="Raptor_of_the_Mists" src="img/ashes/Raptor%20of%20the%20Mists.webp" loading="lazy" hidden/>
+    <img id="Repeating_Thrust" src="img/ashes/Repeating%20Thrust.webp" loading="lazy" hidden/>
+    <img id="Royal_Knight's_Resolve" src="img/ashes/Royal%20Knight's%20Resolve.webp" loading="lazy" hidden/>
+    <img id="Sacred_Blade" src="img/ashes/Sacred%20Blade.webp" loading="lazy" hidden/>
+    <img id="Sacred_Order" src="img/ashes/Sacred%20Order.webp" loading="lazy" hidden/>
+    <img id="Sacred_Ring_of_Light" src="img/ashes/Sacred%20Ring%20of%20Light.webp" loading="lazy" hidden/>
+    <img id="Seppuku" src="img/ashes/Seppuku.webp" loading="lazy" hidden/>
+    <img id="Shared_Order" src="img/ashes/Shared%20Order.webp" loading="lazy" hidden/>
+    <img id="Shield_Bash" src="img/ashes/Shield%20Bash.webp" loading="lazy" hidden/>
+    <img id="Shield_Crash" src="img/ashes/Shield%20Crash.webp" loading="lazy" hidden/>
+    <img id="Sky_Shot" src="img/ashes/Sky%20Shot.webp" loading="lazy" hidden/>
+    <img id="Spectral_Lance" src="img/ashes/Spectral%20Lance.webp" loading="lazy" hidden/>
+    <img id="Spinning_Slash" src="img/ashes/Spinning%20Slash.webp" loading="lazy" hidden/>
+    <img id="Spinning_Strikes" src="img/ashes/Spinning%20Strikes.webp" loading="lazy" hidden/>
+    <img id="Spinning_Weapon" src="img/ashes/Spinning%20Weapon.webp" loading="lazy" hidden/>
+    <img id="Square_Off" src="img/ashes/Square%20Off.webp" loading="lazy" hidden/>
+    <img id="Stamp_(Sweep)" src="img/ashes/Stamp%20(Sweep).webp" loading="lazy" hidden/>
+    <img id="Stamp_(Upward_Cut)" src="img/ashes/Stamp%20(Upward%20Cut).webp" loading="lazy" hidden/>
+    <img id="Storm_Assault" src="img/ashes/Storm%20Assault.webp" loading="lazy" hidden/>
+    <img id="Storm_Blade" src="img/ashes/Storm%20Blade.webp" loading="lazy" hidden/>
+    <img id="Storm_Stomp" src="img/ashes/Storm%20Stomp.webp" loading="lazy" hidden/>
+    <img id="Storm_Wall" src="img/ashes/Storm%20Wall.webp" loading="lazy" hidden/>
+    <img id="Stormcaller" src="img/ashes/Stormcaller.webp" loading="lazy" hidden/>
+    <img id="Sword_Dance" src="img/ashes/Sword%20Dance.webp" loading="lazy" hidden/>
+    <img id="Thops's_Barrier" src="img/ashes/Thops's%20Barrier.webp" loading="lazy" hidden/>
+    <img id="Through_and_Through" src="img/ashes/Through%20and%20Through.webp" loading="lazy" hidden/>
+    <img id="Thunderbolt" src="img/ashes/Thunderbolt.webp" loading="lazy" hidden/>
+    <img id="Troll's_Roar" src="img/ashes/Troll's%20Roar.webp" loading="lazy" hidden/>
+    <img id="Unsheathe" src="img/ashes/Unsheathe.webp" loading="lazy" hidden/>
+    <img id="Vacuum_Slice" src="img/ashes/Vacuum%20Slice.webp" loading="lazy" hidden/>
+    <img id="Vow_of_the_Indomitable" src="img/ashes/Vow%20of%20the%20Indomitable.webp" loading="lazy" hidden/>
+    <img id="War_Cry" src="img/ashes/War%20Cry.webp" loading="lazy" hidden/>
+    <img id="Waves_of_Darkness" src="img/ashes/Waves%20of%20Darkness.webp" loading="lazy" hidden/>
+    <img id="White_Shadow's_Lure" src="img/ashes/White%20Shadow's%20Lure.webp" loading="lazy" hidden/>
+    <img id="Wild_Strikes" src="img/ashes/Wild%20Strikes.webp" loading="lazy" hidden/>
 </div>
 
 <script src="js/ashes_of_war.js"></script>

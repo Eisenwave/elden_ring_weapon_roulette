@@ -5,40 +5,93 @@ const STAT_INPUT_FTH = document.getElementById("stat-input-fth");
 const STAT_INPUT_ARC = document.getElementById("stat-input-arc");
 
 const WEAPON_WHEEL_CONTAINER = document.getElementById("weapon-wheel-container");
+const OFFHAND_WHEEL_CONTAINER = document.getElementById("offhand-wheel-container");
 const ASHES_WHEEL_CONTAINER = document.getElementById("ashes-wheel-container");
+
 const WEAPON_WHEEL_SCROLLER = document.getElementById("weapon-wheel-scroller");
+const OFFHAND_WHEEL_SCROLLER = document.getElementById("offhand-wheel-scroller");
 const ASHES_WHEEL_SCROLLER = document.getElementById("ashes-wheel-scroller");
 
-function isWeaponUsable(weaponName) {
-    return WEAPONS[weaponName].str <= STAT_INPUT_STR.value * 1.5 &&
+const FILTER_NO_MAINHAND_SHIELD = document.getElementById("filter-no-mainhand-shield");
+const FILTER_NO_MAINHAND_STAFF = document.getElementById("filter-no-mainhand-staff");
+const FILTER_NO_MAINHAND_SEAL = document.getElementById("filter-no-mainhand-seal");
+const FILTER_NO_MAINHAND_CROSSBOW = document.getElementById("filter-no-mainhand-crossbow");
+const FILTER_NO_BHS = document.getElementById("filter-no-bhs");
+
+const TOGGLE_ALL = document.getElementById("toggle-all");
+
+function isWeaponCategoryEnabled(weaponName) {
+    const checkboxName = 'checkbox-' + WEAPONS[weaponName].category
+        .toLowerCase()
+        .replace(/ /g, '-');
+    const checkbox = document.getElementById(checkboxName);
+    if (!checkbox) {
+        throw new Error("Failed to find checkbox with id" + checkboxName)
+    }
+    return checkbox.checked;
+}
+
+function isWeaponFilteredOut(weaponName, isOffhand) {
+    if (isOffhand) {
+        return false;
+    }
+    const category = WEAPONS[weaponName].category;
+    switch (category) {
+        case 'Small Shield':
+        case 'Medium Shield':
+        case 'Greatshield':
+            return FILTER_NO_MAINHAND_SHIELD.checked;
+        case 'Glintstone Staff':
+            return FILTER_NO_MAINHAND_STAFF.checked;
+        case 'Sacred Seal':
+            return FILTER_NO_MAINHAND_SEAL.checked;
+        case 'Crossbow':
+            return FILTER_NO_MAINHAND_CROSSBOW.checked;
+    }
+    return false;
+}
+
+function isWeaponUsable(weaponName, isOffhand) {
+    if (isOffhand && WEAPONS[weaponName].type === 'two-handed') {
+        return false;
+    }
+    if (!isWeaponCategoryEnabled(weaponName) || isWeaponFilteredOut(weaponName, isOffhand)) {
+        return false;
+    }
+
+    const twoHandedStr = isOffhand ? 1 : 1.5;
+    return WEAPONS[weaponName].str <= STAT_INPUT_STR.value * twoHandedStr &&
         WEAPONS[weaponName].dex <= STAT_INPUT_DEX.value &&
         WEAPONS[weaponName].int <= STAT_INPUT_INT.value &&
         WEAPONS[weaponName].fth <= STAT_INPUT_FTH.value &&
         WEAPONS[weaponName].arc <= STAT_INPUT_ARC.value;
 }
 
-function collectUsableWeaponNames() {
-    return Object.keys(WEAPONS).filter(isWeaponUsable);
+function collectUsableWeaponNames(isOffhand) {
+    return Object.keys(WEAPONS).filter(w => isWeaponUsable(w, isOffhand));
 }
 
 function collectUsableAshNames() {
-    return Object.keys(ASHES_OF_WAR).filter(name => {
-        const weaponName = WEAPON_WHEEL_SCROLLER.children
-            .item(2)
-            .getAttribute('data-name');
-        // fallback option for non-infusible weapons
-        if (!WEAPONS[weaponName].infusible) {
-            return name === 'No Skill';
-        }
-        return ASHES_OF_WAR[name].includes(WEAPONS[weaponName].category);
-    });
+    return Object
+        .keys(ASHES_OF_WAR)
+        .filter(name => {
+            const weaponName = WEAPON_WHEEL_SCROLLER.children
+                .item(2)
+                .getAttribute('data-name');
+            // fallback option for non-infusible weapons
+            if (!WEAPONS[weaponName].infusible) {
+                return name === 'No Skill';
+            }
+            return ASHES_OF_WAR[name].includes(WEAPONS[weaponName].category);
+        })
+        .filter(name => !FILTER_NO_BHS.checked || name !== "Bloodhound's Step");
 }
 
-function createTile(name) {
+function createTile(name, detail) {
     let img = undefined;
     try {
         img = document.getElementById(name.replace(/ /g, '_'))
-            .cloneNode(false);
+            .cloneNode(true);
     } catch (e) {
         console.error("Failed to find image for " + name);
         console.error(e);
@@ -46,11 +99,12 @@ function createTile(name) {
     }
     img.removeAttribute('id');
     img.hidden = '';
-    img.className = 'tile';
+    img.classList.add('tile');
 
     const outerWrapper = document.createElement('div');
     outerWrapper.className = 'tile-outer-wrapper';
     outerWrapper.setAttribute('data-name', name);
+    outerWrapper.setAttribute('data-detail', detail ?? '');
 
     const wrapper = document.createElement('div');
     wrapper.className = 'tile-wrapper';
@@ -61,10 +115,21 @@ function createTile(name) {
     text.className = 'tile-text';
     wrapper.appendChild(text);
 
+    if (detail) {
+        const topText = document.createElement('span');
+        topText.className = 'tile-top-text';
+        topText.textContent = detail;
+        text.appendChild(topText);
+    }
+
+    const bottomTextContainer = document.createElement('div');
+    bottomTextContainer.className = 'tile-bottom-text-container';
+    text.appendChild(bottomTextContainer);
+
     const bottomText = document.createElement('span');
     bottomText.className = 'tile-bottom-text';
     bottomText.textContent = name;
-    text.appendChild(bottomText);
+    bottomTextContainer.appendChild(bottomText);
 
     return outerWrapper;
 }
@@ -82,10 +147,11 @@ function pickRandomElement(array) {
 }
 
 
-const TILE_COUNT = 500;
-const CHOSEN_TILE_INDEX = 400;
-const SCROLLING_STEPS = 100;
-const SCROLLING_DURATION = 1000 * 5;
+const TILE_COUNT = 100;
+const CHOSEN_TILE_INDEX = TILE_COUNT - 5;
+const SCROLLING_DURATION = 1000 * 8;
+const SCROLLING_STEPS_PER_SECOND = 10;
+const SCROLLING_STEPS = SCROLLING_DURATION / 1000 * SCROLLING_STEPS_PER_SECOND;
 const SCROLLING_DISTANCE = 160 * CHOSEN_TILE_INDEX;
 
 let scrollingStep = 0;
@@ -93,19 +159,55 @@ let scrollingIntervalId = undefined;
 
 function wheelCurve(x) {
     //return -x * (x - 2);
-    return Math.pow(x, 0.025);
+    return Math.pow(x, 0.1);
 }
 
-function fillWeaponWheel(scroller, limit) {
-    const usableWeapons = collectUsableWeaponNames();
+const TYPE_USE_WEIGHTS = {
+    "melee": [2 / 6, 3 / 6, 1 / 6],
+    "two-handed": [1, 0, 0],
+    "paired": [1 / 2, 1 / 4, 1 / 4],
+    "offhand": [1 / 8, 3 / 4, 1 / 8]
+};
+
+function chooseWeaponUse(weapon) {
+    const type = WEAPONS[weapon].type;
+    if (type === undefined) {
+        throw new Error("No weapon type for weapon " + weapon);
+    }
+
+    const weights = TYPE_USE_WEIGHTS[type];
+    if (weights === undefined) {
+        throw new Error("No weights found for weapon type " + type);
+    }
+    // weapons may have been chosen for which we only meet the STR requirement
+    // two-handed, so we have to avoid 1H or PS for them
+    if (WEAPONS[weapon].str > STAT_INPUT_STR.value) {
+        return '2H';
+    }
+
+    const sample = Math.random();
+    if (sample <= weights[0]) {
+        return '2H';
+    }
+    if (sample <= weights[0] + weights[1]) {
+        return '1H';
+    }
+    return 'PS';
+}
+
+function fillWeaponWheel(scroller, limit, isOffhand) {
+    const usableWeapons = collectUsableWeaponNames(isOffhand);
+    if (usableWeapons.length === 0) {
+        return false;
+    }
+
     const categoryMap = new Map();
 
     for (const weapon of usableWeapons) {
         const category = WEAPONS[weapon].category;
         if (categoryMap.has(category)) {
             categoryMap.get(category).push(weapon);
-        }
-        else {
+        } else {
             categoryMap.set(category, [weapon]);
         }
     }
@@ -117,9 +219,17 @@ function fillWeaponWheel(scroller, limit) {
 
     for (let i = 0; i < limit; ++i) {
         const category = pickRandomElement(partitionedUsableWeapons);
-        const card = createTile(pickRandomElement(category));
+        const weapon = pickRandomElement(category);
+        let use = undefined;
+        if (!isOffhand) {
+            use = WEAPONS[weapon].type === 'two-handed' ? undefined
+                : chooseWeaponUse(weapon);
+        }
+        const card = createTile(weapon, use);
         scroller.appendChild(card);
     }
+
+    return true;
 }
 
 function fillAshesWheel(scroller, limit) {
@@ -129,6 +239,8 @@ function fillAshesWheel(scroller, limit) {
         const card = createTile(pickRandomElement(usableAshes));
         scroller.appendChild(card);
     }
+
+    return true;
 }
 
 function completeSpinningAnimation(scroller) {
@@ -141,7 +253,10 @@ function completeSpinningAnimation(scroller) {
         scroller.lastChild.remove();
     }
     if (scroller === WEAPON_WHEEL_SCROLLER) {
-        const selectedWeapon = scroller.children[2].getAttribute('data-name');
+        const selected = scroller.children[2];
+        const selectedWeapon = selected.getAttribute('data-name');
+        const selectedUse = selected.getAttribute('data-detail');
+        setContainerActive(OFFHAND_WHEEL_CONTAINER, selectedUse === '1H');
         setContainerActive(ASHES_WHEEL_CONTAINER, WEAPONS[selectedWeapon].infusible);
     }
 
@@ -154,7 +269,11 @@ function playSpinningAnimation(scroller) {
     scrollingStep = 0;
     scrollingIntervalId = setInterval(() => {
         let progress = wheelCurve(scrollingStep++ / SCROLLING_STEPS);
-        scroller.scrollTo({top: 0, left: progress * SCROLLING_DISTANCE, behavior: "smooth"});
+        scroller.scrollTo({
+            top: 0,
+            left: progress * SCROLLING_DISTANCE,
+            behavior: "smooth"
+        });
 
         if (progress === 1) {
             clearInterval(scrollingIntervalId);
@@ -166,24 +285,33 @@ function playSpinningAnimation(scroller) {
 function setContainerActive(wheel, active) {
     if (active) {
         wheel.classList.remove("inactive");
-    }
-    else if (!wheel.classList.contains("inactive")) {
+    } else if (!wheel.classList.contains("inactive")) {
         wheel.classList.add("inactive");
     }
 }
 
-function spin(scroller, fillFunction) {
+function spin(scroller, fillFunction, isOffhand) {
     if (scrollingStep !== 0) {
         return;
     }
+    if (scroller === WEAPON_WHEEL_SCROLLER) {
+        setContainerActive(OFFHAND_WHEEL_CONTAINER, false);
+        setContainerActive(ASHES_WHEEL_CONTAINER, false);
+    }
 
-    fillFunction(scroller, TILE_COUNT);
-    playSpinningAnimation(scroller);
+    if (fillFunction(scroller, TILE_COUNT, isOffhand)) {
+        playSpinningAnimation(scroller);
+    }
 }
 
 WEAPON_WHEEL_CONTAINER.addEventListener('click', e => {
     if (!WEAPON_WHEEL_CONTAINER.classList.contains('inactive'))
-        spin(WEAPON_WHEEL_SCROLLER, fillWeaponWheel);
+        spin(WEAPON_WHEEL_SCROLLER, fillWeaponWheel, false);
+})
+
+OFFHAND_WHEEL_CONTAINER.addEventListener('click', e => {
+    if (!OFFHAND_WHEEL_CONTAINER.classList.contains('inactive'))
+        spin(OFFHAND_WHEEL_SCROLLER, fillWeaponWheel, true);
 })
 
 ASHES_WHEEL_CONTAINER.addEventListener('click', e => {
@@ -199,17 +327,27 @@ for ([key, val] of Object.entries(WEAPONS)) {
     val.arc = val.arc ?? 0;
 }
 
-for ([category, weapons] of Object.entries(WEAPON_CATEGORIES)) {
-    for (const weapon of weapons) {
+for ([category, info] of Object.entries(WEAPON_CATEGORIES)) {
+    for (const weapon of info.weapons) {
         WEAPONS[weapon].category = category;
+        WEAPONS[weapon].type = info.type;
     }
 }
 
-fillWeaponWheel(WEAPON_WHEEL_SCROLLER, 5);
+fillWeaponWheel(WEAPON_WHEEL_SCROLLER, 5, false);
+fillWeaponWheel(OFFHAND_WHEEL_SCROLLER, 5, true);
+
 
 for (let i = 0; i < 5; ++i) {
     const ashTile = createTile('No Skill');
     ASHES_WHEEL_SCROLLER.appendChild(ashTile);
 }
 
+setContainerActive(OFFHAND_WHEEL_CONTAINER, false);
 setContainerActive(ASHES_WHEEL_CONTAINER, false);
+
+TOGGLE_ALL.addEventListener('change', _ => {
+    for (const box of document.querySelectorAll('[id^=checkbox]')) {
+        box.checked = TOGGLE_ALL.checked;
+    }
+})

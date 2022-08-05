@@ -251,7 +251,7 @@ WEAPONS = {
     "Meteoric Ore Blade": {"str": 15, "dex": 14, "int": 18, "infusible": false},
     "Moonveil": {"str": 12, "dex": 18, "int": 23, "infusible": false},
     "Nagakiba": {"str": 18, "dex": 22, "infusible": true},
-    "Rivers of Blood": {"str": 12, "dex": 18, "infusible": false},
+    "Rivers of Blood": {"str": 12, "dex": 18, "arc": 20, "infusible": false},
     "Serpentbone Blade": {"str": 11, "dex": 22, "infusible": false},
     "Uchigatana": {"str": 11, "dex": 15, "infusible": true},
     "Composite Bow": {"str": 15, "dex": 15, "infusible": true},
