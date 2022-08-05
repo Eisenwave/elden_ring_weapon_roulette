@@ -1,3 +1,6 @@
+const BODY = document.getElementById("body");
+const MAIN = document.getElementById("main");
+
 const STAT_INPUT_STR = document.getElementById("stat-input-str");
 const STAT_INPUT_DEX = document.getElementById("stat-input-dex");
 const STAT_INPUT_INT = document.getElementById("stat-input-int");
@@ -19,6 +22,8 @@ const FILTER_NO_MAINHAND_CROSSBOW = document.getElementById("filter-no-mainhand-
 const FILTER_NO_BHS = document.getElementById("filter-no-bhs");
 
 const TOGGLE_ALL = document.getElementById("toggle-all");
+
+const GREENSCREEN = document.getElementById("greenscreen");
 
 function isWeaponCategoryEnabled(weaponName) {
     const checkboxName = 'checkbox-' + WEAPONS[weaponName].category
@@ -349,5 +354,17 @@ setContainerActive(ASHES_WHEEL_CONTAINER, false);
 TOGGLE_ALL.addEventListener('change', _ => {
     for (const box of document.querySelectorAll('[id^=checkbox]')) {
         box.checked = TOGGLE_ALL.checked;
+    }
+})
+
+GREENSCREEN.addEventListener('change', _ => {
+    console.log(GREENSCREEN);
+    if (GREENSCREEN.checked) {
+        BODY.classList.add('greenscreen');
+        MAIN.classList.remove('drop-shadow');
+    }
+    else {
+        BODY.classList.remove('greenscreen');
+        MAIN.classList.add('drop-shadow');
     }
 })

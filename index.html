@@ -4,12 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <title>Elden Ring Weapon Roulette</title>
+    <link rel="stylesheet" href="fonts.css">
     <link rel="stylesheet" href="main.css">
 </head>
-<body>
-<main>
+<body id="body">
+<main id="main" class="drop-shadow">
     <div id="content-wrapper">
-        <h2>Click to Spin!</h2>
+        <h1>Elden Ring Weapon Roulette</h1>
+        <span id="credits-text">by Eisenwave</span>
+        <a href="https://github.com/Eisenwave">
+            <img class="social-icon" src="img/icon/github.png">
+        </a>
+        <a href="https://www.twitch.tv/eisenwave">
+            <img class="social-icon" src="img/icon/twitch.png">
+        </a>
+
 
         <h3>Mainhand Weapon</h3>
         <div id="weapon-wheel-container" class="wheel-container">
@@ -32,9 +41,8 @@
             <div class="wheel-triangle"></div>
         </div>
 
-        <h2 id="h-settings">Restrictions</h2>
-
         <div id="settings-container">
+            <h2 id="h-settings">Restrictions</h2>
             <div id="settings-left-and-right">
                 <div>
                     <h3>Build</h3>
@@ -108,6 +116,13 @@
                 </div>
             </div>
         </div>
+        <div id="display-settings-container">
+            <h2>Display Settings</h2>
+            <div class="display-container">
+                <label>Enable green background</label><input id="greenscreen" type="checkbox">
+            </div>
+        </div>
+
     </div>
 </main>
 </body>

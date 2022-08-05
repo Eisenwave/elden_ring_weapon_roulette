@@ -3,7 +3,7 @@ body {
     background: url('./img/background/20220805125106_1_blurred.jpg') no-repeat center center fixed;
     background-size: cover;
 
-    font-family: sans-serif;
+    font-family: 'Trebuchet MS', sans-serif;
 
     margin: 0;
     padding: 0;
@@ -11,8 +11,13 @@ body {
     color: #eeeeee;
 }
 
+.greenscreen {
+    background: #00ff00 !important;
+}
+
 main {
     background: #515151;
+    border-radius: 10px;
     min-height: 720px;
     width: fit-content;
 
@@ -21,12 +26,34 @@ main {
 
     margin-top: 40px;
     margin-bottom: 80px;
+}
 
+.drop-shadow {
     filter: drop-shadow(2px 2px 4px black);
 }
 
-h2 {
+h1 {
+    padding-top: 1em;
+    text-transform: uppercase;
 
+    font-family: 'Mantinia Regular', sans-serif;
+    font-weight: bolder;
+    letter-spacing: 3px;
+
+    margin-bottom: 0;
+}
+
+h1, h2, h3 {
+    color: #ebe5c6;
+}
+
+#credits-text {
+}
+
+.social-icon {
+    width: 16px;
+    height: 16px;
+    filter: grayscale(50%);
 }
 
 #content-wrapper {
@@ -91,6 +118,14 @@ h2 {
     margin-bottom: 0;
 }
 
+#settings-container {
+    margin-top: 4.5em;
+}
+
+#display-settings-container {
+    padding-bottom: 4.5em;
+}
+
 #settings-left-and-right {
     display: grid;
     grid-template-columns: 25em 10em;
@@ -99,6 +134,12 @@ h2 {
 #stats-container {
     display: grid;
     grid-template-columns: 1.5em 4em;
+    grid-gap: 0.5em;
+}
+
+.display-container {
+    display: grid;
+    grid-template-columns: 15em 4em;
     grid-gap: 0.5em;
 }
 
