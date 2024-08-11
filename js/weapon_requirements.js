@@ -375,5 +375,8 @@ WEAPONS = {
     "Magma Whip Candlestick": {"str": 8, "dex": 16, "fth": 18, "infusible": false},
     "Thorned Whip": {"str": 8, "dex": 16, "infusible": true},
     "Urumi": {"str": 10, "dex": 19, "infusible": true},
-    "Whip": {"str": 8, "dex": 14, "infusible": true}
+    "Whip": {"str": 8, "dex": 14, "infusible": true},
+    // dlc weapons
+    "Dueling Shield": {"str": 15, "dex": 14, "infusible": false}, //true
+    "Carian Thrusting Shield": {"str": 17, "dex": 13, "int": 15, "infusible": false} //true
 }

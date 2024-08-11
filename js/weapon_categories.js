@@ -545,5 +545,12 @@ WEAPON_CATEGORIES = {
             "Urumi",
             "Whip"
         ]
+    },
+    "Thrusting Shield": {
+        "type": "melee",
+        "weapons": [
+            "Dueling Shield",
+            "Carian Thrusting Shield"
+        ]
     }
 }
