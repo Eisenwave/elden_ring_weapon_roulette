@@ -546,11 +546,66 @@ WEAPON_CATEGORIES = {
             "Whip"
         ]
     },
+    // dlc new weapon types
     "Thrusting Shield": {
         "type": "melee",
         "weapons": [
             "Dueling Shield",
             "Carian Thrusting Shield"
         ]
-    }
+    },
+    "Hand-to-Hand Art": {
+        "type": "paired",
+        "weapons": [
+            "Dryleaf Arts",
+            "Dane's Footwork"
+        ]
+    },
+    "Throwing Blade": {
+        "type": "paired",
+        "weapons": [
+            "Smithscript Dagger"
+        ]
+    },
+    "Backhand Blade": {
+        "type": "paired",
+        "weapons": [
+            "Backhand Blade",
+            "Smithscript Cirque",
+            "Curseblade's Cirque"
+        ]
+    },
+    "Perfume Bottle": {
+        "type": "meele",
+        "weapons": [
+            "Firespark Perfume Bottle",
+            "Chilling Perfume Bottle",
+            "Frenzyflame Perfume Bottle",
+            "Lighting Perfume Bottle",
+            "Deadly Poison Perfume Bottle"
+        ]
+    },
+    "Beast Claw": {
+        "type": "paired",
+        "weapons": [
+            "Red Bear's Claw",
+            "Beast Claw(Weapon)"
+        ]
+    },
+    "Light Greatsword": {
+        "type": "meele",
+        "weapons": [
+            "Milady",
+            "Leda's Sword",
+            "Rellana's Twin Blades"
+        ]
+    },
+    "Great Katana": {
+        "type": "meele",
+        "weapons": [
+            "Great Katana",
+            "Dragon-Hunter's Great Katana",
+            "Rakshasa's Great Katana"
+        ]
+    },
 }

@@ -380,5 +380,31 @@ WEAPONS = {
     //TODO: Add the weapons to the ashes of war
     // Thrusting Shield
     "Dueling Shield": {"str": 15, "dex": 14, "infusible": false}, //true
-    "Carian Thrusting Shield": {"str": 17, "dex": 13, "int": 15, "infusible": false} //true
+    "Carian Thrusting Shield": {"str": 17, "dex": 13, "int": 15, "infusible": false}, //true
+    // Hand2Hand
+    "Dryleaf Arts": {"str": 8, "dex": 8, "infusible": false}, //true
+    "Dane's Footwork": {"str": 8, "dex": 8, "infusible": false}, //true
+    // throwing blade
+    "Smithscript Dagger": {"str": 5, "dex": 11, "int": 11, "fth": 11, "infusible": false}, //true
+    // backhand
+    "Backhand Blade": {"str": 10, "dex": 13, "infusible": false}, //true
+    "Smithscript Cirque": {"str": 9, "dex": 14, "int": 11, "fth": 11, "infusible": false}, //true
+    "Curseblade's Cirque": {"str": 9, "dex": 22, "infusible": false},
+    // perfume
+    "Firespark Perfume Bottle": {"str": 3, "dex": 14, "infusible": false}, //true
+    "Chilling Perfume Bottle": {"str": 3, "dex": 13, "int": 13, "infusible": false}, //true
+    "Frenzyflame Perfume Bottle": {"str": 3, "dex": 10, "int": 12, "fth": 12, "infusible": false}, //true
+    "Lighting Perfume Bottle": {"str": 3, "dex": 16, "fth": 14, "infusible": false}, //true
+    "Deadly Poison Perfume Bottle": {"str": 3, "dex": 13, "arc": 18, "infusible": false}, //true
+    //beast claw
+    "Red Bear's Claw": {"str": 20, "dex": 10, "infusible": false},
+    "Beast Claw(Weapon)": {"str": 13, "dex": 11, "infusible": false}, //true
+    // light greatsword
+    "Milady": {"str": 12, "dex": 17, "infusible": false}, //true
+    "Leda's Sword": {"str": 11, "dex": 22, "fth": 19, "infusible": false},
+    "Rellana's Twin Blades": {"str": 13, "dex": 16, "int": 16, "fth": 16, "infusible": false},
+    // great katana
+    "Great Katana": {"str": 14, "dex": 18, "infusible": false}, //true
+    "Dragon-Hunter's Great Katana": {"str": 15, "dex": 20, "infusible": false},
+    "Rakshasa's Great Katana": {"str": 12, "dex": 27, "infusible": false},
 }
