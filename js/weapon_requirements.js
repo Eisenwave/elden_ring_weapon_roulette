@@ -377,6 +377,8 @@ WEAPONS = {
     "Urumi": {"str": 10, "dex": 19, "infusible": true},
     "Whip": {"str": 8, "dex": 14, "infusible": true},
     // dlc weapons
+    //TODO: Add the weapons to the ashes of war
+    // Thrusting Shield
     "Dueling Shield": {"str": 15, "dex": 14, "infusible": false}, //true
     "Carian Thrusting Shield": {"str": 17, "dex": 13, "int": 15, "infusible": false} //true
 }
