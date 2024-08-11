@@ -61,7 +61,22 @@ function isWeaponFilteredOut(weaponName, isOffhand) {
     return false;
 }
 
+//checks both ashes and weapons, loaded in dlc-exclusives
+function isDLCExclusive(name){
+    const checkbox = document.getElementById("filter-dlc");
+    if(!checkbox){
+        throw new Error("Failed to find checkbox with id filter-dlc")
+    }
+    if(checkbox.checked){
+        return false;
+    }
+    return DLC_EXCLUSIVES[name];
+}
+
 function isWeaponUsable(weaponName, isOffhand) {
+    if(isDLCExclusive(weaponName)){
+        return false;
+    }
     if (isOffhand && WEAPONS[weaponName].type === 'two-handed') {
         return false;
     }
@@ -82,6 +97,8 @@ function collectUsableWeaponNames(isOffhand) {
 }
 
 function collectUsableAshNames() {
+    // TODO: find a way to segregate dlc ashes from normal ashes
+
     return Object
         .keys(ASHES_OF_WAR)
         .filter(name => {
