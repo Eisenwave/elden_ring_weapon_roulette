@@ -319,6 +319,9 @@ function fillWeaponWheel(scroller, limit, isOffhand) {
 
 function fillAshesWheel(scroller, limit) {
     const usableAshes = collectUsableAshNames();
+    if(usableAshes.length == 0){
+        return false;
+    }
 
     for (let i = 0; i < limit; ++i) {
         const card = createTile(pickRandomElement(usableAshes));
