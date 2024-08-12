@@ -138,10 +138,9 @@ function collectUsableWeaponNames(isOffhand) {
 }
 
 function collectUsableAshNames() {
-    // TODO: find a way to segregate dlc ashes from normal ashes
-
     return Object
         .keys(ASHES_OF_WAR)
+        .filter(name => !isDLCExclusive(name))
         .filter(name => {
             const weaponName = WEAPON_WHEEL_SCROLLER.children
                 .item(2)
