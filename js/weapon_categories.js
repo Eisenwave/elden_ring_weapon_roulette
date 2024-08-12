@@ -576,12 +576,12 @@ WEAPON_CATEGORIES = {
         ]
     },
     "Perfume Bottle": {
-        "type": "meele",
+        "type": "melee",
         "weapons": [
             "Firespark Perfume Bottle",
             "Chilling Perfume Bottle",
             "Frenzyflame Perfume Bottle",
-            "Lighting Perfume Bottle",
+            "Lightning Perfume Bottle",
             "Deadly Poison Perfume Bottle"
         ]
     },
@@ -593,7 +593,7 @@ WEAPON_CATEGORIES = {
         ]
     },
     "Light Greatsword": {
-        "type": "meele",
+        "type": "melee",
         "weapons": [
             "Milady",
             "Leda's Sword",
@@ -601,7 +601,7 @@ WEAPON_CATEGORIES = {
         ]
     },
     "Great Katana": {
-        "type": "meele",
+        "type": "melee",
         "weapons": [
             "Great Katana",
             "Dragon-Hunter's Great Katana",
