@@ -1194,5 +1194,26 @@ ASHES_OF_WAR = {
         "Medium Shield",
         "Greatshield",
         "Torch"
+    ],
+    //DLC Ashes of War
+    "Dryleaf Whirlwind": [
+        "Hand-to-Hand Art"
+    ],
+    "Aspects of the Crucible Wings": [
+        "Dagger",
+        "Straight Sword",
+        "Light Greatsword",
+        "Greatsword",
+        "Colossal Sword",
+        "Curved Sword",
+        "Curved Greatsword",
+        "Katanas",
+        "Great Katana",
+        "Twinblade",
+        "Thrusting Sword",
+        "Heavy Thrusting Sword",
+        "Spear",
+        "Great Spear",
+        "Halberd"
     ]
 }
