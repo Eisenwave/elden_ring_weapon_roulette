@@ -70,8 +70,26 @@ function enableCheckboxes(checkboxId, isEnabled){
     }
 }
 
-function toggleOnlyDlcCheckbox(){
-    const includeDlcCheckbox = document.getElementById('filter-dlc');
+function toggleDLCCheckboxes(){
+    const includeDLCCheckbox = document.getElementById('filter-dlc');
+    toggleOnlyDlcCheckbox(includeDLCCheckbox.checked, includeDLCCheckbox);
+    toggleWeaponCheckbox(includeDLCCheckbox.checked);
+}
+
+function toggleOnlyDlcCheckbox(isEnabled){
+    const checkbox = document.getElementById("only-dlc")
+    if(!checkbox){
+        throw new Error("Failed to find checkbox with id" + checkboxID);
+    }
+    if(checkbox){
+        checkbox.disabled = !isEnabled;
+    }
+    if (!isEnabled.checked) {
+        checkbox.checked = false;
+    }
+}
+
+function toggleWeaponCheckbox(isEnabled){
     const checkboxes = [
         "checkbox-backhand-blade",
         "checkbox-beast-claw",
@@ -81,9 +99,8 @@ function toggleOnlyDlcCheckbox(){
         "checkbox-perfume-bottle",
         "checkbox-throwing-blade",
         "checkbox-thrusting-shield",
-        "only-dlc"
     ];
-    checkboxes.forEach(checkboxId => enableCheckboxes(checkboxId, includeDlcCheckbox.checked));
+    checkboxes.forEach(checkboxId => enableCheckboxes(checkboxId, isEnabled));
 }
 
 //checks both ashes and weapons, loaded in dlc-exclusives
@@ -98,7 +115,7 @@ function isDLCExclusive(name){
     return DLC_EXCLUSIVES[name];
 }
 
-function onlyDLCWeapons(name){
+function onlyDLCExclusives(name){
     const checkbox = document.getElementById("only-dlc");
     if(!checkbox){
         throw new Error("Failed to find checkbox with id only-dlc");
@@ -115,7 +132,7 @@ function isWeaponUsable(weaponName, isOffhand) {
         return false;
     }
     // excludes non dlc weapons
-    if(onlyDLCWeapons(weaponName)){
+    if(onlyDLCExclusives(weaponName)){
         return false
     }
     if (isOffhand && WEAPONS[weaponName].type === 'two-handed') {
@@ -141,6 +158,7 @@ function collectUsableAshNames() {
     return Object
         .keys(ASHES_OF_WAR)
         .filter(name => !isDLCExclusive(name))
+        .filter(name => !onlyDLCExclusives(name))
         .filter(name => {
             const weaponName = WEAPON_WHEEL_SCROLLER.children
                 .item(2)
