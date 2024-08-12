@@ -244,3 +244,8 @@ label {
     margin-left: 1em;
     width: 4em;
 }
+
+input[type="checkbox"]:disabled {
+    cursor: not-allowed;
+    opacity: 0.5; /* Makes the checkbox appear grayed out */
+}
