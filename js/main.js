@@ -60,12 +60,37 @@ function isWeaponFilteredOut(weaponName, isOffhand) {
     }
     return false;
 }
+function enableCheckboxes(checkboxId, isEnabled){
+    const checkbox = document.getElementById(checkboxId)
+    if(!checkbox){
+        throw new Error("Failed to find checkbox with id" + checkboxID);
+    }
+    if(checkbox){
+        checkbox.disabled = !isEnabled;
+    }
+}
+
+function toggleOnlyDlcCheckbox(){
+    const includeDlcCheckbox = document.getElementById('filter-dlc');
+    const checkboxes = [
+        "checkbox-backhand-blade",
+        "checkbox-beast-claw",
+        "checkbox-great-katana",
+        "checkbox-hand-to-hand-art",
+        "checkbox-light-greatsword",
+        "checkbox-perfume-bottle",
+        "checkbox-throwing-blade",
+        "checkbox-thrusting-shield",
+        "only-dlc"
+    ];
+    checkboxes.forEach(checkboxId => enableCheckboxes(checkboxId, includeDlcCheckbox.checked));
+}
 
 //checks both ashes and weapons, loaded in dlc-exclusives
 function isDLCExclusive(name){
     const checkbox = document.getElementById("filter-dlc");
     if(!checkbox){
-        throw new Error("Failed to find checkbox with id filter-dlc")
+        throw new Error("Failed to find checkbox with id filter-dlc");
     }
     if(checkbox.checked){
         return false;
@@ -73,9 +98,25 @@ function isDLCExclusive(name){
     return DLC_EXCLUSIVES[name];
 }
 
+function onlyDLCWeapons(name){
+    const checkbox = document.getElementById("only-dlc");
+    if(!checkbox){
+        throw new Error("Failed to find checkbox with id only-dlc");
+    }
+    if(checkbox.checked){
+        return !DLC_EXCLUSIVES[name];
+    }
+    return false;
+}
+
 function isWeaponUsable(weaponName, isOffhand) {
+    // include dlc weapons
     if(isDLCExclusive(weaponName)){
         return false;
+    }
+    // excludes non dlc weapons
+    if(onlyDLCWeapons(weaponName)){
+        return false
     }
     if (isOffhand && WEAPONS[weaponName].type === 'two-handed') {
         return false;
