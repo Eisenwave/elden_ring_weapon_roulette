@@ -394,7 +394,7 @@ WEAPONS = {
     "Firespark Perfume Bottle": {"str": 3, "dex": 14, "infusible": false}, //true
     "Chilling Perfume Bottle": {"str": 3, "dex": 13, "int": 13, "infusible": false}, //true
     "Frenzyflame Perfume Bottle": {"str": 3, "dex": 10, "int": 12, "fth": 12, "infusible": false}, //true
-    "Lighting Perfume Bottle": {"str": 3, "dex": 16, "fth": 14, "infusible": false}, //true
+    "Lightning Perfume Bottle": {"str": 3, "dex": 16, "fth": 14, "infusible": false}, //true
     "Deadly Poison Perfume Bottle": {"str": 3, "dex": 13, "arc": 18, "infusible": false}, //true
     //beast claw
     "Red Bear's Claw": {"str": 20, "dex": 10, "infusible": false},

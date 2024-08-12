@@ -10,7 +10,7 @@ DLC_EXCLUSIVES = {
     "Firespark Perfume Bottle": true,
     "Chilling Perfume Bottle": true,
     "Frenzyflame Perfume Bottle": true,
-    "Lighting Perfume Bottle": true,
+    "Lightning Perfume Bottle": true,
     "Deadly Poison Perfume Bottle": true,
     "Red Bear's Claw": true,
     "Beast Claw(Weapon)": true,
