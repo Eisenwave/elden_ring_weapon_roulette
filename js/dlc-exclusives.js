@@ -1,4 +1,5 @@
 DLC_EXCLUSIVES = {
+    // new weapon types
     "Dueling Shield": true,
     "Carian Thrusting Shield": true,
     "Dryleaf Arts": true,
@@ -102,4 +103,7 @@ DLC_EXCLUSIVES = {
     "Black Steel Twinblade": true,
     "Euporia": true,
     "Tooth Whip": true,
+    // all ashes
+    "Dryleaf Whirlwind": true,
+    "Aspects of the Crucible Wings": true,
 }
