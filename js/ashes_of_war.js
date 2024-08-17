@@ -1315,6 +1315,7 @@ ASHES_OF_WAR = {
         "Throwing Blade",
         "Backhand Blade",
         "Beast Claw",
+        "Light Greatsword",
     ],
     "Assassin's Gambit": [
         "Dagger",
@@ -1322,6 +1323,7 @@ ASHES_OF_WAR = {
         "Katana",
         "Thrusting Sword",
         "Throwing Blade",
+        "Light Greatsword",
     ],
     "Mighty Shot": [
         "Light Bow",
