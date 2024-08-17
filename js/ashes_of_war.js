@@ -1727,7 +1727,7 @@ ASHES_OF_WAR = {
         "Greatshield",
         "Thrusting Shield",
     ],
-    // 2 missing ashes of war
+    // seppuku was missing
     "Seppuku": [
         "Straight Sword",
         "Greatsword",
@@ -1742,8 +1742,5 @@ ASHES_OF_WAR = {
         "Halberd",
         "Light Greatsword",
         "Great Katana",
-    ],
-    "": [
-
     ],
 }
