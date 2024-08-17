@@ -398,7 +398,7 @@ WEAPONS = {
     "Deadly Poison Perfume Bottle": { "str": 3, "dex": 13, "arc": 18, "infusible": true },
     //beast claw
     "Red Bear's Claw": { "str": 20, "dex": 10, "infusible": false },
-    "Beast Claw(Weapon)": { "str": 13, "dex": 11, "infusible": false }, //true
+    "Beast Claw(Weapon)": { "str": 13, "dex": 11, "infusible": true },
     // light greatsword
     "Milady": { "str": 12, "dex": 17, "infusible": false }, //true
     "Leda's Sword": { "str": 11, "dex": 22, "fth": 19, "infusible": false },

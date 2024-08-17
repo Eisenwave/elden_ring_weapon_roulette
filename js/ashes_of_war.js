@@ -72,6 +72,7 @@ ASHES_OF_WAR = {
         "Claw",
         "Colossal Weapon",
         "Backhand Blade",
+        "Beast Claw",
     ],
     "Kick": [
         "Dagger",
@@ -102,6 +103,7 @@ ASHES_OF_WAR = {
         "Throwing Blade",
         "Backhand Blade",
         "Perfume Bottle",
+        "Beast Claw",
     ],
     "Endure": [
         "Dagger",
@@ -132,6 +134,7 @@ ASHES_OF_WAR = {
         "Throwing Blade",
         "Backhand Blade",
         "Perfume Bottle",
+        "Beast Claw",
     ],
     "Ground Slam": [
         "Dagger",
@@ -162,6 +165,7 @@ ASHES_OF_WAR = {
         "Throwing Blade",
         "Backhand Blade",
         "Perfume Bottle",
+        "Beast Claw",
     ],
     "Earthshaker": [
         "Colossal Sword",
@@ -199,6 +203,7 @@ ASHES_OF_WAR = {
         "Throwing Blade",
         "Backhand Blade",
         "Perfume Bottle",
+        "Beast Claw",
     ],
     "War Cry": [
         "Straight Sword",
@@ -222,6 +227,7 @@ ASHES_OF_WAR = {
         "Claw",
         "Colossal Weapon",
         "Hand-to-Hand Art",
+        "Beast Claw",
     ],
     "Barbaric Roar": [
         "Straight Sword",
@@ -245,6 +251,7 @@ ASHES_OF_WAR = {
         "Claw",
         "Colossal Weapon",
         "Hand-to-Hand Art",
+        "Beast Claw",
     ],
     "Braggart's Roar": [
         "Straight Sword",
@@ -268,6 +275,7 @@ ASHES_OF_WAR = {
         "Claw",
         "Colossal Weapon",
         "Hand-to-Hand Art",
+        "Beast Claw",
     ],
     "Troll's Roar": [
         "Greatsword",
@@ -396,6 +404,7 @@ ASHES_OF_WAR = {
         "Throwing Blade",
         "Backhand Blade",
         "Perfume Bottle",
+        "Beast Claw",
     ],
     "Bloodhound's Step": [
         "Dagger",
@@ -426,6 +435,7 @@ ASHES_OF_WAR = {
         "Throwing Blade",
         "Backhand Blade",
         "Perfume Bottle",
+        "Beast Claw",
     ],
     "Raptor of the Mists": [
         "Dagger",
@@ -578,6 +588,7 @@ ASHES_OF_WAR = {
         "Throwing Blade",
         "Backhand Blade",
         "Perfume Bottle",
+        "Beast Claw",
     ],
     "Vacuum Slice": [
         "Dagger",
@@ -626,6 +637,7 @@ ASHES_OF_WAR = {
         "Colossal Weapon",
         "Thrusting Shield",
         "Backhand Blade",
+        "Beast Claw",
     ],
     "Royal Knight's Resolve": [
         "Dagger",
@@ -653,6 +665,7 @@ ASHES_OF_WAR = {
         "Colossal Weapon",
         "Thrusting Shield",
         "Backhand Blade",
+        "Beast Claw",
     ],
     "Glintstone Pebble": [
         "Dagger",
@@ -787,6 +800,7 @@ ASHES_OF_WAR = {
         "Claw",
         "Thrusting Shield",
         "Backhand Blade",
+        "Beast Claw",
     ],
     "Flame of the Redmanes": [
         "Dagger",
@@ -816,6 +830,7 @@ ASHES_OF_WAR = {
         "Hand-to-Hand Art",
         "Throwing Blade",
         "Backhand Blade",
+        "Beast Claw",
     ],
     "Eruption": [
         "Greatsword",
@@ -865,6 +880,7 @@ ASHES_OF_WAR = {
         "Thrusting Shield",
         "Throwing Blade",
         "Backhand Blade",
+        "Beast Claw",
     ],
     "Lightning Slash": [
         "Dagger",
@@ -912,6 +928,7 @@ ASHES_OF_WAR = {
         "Hand-to-Hand Art",
         "Throwing Blade",
         "Backhand Blade",
+        "Beast Claw",
     ],
     "Sacred Blade": [
         "Dagger",
@@ -978,6 +995,7 @@ ASHES_OF_WAR = {
         "Colossal Weapon",
         "Thrusting Shield",
         "Backhand Blade",
+        "Beast Claw",
     ],
     "Shared Order": [
         "Dagger",
@@ -1004,6 +1022,7 @@ ASHES_OF_WAR = {
         "Whip",
         "Colossal Weapon",
         "Backhand Blade",
+        "Beast Claw",
     ],
     "Golden Land": [
         "Colossal Sword",
@@ -1037,6 +1056,7 @@ ASHES_OF_WAR = {
         "Hand-to-Hand Art",
         "Throwing Blade",
         "Backhand Blade",
+        "Beast Claw",
     ],
     "Golden Vow": [
         "Dagger",
@@ -1066,6 +1086,7 @@ ASHES_OF_WAR = {
         "Hand-to-Hand Art",
         "Throwing Blade",
         "Backhand Blade",
+        "Beast Claw",
     ],
     "Vow of the Indomitable": [
         "Small Shield",
@@ -1204,6 +1225,7 @@ ASHES_OF_WAR = {
         "Hand-to-Hand Art",
         "Throwing Blade",
         "Backhand Blade",
+        "Beast Claw",
     ],
     "Spectral Lance": [
         "Spear",
@@ -1214,6 +1236,7 @@ ASHES_OF_WAR = {
         "Fist",
         "Claw",
         "Hand-to-Hand Art",
+        "Beast Claw",
     ],
     "White Shadow's Lure": [
         "Dagger",
@@ -1243,6 +1266,7 @@ ASHES_OF_WAR = {
         "Hand-to-Hand Art",
         "Throwing Blade",
         "Backhand Blade",
+        "Beast Claw",
     ],
     "Assassin's Gambit": [
         "Dagger",
