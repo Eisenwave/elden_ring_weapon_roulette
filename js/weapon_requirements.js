@@ -378,7 +378,7 @@ WEAPONS = {
     "Whip": { "str": 8, "dex": 14, "infusible": true },
     // dlc weapons
     //TODO: Add the weapons to the ashes of war
-    // Thrusting Shield
+    // Thrusting Shield //this does show up?
     "Dueling Shield": { "str": 15, "dex": 14, "infusible": true },
     "Carian Thrusting Shield": { "str": 17, "dex": 13, "int": 15, "infusible": true },
     // Hand2Hand
@@ -387,8 +387,8 @@ WEAPONS = {
     // throwing blade
     "Smithscript Dagger": { "str": 5, "dex": 11, "int": 11, "fth": 11, "infusible": true },
     // backhand
-    "Backhand Blade": { "str": 10, "dex": 13, "infusible": false }, //true
-    "Smithscript Cirque": { "str": 9, "dex": 14, "int": 11, "fth": 11, "infusible": false }, //true
+    "Backhand Blade": { "str": 10, "dex": 13, "infusible": true },
+    "Smithscript Cirque": { "str": 9, "dex": 14, "int": 11, "fth": 11, "infusible": true },
     "Curseblade's Cirque": { "str": 9, "dex": 22, "infusible": false },
     // perfume
     "Firespark Perfume Bottle": { "str": 3, "dex": 14, "infusible": false }, //true

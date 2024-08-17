@@ -70,7 +70,8 @@ ASHES_OF_WAR = {
         "Reaper",
         "Fist",
         "Claw",
-        "Colossal Weapon"
+        "Colossal Weapon",
+        "Backhand Blade",
     ],
     "Kick": [
         "Dagger",
@@ -99,6 +100,7 @@ ASHES_OF_WAR = {
         "Thrusting Shield",
         "Hand-to-Hand Art",
         "Throwing Blade",
+        "Backhand Blade",
     ],
     "Endure": [
         "Dagger",
@@ -127,6 +129,7 @@ ASHES_OF_WAR = {
         "Thrusting Shield",
         "Hand-to-Hand Art",
         "Throwing Blade",
+        "Backhand Blade",
     ],
     "Ground Slam": [
         "Dagger",
@@ -155,6 +158,7 @@ ASHES_OF_WAR = {
         "Thrusting Shield",
         "Hand-to-Hand Art",
         "Throwing Blade",
+        "Backhand Blade",
     ],
     "Earthshaker": [
         "Colossal Sword",
@@ -190,6 +194,7 @@ ASHES_OF_WAR = {
         "Thrusting Shield",
         "Hand-to-Hand Art",
         "Throwing Blade",
+        "Backhand Blade",
     ],
     "War Cry": [
         "Straight Sword",
@@ -284,6 +289,7 @@ ASHES_OF_WAR = {
         "Halberd",
         "Reaper",
         "Throwing Blade",
+        "Backhand Blade",
     ],
     "Impaling Thrust": [
         "Dagger",
@@ -352,6 +358,7 @@ ASHES_OF_WAR = {
         "Halberd",
         "Reaper",
         "Throwing Blade",
+        "Backhand Blade",
     ],
     "Unsheathe": [
         "Katana"
@@ -383,6 +390,7 @@ ASHES_OF_WAR = {
         "Thrusting Shield",
         "Hand-to-Hand Art",
         "Throwing Blade",
+        "Backhand Blade",
     ],
     "Bloodhound's Step": [
         "Dagger",
@@ -411,6 +419,7 @@ ASHES_OF_WAR = {
         "Thrusting Shield",
         "Hand-to-Hand Art",
         "Throwing Blade",
+        "Backhand Blade",
     ],
     "Raptor of the Mists": [
         "Dagger",
@@ -439,6 +448,7 @@ ASHES_OF_WAR = {
         "Thrusting Shield",
         "Hand-to-Hand Art",
         "Throwing Blade",
+        "Backhand Blade",
     ],
     "Beast's Roar": [
         "Dagger",
@@ -467,6 +477,7 @@ ASHES_OF_WAR = {
         "Thrusting Shield",
         "Hand-to-Hand Art",
         "Throwing Blade",
+        "Backhand Blade",
     ],
     "Square Off": [
         "Straight Sword"
@@ -557,6 +568,7 @@ ASHES_OF_WAR = {
         "Thrusting Shield",
         "Hand-to-Hand Art",
         "Throwing Blade",
+        "Backhand Blade",
     ],
     "Vacuum Slice": [
         "Dagger",
@@ -604,6 +616,7 @@ ASHES_OF_WAR = {
         "Whip",
         "Colossal Weapon",
         "Thrusting Shield",
+        "Backhand Blade",
     ],
     "Royal Knight's Resolve": [
         "Dagger",
@@ -630,6 +643,7 @@ ASHES_OF_WAR = {
         "Whip",
         "Colossal Weapon",
         "Thrusting Shield",
+        "Backhand Blade",
     ],
     "Glintstone Pebble": [
         "Dagger",
@@ -701,6 +715,7 @@ ASHES_OF_WAR = {
         "Reaper",
         "Thrusting Shield",
         "Throwing Blade",
+        "Backhand Blade",
     ],
     "Loretta's Slash": [
         "Twinblade",
@@ -737,6 +752,7 @@ ASHES_OF_WAR = {
         "Reaper",
         "Colossal Weapon",
         "Thrusting Shield",
+        "Backhand Blade",
     ],
     "Flaming Strike": [
         "Dagger",
@@ -761,6 +777,7 @@ ASHES_OF_WAR = {
         "Fist",
         "Claw",
         "Thrusting Shield",
+        "Backhand Blade",
     ],
     "Flame of the Redmanes": [
         "Dagger",
@@ -789,6 +806,7 @@ ASHES_OF_WAR = {
         "Thrusting Shield",
         "Hand-to-Hand Art",
         "Throwing Blade",
+        "Backhand Blade",
     ],
     "Eruption": [
         "Greatsword",
@@ -837,6 +855,7 @@ ASHES_OF_WAR = {
         "Colossal Weapon",
         "Thrusting Shield",
         "Throwing Blade",
+        "Backhand Blade",
     ],
     "Lightning Slash": [
         "Dagger",
@@ -883,6 +902,7 @@ ASHES_OF_WAR = {
         "Thrusting Shield",
         "Hand-to-Hand Art",
         "Throwing Blade",
+        "Backhand Blade",
     ],
     "Sacred Blade": [
         "Dagger",
@@ -948,6 +968,7 @@ ASHES_OF_WAR = {
         "Whip",
         "Colossal Weapon",
         "Thrusting Shield",
+        "Backhand Blade",
     ],
     "Shared Order": [
         "Dagger",
@@ -972,7 +993,8 @@ ASHES_OF_WAR = {
         "Fist",
         "Claw",
         "Whip",
-        "Colossal Weapon"
+        "Colossal Weapon",
+        "Backhand Blade",
     ],
     "Golden Land": [
         "Colossal Sword",
@@ -1005,6 +1027,7 @@ ASHES_OF_WAR = {
         "Thrusting Shield",
         "Hand-to-Hand Art",
         "Throwing Blade",
+        "Backhand Blade",
     ],
     "Golden Vow": [
         "Dagger",
@@ -1033,6 +1056,7 @@ ASHES_OF_WAR = {
         "Thrusting Shield",
         "Hand-to-Hand Art",
         "Throwing Blade",
+        "Backhand Blade",
     ],
     "Vow of the Indomitable": [
         "Small Shield",
@@ -1076,6 +1100,7 @@ ASHES_OF_WAR = {
         "Katana",
         "Thrusting Sword",
         "Throwing Blade",
+        "Backhand Blade",
     ],
     "Blood Blade": [
         "Dagger",
@@ -1085,6 +1110,7 @@ ASHES_OF_WAR = {
         "Twinblade",
         "Thrusting Sword",
         "Throwing Blade",
+        "Backhand Blade",
     ],
     "Bloody Slash": [
         "Dagger",
@@ -1168,6 +1194,7 @@ ASHES_OF_WAR = {
         "Thrusting Shield",
         "Hand-to-Hand Art",
         "Throwing Blade",
+        "Backhand Blade",
     ],
     "Spectral Lance": [
         "Spear",
@@ -1206,6 +1233,7 @@ ASHES_OF_WAR = {
         "Thrusting Shield",
         "Hand-to-Hand Art",
         "Throwing Blade",
+        "Backhand Blade",
     ],
     "Assassin's Gambit": [
         "Dagger",
@@ -1340,6 +1368,7 @@ ASHES_OF_WAR = {
         "Beast Claw",
     ],
     "Blind Spot": [
+        "Backhand Blade",
         "Backhand Blade",
     ],
     "Swift Slash": [
