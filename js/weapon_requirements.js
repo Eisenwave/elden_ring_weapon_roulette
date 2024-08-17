@@ -385,7 +385,7 @@ WEAPONS = {
     "Dryleaf Arts": { "str": 8, "dex": 8, "infusible": true },
     "Dane's Footwork": { "str": 8, "dex": 8, "infusible": true },
     // throwing blade
-    "Smithscript Dagger": { "str": 5, "dex": 11, "int": 11, "fth": 11, "infusible": false }, //true
+    "Smithscript Dagger": { "str": 5, "dex": 11, "int": 11, "fth": 11, "infusible": true },
     // backhand
     "Backhand Blade": { "str": 10, "dex": 13, "infusible": false }, //true
     "Smithscript Cirque": { "str": 9, "dex": 14, "int": 11, "fth": 11, "infusible": false }, //true
