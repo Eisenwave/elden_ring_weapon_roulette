@@ -404,7 +404,7 @@ WEAPONS = {
     "Leda's Sword": { "str": 11, "dex": 22, "fth": 19, "infusible": false },
     "Rellana's Twin Blades": { "str": 13, "dex": 16, "int": 16, "fth": 16, "infusible": false },
     // great katana
-    "Great Katana": { "str": 14, "dex": 18, "infusible": false }, //true
+    "Great Katana": { "str": 14, "dex": 18, "infusible": true },
     "Dragon-Hunter's Great Katana": { "str": 15, "dex": 20, "infusible": false },
     "Rakshasa's Great Katana": { "str": 12, "dex": 27, "infusible": false },
     // all the remaing already classified weapons
