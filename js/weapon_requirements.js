@@ -400,7 +400,7 @@ WEAPONS = {
     "Red Bear's Claw": { "str": 20, "dex": 10, "infusible": false },
     "Beast Claw(Weapon)": { "str": 13, "dex": 11, "infusible": true },
     // light greatsword
-    "Milady": { "str": 12, "dex": 17, "infusible": false }, //true
+    "Milady": { "str": 12, "dex": 17, "infusible": true },
     "Leda's Sword": { "str": 11, "dex": 22, "fth": 19, "infusible": false },
     "Rellana's Twin Blades": { "str": 13, "dex": 16, "int": 16, "fth": 16, "infusible": false },
     // great katana
