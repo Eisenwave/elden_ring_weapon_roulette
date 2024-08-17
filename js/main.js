@@ -126,6 +126,14 @@ function onlyDLCExclusives(name){
     return false;
 }
 
+function noAshes(name){
+    const checkbox = document.getElementById("no-ashes");
+    if(!checkbox){
+        throw new Error("Failed to find checkbox with id no-ashes");
+    }
+    return !checkbox.checked;
+}
+
 function isWeaponUsable(weaponName, isOffhand) {
     // include dlc weapons
     if(isDLCExclusive(weaponName)){
@@ -159,6 +167,7 @@ function collectUsableAshNames() {
         .keys(ASHES_OF_WAR)
         .filter(name => !isDLCExclusive(name))
         .filter(name => !onlyDLCExclusives(name))
+        .filter(name => !noAshes(name))
         .filter(name => {
             const weaponName = WEAPON_WHEEL_SCROLLER.children
                 .item(2)
@@ -405,7 +414,10 @@ function spin(scroller, fillFunction, isOffhand) {
 
     if (fillFunction(scroller, TILE_COUNT, isOffhand)) {
         playSpinningAnimation(scroller);
+        return; //instead of if/else so it can be extended
     }
+    //deactivates wheal, so it obvious when there is no weapon
+    setContainerActive(WEAPON_WHEEL_CONTAINER, false); 
 }
 
 WEAPON_WHEEL_CONTAINER.addEventListener('click', e => {
