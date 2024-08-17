@@ -391,11 +391,11 @@ WEAPONS = {
     "Smithscript Cirque": { "str": 9, "dex": 14, "int": 11, "fth": 11, "infusible": true },
     "Curseblade's Cirque": { "str": 9, "dex": 22, "infusible": false },
     // perfume
-    "Firespark Perfume Bottle": { "str": 3, "dex": 14, "infusible": false }, //true
-    "Chilling Perfume Bottle": { "str": 3, "dex": 13, "int": 13, "infusible": false }, //true
-    "Frenzyflame Perfume Bottle": { "str": 3, "dex": 10, "int": 12, "fth": 12, "infusible": false }, //true
-    "Lightning Perfume Bottle": { "str": 3, "dex": 16, "fth": 14, "infusible": false }, //true
-    "Deadly Poison Perfume Bottle": { "str": 3, "dex": 13, "arc": 18, "infusible": false }, //true
+    "Firespark Perfume Bottle": { "str": 3, "dex": 14, "infusible": true },
+    "Chilling Perfume Bottle": { "str": 3, "dex": 13, "int": 13, "infusible": true },
+    "Frenzyflame Perfume Bottle": { "str": 3, "dex": 10, "int": 12, "fth": 12, "infusible": true },
+    "Lightning Perfume Bottle": { "str": 3, "dex": 16, "fth": 14, "infusible": true },
+    "Deadly Poison Perfume Bottle": { "str": 3, "dex": 13, "arc": 18, "infusible": true },
     //beast claw
     "Red Bear's Claw": { "str": 20, "dex": 10, "infusible": false },
     "Beast Claw(Weapon)": { "str": 13, "dex": 11, "infusible": false }, //true

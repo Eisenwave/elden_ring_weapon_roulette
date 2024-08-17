@@ -101,6 +101,7 @@ ASHES_OF_WAR = {
         "Hand-to-Hand Art",
         "Throwing Blade",
         "Backhand Blade",
+        "Perfume Bottle",
     ],
     "Endure": [
         "Dagger",
@@ -130,6 +131,7 @@ ASHES_OF_WAR = {
         "Hand-to-Hand Art",
         "Throwing Blade",
         "Backhand Blade",
+        "Perfume Bottle",
     ],
     "Ground Slam": [
         "Dagger",
@@ -159,6 +161,7 @@ ASHES_OF_WAR = {
         "Hand-to-Hand Art",
         "Throwing Blade",
         "Backhand Blade",
+        "Perfume Bottle",
     ],
     "Earthshaker": [
         "Colossal Sword",
@@ -195,6 +198,7 @@ ASHES_OF_WAR = {
         "Hand-to-Hand Art",
         "Throwing Blade",
         "Backhand Blade",
+        "Perfume Bottle",
     ],
     "War Cry": [
         "Straight Sword",
@@ -391,6 +395,7 @@ ASHES_OF_WAR = {
         "Hand-to-Hand Art",
         "Throwing Blade",
         "Backhand Blade",
+        "Perfume Bottle",
     ],
     "Bloodhound's Step": [
         "Dagger",
@@ -420,6 +425,7 @@ ASHES_OF_WAR = {
         "Hand-to-Hand Art",
         "Throwing Blade",
         "Backhand Blade",
+        "Perfume Bottle",
     ],
     "Raptor of the Mists": [
         "Dagger",
@@ -449,6 +455,7 @@ ASHES_OF_WAR = {
         "Hand-to-Hand Art",
         "Throwing Blade",
         "Backhand Blade",
+        "Perfume Bottle",
     ],
     "Beast's Roar": [
         "Dagger",
@@ -478,6 +485,7 @@ ASHES_OF_WAR = {
         "Hand-to-Hand Art",
         "Throwing Blade",
         "Backhand Blade",
+        "Perfume Bottle",
     ],
     "Square Off": [
         "Straight Sword"
@@ -569,6 +577,7 @@ ASHES_OF_WAR = {
         "Hand-to-Hand Art",
         "Throwing Blade",
         "Backhand Blade",
+        "Perfume Bottle",
     ],
     "Vacuum Slice": [
         "Dagger",
