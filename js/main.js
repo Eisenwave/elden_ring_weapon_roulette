@@ -127,13 +127,13 @@ function onlyDLCExclusives(name){
 }
 
 // used to test the wheel functions
-// function noAshes(name){
-//     const checkbox = document.getElementById("no-ashes");
-//     if(!checkbox){
-//         throw new Error("Failed to find checkbox with id no-ashes");
-//     }
-//     return checkbox.checked;
-// }
+function noAshes(name){
+    const checkbox = document.getElementById("filter-no-ashes");
+    if(!checkbox){
+        throw new Error("Failed to find checkbox with id no-ashes");
+    }
+    return checkbox.checked;
+}
 
 function isWeaponUsable(weaponName, isOffhand) {
     // include dlc weapons
@@ -177,11 +177,13 @@ function isAshUsableForWeapon(name){
 function collectUsableAshNames() {
     return Object
         .keys(ASHES_OF_WAR)
-        .filter(name => !isDLCExclusive(name))
-        .filter(name => !onlyDLCExclusives(name))
-        //.filter(name => !noAshes(name))
-        .filter(name => isAshUsableForWeapon(name)) //extracted to a seperate function
-        .filter(name => !FILTER_NO_BHS.checked || name !== "Bloodhound's Step");
+        .filter(name => 
+            !noAshes(name)&&
+            !isDLCExclusive(name) &&
+            !onlyDLCExclusives(name) &&
+            isAshUsableForWeapon(name) && //extracted to a seperate function
+            (name !== "Bloodhound's Step" || !FILTER_NO_BHS.checked)
+        );
 }
 
 function createTile(name, detail) {
@@ -359,12 +361,15 @@ function completeSpinningAnimation(scroller) {
 
     if (scroller === WEAPON_WHEEL_SCROLLER) {
         const selected = scroller.children[2];
-        const selectedWeapon = selected.getAttribute('data-name');
         const selectedUse = selected.getAttribute('data-detail');
+        const selectedWeapon = selected.getAttribute('data-name');
         setContainerActive(OFFHAND_WHEEL_CONTAINER, selectedUse === '1H');
-        setContainerActive(ASHES_WHEEL_CONTAINER, WEAPONS[selectedWeapon].infusible);
+        if(fillAshesWheel()){
+            setContainerActive(ASHES_WHEEL_CONTAINER, WEAPONS[selectedWeapon].infusible);
+        }     
     }
 
+    
     scrollingStep = 0;
 }
 
@@ -417,7 +422,7 @@ function spin(scroller, fillFunction, isOffhand) {
 
     if (fillFunction(scroller, TILE_COUNT, isOffhand)) {
         setContainerActive(scroller, true);
-        playSpinningAnimation(scroller);
+        playSpinningAnimation(scroller, fillFunction);
         return; //replaces else-statement
     }
     //deactivates wheal, when fill returns false, cause its empty
