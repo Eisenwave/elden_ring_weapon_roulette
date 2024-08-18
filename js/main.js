@@ -127,7 +127,7 @@ function onlyDLCExclusives(name){
 }
 
 // used to test the wheel functions
-function noAshes(name){
+function noAshes(){
     const checkbox = document.getElementById("filter-no-ashes");
     if(!checkbox){
         throw new Error("Failed to find checkbox with id no-ashes");
@@ -178,7 +178,7 @@ function collectUsableAshNames() {
     return Object
         .keys(ASHES_OF_WAR)
         .filter(name => 
-            !noAshes(name)&&
+            !noAshes()&&
             !isDLCExclusive(name) &&
             !onlyDLCExclusives(name) &&
             isAshUsableForWeapon(name) && //extracted to a seperate function
@@ -359,18 +359,19 @@ function completeSpinningAnimation(scroller) {
         scroller.lastChild.remove();
     }
 
+    scrollingStep = 0;
+
     if (scroller === WEAPON_WHEEL_SCROLLER) {
         const selected = scroller.children[2];
         const selectedUse = selected.getAttribute('data-detail');
         const selectedWeapon = selected.getAttribute('data-name');
         setContainerActive(OFFHAND_WHEEL_CONTAINER, selectedUse === '1H');
-        if(fillAshesWheel()){
-            setContainerActive(ASHES_WHEEL_CONTAINER, WEAPONS[selectedWeapon].infusible);
+        setContainerActive(ASHES_WHEEL_CONTAINER, WEAPONS[selectedWeapon].infusible);
+        if(noAshes()){
+            setContainerActive(ASHES_WHEEL_CONTAINER, false);
+            return;
         }     
     }
-
-    
-    scrollingStep = 0;
 }
 
 // I had a great day
