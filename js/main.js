@@ -71,20 +71,20 @@ function enableCheckboxes(checkboxId, isEnabled){
 }
 
 function toggleDLCCheckboxes(){
-    const includeDLCCheckbox = document.getElementById('filter-dlc');
+    const includeDLCCheckbox = document.getElementById('filter-no-dlc');
     toggleOnlyDlcCheckbox(includeDLCCheckbox.checked, includeDLCCheckbox);
     toggleWeaponCheckbox(includeDLCCheckbox.checked);
 }
 
 function toggleOnlyDlcCheckbox(isEnabled){
-    const checkbox = document.getElementById("only-dlc")
+    const checkbox = document.getElementById("filter-no-base")
     if(!checkbox){
         throw new Error("Failed to find checkbox with id" + checkboxID);
     }
     if(checkbox){
         checkbox.disabled = !isEnabled;
     }
-    if (!isEnabled.checked) {
+    if(!isEnabled.checked){
         checkbox.checked = false;
     }
 }
@@ -105,9 +105,9 @@ function toggleWeaponCheckbox(isEnabled){
 
 //checks both ashes and weapons, loaded in dlc-exclusives
 function isDLCExclusive(name){
-    const checkbox = document.getElementById("filter-dlc");
+    const checkbox = document.getElementById("filter-no-dlc");
     if(!checkbox){
-        throw new Error("Failed to find checkbox with id filter-dlc");
+        throw new Error("Failed to find checkbox with id filter-no-dlc");
     }
     if(checkbox.checked){
         return false;
@@ -116,9 +116,9 @@ function isDLCExclusive(name){
 }
 
 function onlyDLCExclusives(name){
-    const checkbox = document.getElementById("only-dlc");
+    const checkbox = document.getElementById("filter-no-base");
     if(!checkbox){
-        throw new Error("Failed to find checkbox with id only-dlc");
+        throw new Error("Failed to find checkbox with id filter-no-base");
     }
     if(checkbox.checked){
         return !DLC_EXCLUSIVES[name];
@@ -126,21 +126,22 @@ function onlyDLCExclusives(name){
     return false;
 }
 
-function noAshes(name){
-    const checkbox = document.getElementById("no-ashes");
-    if(!checkbox){
-        throw new Error("Failed to find checkbox with id no-ashes");
-    }
-    return !checkbox.checked;
-}
+// used to test the wheel functions
+// function noAshes(name){
+//     const checkbox = document.getElementById("no-ashes");
+//     if(!checkbox){
+//         throw new Error("Failed to find checkbox with id no-ashes");
+//     }
+//     return checkbox.checked;
+// }
 
 function isWeaponUsable(weaponName, isOffhand) {
     // include dlc weapons
-    if(isDLCExclusive(weaponName)){
+    if(isDLCExclusive(weaponName)) {
         return false;
     }
     // excludes non dlc weapons
-    if(onlyDLCExclusives(weaponName)){
+    if(onlyDLCExclusives(weaponName)) {
         return false
     }
     if (isOffhand && WEAPONS[weaponName].type === 'two-handed') {
@@ -162,22 +163,24 @@ function collectUsableWeaponNames(isOffhand) {
     return Object.keys(WEAPONS).filter(w => isWeaponUsable(w, isOffhand));
 }
 
+function isAshUsableForWeapon(name){
+    const weaponName = WEAPON_WHEEL_SCROLLER.children
+        .item(2)
+        .getAttribute('data-name');
+    // fallback option for non-infusible weapons
+    if (!WEAPONS[weaponName].infusible) {
+        return name === 'No Skill';
+    }
+    return ASHES_OF_WAR[name].includes(WEAPONS[weaponName].category);
+}
+
 function collectUsableAshNames() {
     return Object
         .keys(ASHES_OF_WAR)
         .filter(name => !isDLCExclusive(name))
         .filter(name => !onlyDLCExclusives(name))
-        .filter(name => !noAshes(name))
-        .filter(name => {
-            const weaponName = WEAPON_WHEEL_SCROLLER.children
-                .item(2)
-                .getAttribute('data-name');
-            // fallback option for non-infusible weapons
-            if (!WEAPONS[weaponName].infusible) {
-                return name === 'No Skill';
-            }
-            return ASHES_OF_WAR[name].includes(WEAPONS[weaponName].category);
-        })
+        //.filter(name => !noAshes(name))
+        .filter(name => isAshUsableForWeapon(name)) //extracted to a seperate function
         .filter(name => !FILTER_NO_BHS.checked || name !== "Bloodhound's Step");
 }
 
@@ -347,7 +350,7 @@ function completeSpinningAnimation(scroller) {
     for (let i = 0; i < 5; ++i) {
         const copy = scroller.children.item(CHOSEN_TILE_INDEX + i).cloneNode(true);
         scroller.children.item(i).replaceWith(copy);
-        scroller.scrollTo({top: 0, left: 0, behavior: "instant"});
+        scroller.scrollTo({ top: 0, left: 0, behavior: "instant" });
     }
     scroller.children.item(2).firstElementChild.firstElementChild.classList.add('highlighted')
     while (scroller.children.length > 5) {
@@ -413,11 +416,12 @@ function spin(scroller, fillFunction, isOffhand) {
     }
 
     if (fillFunction(scroller, TILE_COUNT, isOffhand)) {
+        setContainerActive(scroller, true);
         playSpinningAnimation(scroller);
-        return; //instead of if/else so it can be extended
+        return; //replaces else-statement
     }
-    //deactivates wheal, so it obvious when there is no weapon
-    setContainerActive(WEAPON_WHEEL_CONTAINER, false); 
+    //deactivates wheal, when fill returns false, cause its empty
+    setContainerActive(scroller, false);
 }
 
 WEAPON_WHEEL_CONTAINER.addEventListener('click', e => {
