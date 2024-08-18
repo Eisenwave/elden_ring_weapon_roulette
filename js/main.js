@@ -178,7 +178,7 @@ function collectUsableAshNames() {
     return Object
         .keys(ASHES_OF_WAR)
         .filter(name => 
-            !noAshes()&&
+            !noAshes()&& //so it leaves the function earlier
             !isDLCExclusive(name) &&
             !onlyDLCExclusives(name) &&
             isAshUsableForWeapon(name) && //extracted to a seperate function
@@ -366,8 +366,8 @@ function completeSpinningAnimation(scroller) {
         const selectedUse = selected.getAttribute('data-detail');
         const selectedWeapon = selected.getAttribute('data-name');
         setContainerActive(OFFHAND_WHEEL_CONTAINER, selectedUse === '1H');
-        setContainerActive(ASHES_WHEEL_CONTAINER, WEAPONS[selectedWeapon].infusible);
-        if(noAshes()){
+        setContainerActive(ASHES_WHEEL_CONTAINER, WEAPONS[selectedWeapon].infusible); //enable wheel
+        if(noAshes()){ //disable the wheel if no ashes is enabled
             setContainerActive(ASHES_WHEEL_CONTAINER, false);
             return;
         }     
