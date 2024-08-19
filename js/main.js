@@ -15,11 +15,16 @@ const WEAPON_WHEEL_SCROLLER = document.getElementById("weapon-wheel-scroller");
 const OFFHAND_WHEEL_SCROLLER = document.getElementById("offhand-wheel-scroller");
 const ASHES_WHEEL_SCROLLER = document.getElementById("ashes-wheel-scroller");
 
+const INCLUDE_DLC = document.getElementById('filter-no-dlc');
+
+const NO_ASHES = document.getElementById("filter-no-ashes");
 const FILTER_NO_MAINHAND_SHIELD = document.getElementById("filter-no-mainhand-shield");
 const FILTER_NO_MAINHAND_STAFF = document.getElementById("filter-no-mainhand-staff");
 const FILTER_NO_MAINHAND_SEAL = document.getElementById("filter-no-mainhand-seal");
 const FILTER_NO_MAINHAND_CROSSBOW = document.getElementById("filter-no-mainhand-crossbow");
 const FILTER_NO_BHS = document.getElementById("filter-no-bhs");
+const NO_BASE = document.getElementById("filter-no-base")
+
 
 const TOGGLE_ALL = document.getElementById("toggle-all");
 
@@ -65,27 +70,18 @@ function enableCheckboxes(checkboxId, isEnabled){
     if(!checkbox){
         throw new Error("Failed to find checkbox with id" + checkboxID);
     }
-    if(checkbox){
-        checkbox.disabled = !isEnabled;
-    }
+    checkbox.disabled = !isEnabled;
 }
 
 function toggleDLCCheckboxes(){
-    const includeDLCCheckbox = document.getElementById('filter-no-dlc');
-    toggleOnlyDlcCheckbox(includeDLCCheckbox.checked, includeDLCCheckbox);
-    toggleWeaponCheckbox(includeDLCCheckbox.checked);
+    toggleOnlyDlcCheckbox(INCLUDE_DLC.checked);
+    toggleWeaponCheckbox(INCLUDE_DLC.checked);
 }
 
 function toggleOnlyDlcCheckbox(isEnabled){
-    const checkbox = document.getElementById("filter-no-base")
-    if(!checkbox){
-        throw new Error("Failed to find checkbox with id" + checkboxID);
-    }
-    if(checkbox){
-        checkbox.disabled = !isEnabled;
-    }
-    if(!isEnabled.checked){
-        checkbox.checked = false;
+    NO_BASE.disabled = !isEnabled;
+    if(!isEnabled){
+        NO_BASE.checked = false;
     }
 }
 
@@ -105,34 +101,17 @@ function toggleWeaponCheckbox(isEnabled){
 
 //checks both ashes and weapons, loaded in dlc-exclusives
 function isDLCExclusive(name){
-    const checkbox = document.getElementById("filter-no-dlc");
-    if(!checkbox){
-        throw new Error("Failed to find checkbox with id filter-no-dlc");
-    }
-    if(checkbox.checked){
+    if(INCLUDE_DLC.checked){
         return false;
     }
     return DLC_EXCLUSIVES[name];
 }
 
 function onlyDLCExclusives(name){
-    const checkbox = document.getElementById("filter-no-base");
-    if(!checkbox){
-        throw new Error("Failed to find checkbox with id filter-no-base");
-    }
-    if(checkbox.checked){
-        return !DLC_EXCLUSIVES[name];
+    if(NO_BASE.checked){
+        return !DLC_EXCLUSIVES[name]; 
     }
     return false;
-}
-
-// check if ashes are disabled
-function noAshes(){
-    const checkbox = document.getElementById("filter-no-ashes");
-    if(!checkbox){
-        throw new Error("Failed to find checkbox with id no-ashes");
-    }
-    return checkbox.checked;
 }
 
 function isWeaponUsable(weaponName, isOffhand) {
@@ -179,7 +158,7 @@ function collectUsableAshNames() {
         .keys(ASHES_OF_WAR)
         .filter(name =>
             //order important, so it leaves the function earlier
-            !noAshes()&& 
+            !NO_ASHES.checked&& 
             !isDLCExclusive(name) &&
             !onlyDLCExclusives(name) &&
             isAshUsableForWeapon(name) &&
@@ -369,7 +348,7 @@ function completeSpinningAnimation(scroller) {
         setContainerActive(OFFHAND_WHEEL_CONTAINER, selectedUse === '1H');
         setContainerActive(ASHES_WHEEL_CONTAINER, WEAPONS[selectedWeapon].infusible);
         // this does not cover the possibility that there may not be ashes, even though a weapon is infusible
-        if(noAshes()){
+        if(NO_ASHES.checked){
             setContainerActive(ASHES_WHEEL_CONTAINER, false);
             return;
         }     
