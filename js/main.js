@@ -55,6 +55,7 @@ function isWeaponFilteredOut(weaponName, isOffhand) {
         case 'Small Shield':
         case 'Medium Shield':
         case 'Greatshield':
+        case 'Thrusting Shield':
             return FILTER_NO_MAINHAND_SHIELD.checked;
         case 'Glintstone Staff':
             return FILTER_NO_MAINHAND_STAFF.checked;
