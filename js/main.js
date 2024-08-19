@@ -126,7 +126,7 @@ function onlyDLCExclusives(name){
     return false;
 }
 
-// used to test the wheel functions
+// check if ashes are disabled
 function noAshes(){
     const checkbox = document.getElementById("filter-no-ashes");
     if(!checkbox){
@@ -177,11 +177,12 @@ function isAshUsableForWeapon(name){
 function collectUsableAshNames() {
     return Object
         .keys(ASHES_OF_WAR)
-        .filter(name => 
-            !noAshes()&& //so it leaves the function earlier
+        .filter(name =>
+            //order important, so it leaves the function earlier
+            !noAshes()&& 
             !isDLCExclusive(name) &&
             !onlyDLCExclusives(name) &&
-            isAshUsableForWeapon(name) && //extracted to a seperate function
+            isAshUsableForWeapon(name) &&
             (name !== "Bloodhound's Step" || !FILTER_NO_BHS.checked)
         );
 }
