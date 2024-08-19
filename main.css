@@ -228,6 +228,8 @@ h1, h2, h3 {
 }
 
 input {
+    width: 16px;
+    height: 16px;
     background-color: #323232;
     color: #eeeeee;
     border: 2px solid #2b2b2b;
