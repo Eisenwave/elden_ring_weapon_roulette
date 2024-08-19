@@ -366,8 +366,9 @@ function completeSpinningAnimation(scroller) {
         const selectedUse = selected.getAttribute('data-detail');
         const selectedWeapon = selected.getAttribute('data-name');
         setContainerActive(OFFHAND_WHEEL_CONTAINER, selectedUse === '1H');
-        setContainerActive(ASHES_WHEEL_CONTAINER, WEAPONS[selectedWeapon].infusible); //enable wheel
-        if(noAshes()){ //disable the wheel if no ashes is enabled
+        setContainerActive(ASHES_WHEEL_CONTAINER, WEAPONS[selectedWeapon].infusible);
+        // this does not cover the possibility that there may not be ashes, even though a weapon is infusible
+        if(noAshes()){
             setContainerActive(ASHES_WHEEL_CONTAINER, false);
             return;
         }     
