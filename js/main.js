@@ -22,6 +22,8 @@ const FILTER_NO_MAINHAND_SHIELD = document.getElementById("filter-no-mainhand-sh
 const FILTER_NO_MAINHAND_STAFF = document.getElementById("filter-no-mainhand-staff");
 const FILTER_NO_MAINHAND_SEAL = document.getElementById("filter-no-mainhand-seal");
 const FILTER_NO_MAINHAND_BOW = document.getElementById("filter-no-mainhand-bow");
+const FILTER_NO_MAINHAND_TORCH = document.getElementById("filter-no-mainhand-torch");
+const FILTER_NO_MAINHAND_PERFUME_BOTTLE = document.getElementById("filter-no-mainhand-perfume-bottle");
 const FILTER_NO_BHS = document.getElementById("filter-no-bhs");
 const NO_BASE = document.getElementById("filter-no-base")
 
@@ -66,6 +68,10 @@ function isWeaponFilteredOut(weaponName, isOffhand) {
         case 'Greatbow':
         case 'Crossbow':
             return FILTER_NO_MAINHAND_BOW.checked;
+        case 'Torch':
+            return FILTER_NO_MAINHAND_TORCH.checked;
+        case 'Perfume Bottle':
+            return FILTER_NO_MAINHAND_PERFUME_BOTTLE.checked;
     }
     return false;
 }
@@ -78,14 +84,16 @@ function enableCheckboxes(checkboxId, isEnabled){
 }
 
 function toggleDLCCheckboxes(){
-    toggleOnlyDlcCheckbox(INCLUDE_DLC.checked);
     toggleDLCWeaponCheckbox(INCLUDE_DLC.checked);
+    toggleDLCFilter(INCLUDE_DLC.checked);
 }
 
-function toggleOnlyDlcCheckbox(isEnabled){
+function toggleDLCFilter(isEnabled){
     NO_BASE.disabled = !isEnabled;
+    FILTER_NO_MAINHAND_PERFUME_BOTTLE.disabled = !isEnabled;
     if(!isEnabled){
         NO_BASE.checked = false;
+        FILTER_NO_MAINHAND_PERFUME_BOTTLE.checked = false;
     }
 }
 
@@ -464,7 +472,7 @@ TOGGLE_ALL.addEventListener('change', _ => {
 })
 
 GREENSCREEN.addEventListener('change', _ => {
-    console.log(GREENSCREEN);
+    //console.log(GREENSCREEN); //not sure why this is logged
     if (GREENSCREEN.checked) {
         BODY.classList.add('greenscreen');
         MAIN.classList.remove('drop-shadow');
