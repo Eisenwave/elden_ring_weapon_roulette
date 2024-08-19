@@ -360,10 +360,10 @@ function completeSpinningAnimation(scroller) {
         setContainerActive(OFFHAND_WHEEL_CONTAINER, selectedUse === '1H');
         setContainerActive(ASHES_WHEEL_CONTAINER, WEAPONS[selectedWeapon].infusible);
         // this does not cover the possibility that there may not be ashes, even though a weapon is infusible
-        if(NO_ASHES.checked){
-            setContainerActive(ASHES_WHEEL_CONTAINER, false);
-            return;
-        }     
+        // if(NO_ASHES.checked){
+        //     setContainerActive(ASHES_WHEEL_CONTAINER, false);
+        //     return;
+        // }     
     }
 }
 
@@ -415,12 +415,12 @@ function spin(scroller, fillFunction, isOffhand) {
     }
 
     if (fillFunction(scroller, TILE_COUNT, isOffhand)) {
-        setContainerActive(scroller, true);
+        // setContainerActive(scroller, true);
         playSpinningAnimation(scroller, fillFunction);
-        return; //replaces else-statement
+        // return; //replaces else-statement
     }
     //deactivates wheal, when fill returns false, cause its empty
-    setContainerActive(scroller, false);
+    // setContainerActive(scroller, false);
 }
 
 WEAPON_WHEEL_CONTAINER.addEventListener('click', e => {
