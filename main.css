@@ -131,6 +131,12 @@ h1, h2, h3 {
     grid-template-columns: 25em 10em;
 }
 
+#dlc-container {
+    display: grid;
+    grid-template-columns: 12em 4em;
+    grid-gap: 0.5em;
+}
+
 #stats-container {
     display: grid;
     grid-template-columns: 1.5em 4em;
