@@ -76,7 +76,7 @@ function enableCheckboxes(checkboxId, isEnabled){
 
 function toggleDLCCheckboxes(){
     toggleOnlyDlcCheckbox(INCLUDE_DLC.checked);
-    toggleWeaponCheckbox(INCLUDE_DLC.checked);
+    toggleDLCWeaponCheckbox(INCLUDE_DLC.checked);
 }
 
 function toggleOnlyDlcCheckbox(isEnabled){
@@ -86,7 +86,7 @@ function toggleOnlyDlcCheckbox(isEnabled){
     }
 }
 
-function toggleWeaponCheckbox(isEnabled){
+function toggleDLCWeaponCheckbox(isEnabled){
     const checkboxes = [
         "checkbox-backhand-blade",
         "checkbox-beast-claw",
