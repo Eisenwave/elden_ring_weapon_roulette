@@ -135,6 +135,7 @@ h1, h2, h3 {
     display: grid;
     grid-template-columns: 12em 4em;
     grid-gap: 0.5em;
+    padding-bottom: 2em;
 }
 
 #stats-container {
@@ -159,7 +160,7 @@ h1, h2, h3 {
 
 .category-container {
     display: grid;
-    grid-template-columns: 12em 4em;
+    grid-template-columns: 14em 4em;
     grid-gap: 0.5em;
 }
 
