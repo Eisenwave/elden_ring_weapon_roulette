@@ -21,7 +21,7 @@ const NO_ASHES = document.getElementById("filter-no-ashes");
 const FILTER_NO_MAINHAND_SHIELD = document.getElementById("filter-no-mainhand-shield");
 const FILTER_NO_MAINHAND_STAFF = document.getElementById("filter-no-mainhand-staff");
 const FILTER_NO_MAINHAND_SEAL = document.getElementById("filter-no-mainhand-seal");
-const FILTER_NO_MAINHAND_CROSSBOW = document.getElementById("filter-no-mainhand-crossbow");
+const FILTER_NO_MAINHAND_CROSSBOW = document.getElementById("filter-no-mainhand-bow");
 const FILTER_NO_BHS = document.getElementById("filter-no-bhs");
 const NO_BASE = document.getElementById("filter-no-base")
 
@@ -61,6 +61,9 @@ function isWeaponFilteredOut(weaponName, isOffhand) {
             return FILTER_NO_MAINHAND_STAFF.checked;
         case 'Sacred Seal':
             return FILTER_NO_MAINHAND_SEAL.checked;
+        case 'Light Bow': 
+        case 'Bow':
+        case 'Greatbow':
         case 'Crossbow':
             return FILTER_NO_MAINHAND_CROSSBOW.checked;
     }
