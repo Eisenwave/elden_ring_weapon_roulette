@@ -75,7 +75,7 @@ function isWeaponFilteredOut(weaponName, isOffhand) {
     }
     return false;
 }
-function enableCheckboxes(checkboxId, isEnabled){
+function enableCheckboxes(checkboxId, isEnabled) {
     const checkbox = document.getElementById(checkboxId)
     if(!checkbox){
         throw new Error("Failed to find checkbox with id" + checkboxID);
@@ -83,12 +83,12 @@ function enableCheckboxes(checkboxId, isEnabled){
     checkbox.disabled = !isEnabled;
 }
 
-function toggleDLCCheckboxes(){
+function toggleDLCCheckboxes() {
     toggleDLCWeaponCheckbox(INCLUDE_DLC.checked);
     toggleDLCFilter(INCLUDE_DLC.checked);
 }
 
-function toggleDLCFilter(isEnabled){
+function toggleDLCFilter(isEnabled) {
     NO_BASE.disabled = !isEnabled;
     FILTER_NO_MAINHAND_PERFUME_BOTTLE.disabled = !isEnabled;
     if(!isEnabled){
@@ -97,7 +97,7 @@ function toggleDLCFilter(isEnabled){
     }
 }
 
-function toggleDLCWeaponCheckbox(isEnabled){
+function toggleDLCWeaponCheckbox(isEnabled) {
     const checkboxes = [
         "checkbox-backhand-blade",
         "checkbox-beast-claw",
@@ -112,18 +112,12 @@ function toggleDLCWeaponCheckbox(isEnabled){
 }
 
 //checks both ashes and weapons, loaded in dlc-exclusives
-function isDLCExclusive(name){
-    if(INCLUDE_DLC.checked){
-        return false;
-    }
-    return DLC_EXCLUSIVES[name];
+function isDLCExclusive(name) {
+    return INCLUDE_DLC.checked && DLC_EXCLUSIVES.has(name);
 }
 
-function onlyDLCExclusives(name){
-    if(NO_BASE.checked){
-        return !DLC_EXCLUSIVES[name]; 
-    }
-    return false;
+function onlyDLCExclusives(name) {
+    return NO_BASE.checked && !DLC_EXCLUSIVES.has(name);
 }
 
 function isWeaponUsable(weaponName, isOffhand) {
@@ -154,7 +148,7 @@ function collectUsableWeaponNames(isOffhand) {
     return Object.keys(WEAPONS).filter(w => isWeaponUsable(w, isOffhand));
 }
 
-function isAshUsableForWeapon(name){
+function isAshUsableForWeapon(name) {
     const weaponName = WEAPON_WHEEL_SCROLLER.children
         .item(2)
         .getAttribute('data-name');
@@ -170,7 +164,7 @@ function collectUsableAshNames() {
         .keys(ASHES_OF_WAR)
         .filter(name =>
             //order important, so it leaves the function earlier
-            !NO_ASHES.checked&& 
+            !NO_ASHES.checked && 
             !isDLCExclusive(name) &&
             !onlyDLCExclusives(name) &&
             isAshUsableForWeapon(name) &&
