@@ -121,13 +121,8 @@ function onlyDLCExclusives(name) {
 }
 
 function isWeaponUsable(weaponName, isOffhand) {
-    // include dlc weapons
-    if(isDLCExclusive(weaponName)) {
+    if (isDLCExclusive(weaponName) || onlyDLCExclusives(weaponName)) {
         return false;
-    }
-    // excludes non dlc weapons
-    if(onlyDLCExclusives(weaponName)) {
-        return false
     }
     if (isOffhand && WEAPONS[weaponName].type === 'two-handed') {
         return false;
@@ -319,7 +314,7 @@ function fillWeaponWheel(scroller, limit, isOffhand) {
 
 function fillAshesWheel(scroller, limit) {
     const usableAshes = collectUsableAshNames();
-    if(usableAshes.length == 0){
+    if (usableAshes.length === 0) {
         return false;
     }
 
