@@ -14,14 +14,19 @@ WEAPON_CATEGORIES = {
             "Rosus' Axe",
             "Sacrificial Axe",
             "Stormhawk Axe",
-            "Warped Axe"
+            "Warped Axe",
+            "Forked-Tongue Hatchet",
+            "Smithscript Axe",
+            "Messmer Soldier's Axe",
+            "Death Knight's Twin Axes"
         ]
     },
     "Ballista": {
         "type": "two-handed",
         "weapons": [
             "Hand Ballista",
-            "Jar Cannon"
+            "Jar Cannon",
+            "Rabbath's Cannon"
         ]
     },
     "Bow": {
@@ -33,7 +38,8 @@ WEAPON_CATEGORIES = {
             "Horn Bow",
             "Longbow",
             "Pulley Bow",
-            "Serpent Bow"
+            "Serpent Bow",
+            "Ansbach's Longbow"
         ]
     },
     "Claw": {
@@ -42,7 +48,8 @@ WEAPON_CATEGORIES = {
             "Bloodhound Claws",
             "Hookclaws",
             "Raptor Talons",
-            "Venomous Fang"
+            "Venomous Fang",
+            "Claws of Night",
         ]
     },
     "Colossal Sword": {
@@ -58,7 +65,12 @@ WEAPON_CATEGORIES = {
             "Troll Knight's Sword",
             "Troll's Golden Sword",
             "Watchdog's Greatsword",
-            "Zweihander"
+            "Zweihander",
+            "Ancient Meteoric Ore Greatsword",
+            "Fire Knight's Greatsword",
+            "Greatsword of Radahn (Light)",
+            "Greatsword of Radahn (Lord)",
+            "Moonrithyll's Knight Sword",
         ]
     },
     "Colossal Weapon": {
@@ -78,7 +90,12 @@ WEAPON_CATEGORIES = {
             "Rotten Staff",
             "Staff of the Avatar",
             "Troll's Hammer",
-            "Watchdog's Staff"
+            "Watchdog's Staff",
+            "Bloodfiend's Arm",
+            "Anvil Hammer",
+            "Devonia's Hammer",
+            "Shadow Sunflower Blossom",
+            "Gazing Finger",
         ]
     },
     "Crossbow": {
@@ -90,7 +107,9 @@ WEAPON_CATEGORIES = {
             "Heavy Crossbow",
             "Light Crossbow",
             "Pulley Crossbow",
-            "Soldier's Crossbow"
+            "Soldier's Crossbow",
+            "Repeating Crossbow",
+            "Spread Crossbow",
         ]
     },
     "Curved Greatsword": {
@@ -104,7 +123,9 @@ WEAPON_CATEGORIES = {
             "Morgott's Cursed Sword",
             "Omen Cleaver",
             "Onyx Lord's Greatsword",
-            "Zamor Curved Sword"
+            "Zamor Curved Sword",
+            "Horned Warrior's Greatsword",
+            "Freyja's Greatsword",
         ]
     },
     "Curved Sword": {
@@ -124,7 +145,11 @@ WEAPON_CATEGORIES = {
             "Serpent-God's Curved Sword",
             "Shamshir",
             "Shotel",
-            "Wing of Astel"
+            "Wing of Astel",
+            "Spirit Sword",
+            "Falx",
+            "Dancing Blade of Ranah",
+            "Horned Warrior's Sword",
         ]
     },
     "Dagger": {
@@ -145,7 +170,9 @@ WEAPON_CATEGORIES = {
             "Parrying Dagger",
             "Reduvia",
             "Scorpion's Stinger",
-            "Wakizashi"
+            "Wakizashi",
+            "Main-gauche",
+            "Fire Knight's Shortsword",
         ]
     },
     "Fist": {
@@ -159,7 +186,12 @@ WEAPON_CATEGORIES = {
             "Katar",
             "Spiked Caestus",
             "Star Fist",
-            "Veteran's Prosthesis"
+            "Veteran's Prosthesis",
+            "Pata",
+            "Golem Fist",
+            "Madding Hand",
+            "Thiollier's Hidden Needle",
+            "Poisoned Hand",
         ]
     },
     "Flail": {
@@ -169,7 +201,8 @@ WEAPON_CATEGORIES = {
             "Chainlink Flail",
             "Family Heads",
             "Flail",
-            "Nightrider Flail"
+            "Nightrider Flail",
+            "Serpent Flail"
         ]
     },
     "Glintstone Staff": {
@@ -192,7 +225,9 @@ WEAPON_CATEGORIES = {
             "Prince of Death's Staff",
             "Rotten Crystal Staff",
             "Staff of Loss",
-            "Staff of the Guilty"
+            "Staff of the Guilty",
+            "Staff of the Great Beyond",
+            "Maternal Staff",
         ]
     },
     "Great Hammer": {
@@ -211,7 +246,9 @@ WEAPON_CATEGORIES = {
             "Greathorn Hammer",
             "Large Club",
             "Pickaxe",
-            "Rotten Battle Hammer"
+            "Rotten Battle Hammer",
+            "Black Steel Greathammer",
+            "Smithscript Greathammer",
         ]
     },
     "Great Spear": {
@@ -222,7 +259,11 @@ WEAPON_CATEGORIES = {
             "Serpent-Hunter",
             "Siluria's Tree",
             "Treespear",
-            "Vyke's War Spear"
+            "Vyke's War Spear",
+            "Bloodfiend's Sacred Spear",
+            "Messmer Soldier's Spear",
+            "Spear of the Impaler",
+            "Barbed Staff-Spear",
         ]
     },
     "Greataxe": {
@@ -238,7 +279,10 @@ WEAPON_CATEGORIES = {
             "Greataxe",
             "Longhaft Axe",
             "Rusted Anchor",
-            "Winged Greathorn"
+            "Winged Greathorn",
+            "Putrescence Cleaver",
+            "Death Knight's Longhaft Axe",
+            "Bonny Butchering Knife",
         ]
     },
     "Greatbow": {
@@ -247,7 +291,8 @@ WEAPON_CATEGORIES = {
             "Erdtree Greatbow",
             "Golem Greatbow",
             "Greatbow",
-            "Lion Greatbow"
+            "Lion Greatbow",
+            "Igon's Greatbow",
         ]
     },
     "Greatshield": {
@@ -277,7 +322,9 @@ WEAPON_CATEGORIES = {
             "Redmane Greatshield",
             "Spiked Palisade Shield",
             "Visage Shield",
-            "Wooden Greatshield"
+            "Wooden Greatshield",
+            "Verdigris Greatshield",
+            "Black Steel Greatshield",
         ]
     },
     "Greatsword": {
@@ -303,7 +350,10 @@ WEAPON_CATEGORIES = {
             "Marais Executioner's Sword",
             "Ordovis's Greatsword",
             "Sacred Relic Sword",
-            "Sword of Milos"
+            "Sword of Milos",
+            "Lizard Greatsword",
+            "Greatsword of Damnation",
+            "Greatsword of Solitude",
         ]
     },
     "Halberd": {
@@ -324,7 +374,9 @@ WEAPON_CATEGORIES = {
             "Pest's Glaive",
             "Ripple Crescent Halberd",
             "Vulgar Militia Saw",
-            "Vulgar Militia Shotel"
+            "Vulgar Militia Shotel",
+            "Spirit Glaive",
+            "Poleblade of the Bud",
         ]
     },
     "Hammer": {
@@ -344,7 +396,8 @@ WEAPON_CATEGORIES = {
             "Spiked Club",
             "Stone Club",
             "Varre's Bouquet",
-            "Warpick"
+            "Warpick",
+            "Flowerstone Gavel",
         ]
     },
     "Heavy Thrusting Sword": {
@@ -353,7 +406,9 @@ WEAPON_CATEGORIES = {
             "Bloody Helice",
             "Dragon King's Cragblade",
             "Godskin Stitcher",
-            "Great Epee"
+            "Great Epee",
+            "Queelign's Greatsword",
+            "Sword Lance",
         ]
     },
     "Katana": {
@@ -366,7 +421,9 @@ WEAPON_CATEGORIES = {
             "Nagakiba",
             "Rivers of Blood",
             "Serpentbone Blade",
-            "Uchigatana"
+            "Uchigatana",
+            "Star-Lined Sword",
+            "Sword of Night",
         ]
     },
     "Light Bow": {
@@ -376,7 +433,8 @@ WEAPON_CATEGORIES = {
             "Harp Bow",
             "Misbegotten Shortbow",
             "Red Branch Shortbow",
-            "Shortbow"
+            "Shortbow",
+            "Bone Bow",
         ]
     },
     "Medium Shield": {
@@ -408,7 +466,11 @@ WEAPON_CATEGORIES = {
             "Scorpion Kite Shield",
             "Silver Mirrorshield",
             "Sun Realm Shield",
-            "Twinbird Kite Shield"
+            "Twinbird Kite Shield",
+            "Golden Lion Shield",
+            "Serpent Crest Shield",
+            "Wolf Crest Shield",
+            "Messmer Soldier Shield",
         ]
     },
     "Reaper": {
@@ -417,7 +479,8 @@ WEAPON_CATEGORIES = {
             "Grave Scythe",
             "Halo Scythe",
             "Scythe",
-            "Winged Scythe"
+            "Winged Scythe",
+            "Obsidian Lamina",
         ]
     },
     "Sacred Seal": {
@@ -431,7 +494,10 @@ WEAPON_CATEGORIES = {
             "Giant's Seal",
             "Godslayer's Seal",
             "Golden Order Seal",
-            "Gravel Stone Seal"
+            "Gravel Stone Seal",
+            "Dryleaf Seal",
+            "Fire Knight's Seal",
+            "Spiraltree Seal",
         ]
     },
     "Small Shield": {
@@ -453,7 +519,9 @@ WEAPON_CATEGORIES = {
             "Scripture Wooden Shield",
             "Shield of the Guilty",
             "Smoldering Shield",
-            "Spiralhorn Shield"
+            "Spiralhorn Shield",
+            "Smithscript Shield",
+            "Shield of Night",
         ]
     },
     "Spear": {
@@ -474,7 +542,10 @@ WEAPON_CATEGORIES = {
             "Short Spear",
             "Spear",
             "Spiked Spear",
-            "Torchpole"
+            "Torchpole",
+            "Smithscript Spear",
+            "Swift Spear",
+            "Bloodfiend's Fork",
         ]
     },
     "Straight Sword": {
@@ -498,7 +569,11 @@ WEAPON_CATEGORIES = {
             "Sword of Night and Flame",
             "Sword of St Trina",
             "Warhawk's Talon",
-            "Weathered Straight Sword"
+            "Weathered Straight Sword",
+            "Velvet Sword of St Trina",
+            "Stone-Sheathed Sword",
+            "Sword of Light",
+            "Sword of Darkness",
         ]
     },
     "Thrusting Sword": {
@@ -510,7 +585,8 @@ WEAPON_CATEGORIES = {
             "Frozen Needle",
             "Noble's Estoc",
             "Rapier",
-            "Rogier's Rapier"
+            "Rogier's Rapier",
+            "Carian Sorcery Sword"
         ]
     },
     "Torch": {
@@ -521,7 +597,9 @@ WEAPON_CATEGORIES = {
             "Sentry's Torch",
             "St Trina's Torch",
             "Steel-Wire Torch",
-            "Torch"
+            "Torch",
+            "Lamenting Visage",
+            "Nanaya's Torch",
         ]
     },
     "Twinblade": {
@@ -532,7 +610,9 @@ WEAPON_CATEGORIES = {
             "Gargoyle's Twinblade",
             "Godskin Peeler",
             "Twinblade",
-            "Twinned Knight Swords"
+            "Twinned Knight Swords",
+            "Black Steel Twinblade",
+            "Euporia",
         ]
     },
     "Whip": {
@@ -543,7 +623,70 @@ WEAPON_CATEGORIES = {
             "Magma Whip Candlestick",
             "Thorned Whip",
             "Urumi",
-            "Whip"
+            "Whip",
+            "Tooth Whip",
         ]
-    }
+    },
+    // dlc new weapon types
+    "Thrusting Shield": {
+        "type": "melee",
+        "weapons": [
+            "Dueling Shield",
+            "Carian Thrusting Shield"
+        ]
+    },
+    "Hand-to-Hand Art": {
+        "type": "paired",
+        "weapons": [
+            "Dryleaf Arts",
+            "Dane's Footwork"
+        ]
+    },
+    "Throwing Blade": {
+        "type": "paired",
+        "weapons": [
+            "Smithscript Dagger"
+        ]
+    },
+    "Backhand Blade": {
+        "type": "paired",
+        "weapons": [
+            "Backhand Blade",
+            "Smithscript Cirque",
+            "Curseblade's Cirque"
+        ]
+    },
+    "Perfume Bottle": {
+        "type": "melee",
+        "weapons": [
+            "Firespark Perfume Bottle",
+            "Chilling Perfume Bottle",
+            "Frenzyflame Perfume Bottle",
+            "Lightning Perfume Bottle",
+            "Deadly Poison Perfume Bottle"
+        ]
+    },
+    "Beast Claw": {
+        "type": "paired",
+        "weapons": [
+            "Red Bear's Claw",
+            "Beast Claw(Weapon)"
+        ]
+    },
+    "Light Greatsword": {
+        "type": "melee",
+        "weapons": [
+            "Milady",
+            "Leda's Sword",
+            "Rellana's Twin Blades"
+        ]
+    },
+    "Great Katana": {
+        "type": "melee",
+        "weapons": [
+            "Great Katana",
+            "Dragon-Hunter's Great Katana",
+            "Rakshasa's Great Katana"
+        ]
+    },
 }

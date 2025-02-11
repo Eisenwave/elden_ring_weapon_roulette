@@ -15,11 +15,18 @@ const WEAPON_WHEEL_SCROLLER = document.getElementById("weapon-wheel-scroller");
 const OFFHAND_WHEEL_SCROLLER = document.getElementById("offhand-wheel-scroller");
 const ASHES_WHEEL_SCROLLER = document.getElementById("ashes-wheel-scroller");
 
+const INCLUDE_DLC = document.getElementById('filter-no-dlc');
+
+const NO_ASHES = document.getElementById("filter-no-ashes");
 const FILTER_NO_MAINHAND_SHIELD = document.getElementById("filter-no-mainhand-shield");
 const FILTER_NO_MAINHAND_STAFF = document.getElementById("filter-no-mainhand-staff");
 const FILTER_NO_MAINHAND_SEAL = document.getElementById("filter-no-mainhand-seal");
-const FILTER_NO_MAINHAND_CROSSBOW = document.getElementById("filter-no-mainhand-crossbow");
+const FILTER_NO_MAINHAND_BOW = document.getElementById("filter-no-mainhand-bow");
+const FILTER_NO_MAINHAND_TORCH = document.getElementById("filter-no-mainhand-torch");
+const FILTER_NO_MAINHAND_PERFUME_BOTTLE = document.getElementById("filter-no-mainhand-perfume-bottle");
 const FILTER_NO_BHS = document.getElementById("filter-no-bhs");
+const NO_BASE = document.getElementById("filter-no-base")
+
 
 const TOGGLE_ALL = document.getElementById("toggle-all");
 
@@ -50,18 +57,73 @@ function isWeaponFilteredOut(weaponName, isOffhand) {
         case 'Small Shield':
         case 'Medium Shield':
         case 'Greatshield':
+        case 'Thrusting Shield':
             return FILTER_NO_MAINHAND_SHIELD.checked;
         case 'Glintstone Staff':
             return FILTER_NO_MAINHAND_STAFF.checked;
         case 'Sacred Seal':
             return FILTER_NO_MAINHAND_SEAL.checked;
+        case 'Light Bow': 
+        case 'Bow':
+        case 'Greatbow':
         case 'Crossbow':
-            return FILTER_NO_MAINHAND_CROSSBOW.checked;
+            return FILTER_NO_MAINHAND_BOW.checked;
+        case 'Torch':
+            return FILTER_NO_MAINHAND_TORCH.checked;
+        case 'Perfume Bottle':
+            return FILTER_NO_MAINHAND_PERFUME_BOTTLE.checked;
     }
     return false;
 }
+function enableCheckboxes(checkboxId, isEnabled) {
+    const checkbox = document.getElementById(checkboxId)
+    if(!checkbox){
+        throw new Error("Failed to find checkbox with id" + checkboxID);
+    }
+    checkbox.disabled = !isEnabled;
+}
+
+function toggleDLCCheckboxes() {
+    toggleDLCWeaponCheckbox(INCLUDE_DLC.checked);
+    toggleDLCFilter(INCLUDE_DLC.checked);
+}
+
+function toggleDLCFilter(isEnabled) {
+    NO_BASE.disabled = !isEnabled;
+    FILTER_NO_MAINHAND_PERFUME_BOTTLE.disabled = !isEnabled;
+    if(!isEnabled){
+        NO_BASE.checked = false;
+        FILTER_NO_MAINHAND_PERFUME_BOTTLE.checked = false;
+    }
+}
+
+function toggleDLCWeaponCheckbox(isEnabled) {
+    const checkboxes = [
+        "checkbox-backhand-blade",
+        "checkbox-beast-claw",
+        "checkbox-great-katana",
+        "checkbox-hand-to-hand-art",
+        "checkbox-light-greatsword",
+        "checkbox-perfume-bottle",
+        "checkbox-throwing-blade",
+        "checkbox-thrusting-shield",
+    ];
+    checkboxes.forEach(checkboxId => enableCheckboxes(checkboxId, isEnabled));
+}
+
+//checks both ashes and weapons, loaded in dlc-exclusives
+function isDLCExclusive(name) {
+    return INCLUDE_DLC.checked && DLC_EXCLUSIVES.has(name);
+}
+
+function onlyDLCExclusives(name) {
+    return NO_BASE.checked && !DLC_EXCLUSIVES.has(name);
+}
 
 function isWeaponUsable(weaponName, isOffhand) {
+    if (isDLCExclusive(weaponName) || onlyDLCExclusives(weaponName)) {
+        return false;
+    }
     if (isOffhand && WEAPONS[weaponName].type === 'two-handed') {
         return false;
     }
@@ -81,20 +143,28 @@ function collectUsableWeaponNames(isOffhand) {
     return Object.keys(WEAPONS).filter(w => isWeaponUsable(w, isOffhand));
 }
 
+function isAshUsableForWeapon(name) {
+    const weaponName = WEAPON_WHEEL_SCROLLER.children
+        .item(2)
+        .getAttribute('data-name');
+    // fallback option for non-infusible weapons
+    if (!WEAPONS[weaponName].infusible) {
+        return name === 'No Skill';
+    }
+    return ASHES_OF_WAR[name].includes(WEAPONS[weaponName].category);
+}
+
 function collectUsableAshNames() {
     return Object
         .keys(ASHES_OF_WAR)
-        .filter(name => {
-            const weaponName = WEAPON_WHEEL_SCROLLER.children
-                .item(2)
-                .getAttribute('data-name');
-            // fallback option for non-infusible weapons
-            if (!WEAPONS[weaponName].infusible) {
-                return name === 'No Skill';
-            }
-            return ASHES_OF_WAR[name].includes(WEAPONS[weaponName].category);
-        })
-        .filter(name => !FILTER_NO_BHS.checked || name !== "Bloodhound's Step");
+        .filter(name =>
+            //order important, so it leaves the function earlier
+            !NO_ASHES.checked && 
+            !isDLCExclusive(name) &&
+            !onlyDLCExclusives(name) &&
+            isAshUsableForWeapon(name) &&
+            (name !== "Bloodhound's Step" || !FILTER_NO_BHS.checked)
+        );
 }
 
 function createTile(name, detail) {
@@ -244,6 +314,9 @@ function fillWeaponWheel(scroller, limit, isOffhand) {
 
 function fillAshesWheel(scroller, limit) {
     const usableAshes = collectUsableAshNames();
+    if (usableAshes.length === 0) {
+        return false;
+    }
 
     for (let i = 0; i < limit; ++i) {
         const card = createTile(pickRandomElement(usableAshes));
@@ -260,22 +333,27 @@ function completeSpinningAnimation(scroller) {
     for (let i = 0; i < 5; ++i) {
         const copy = scroller.children.item(CHOSEN_TILE_INDEX + i).cloneNode(true);
         scroller.children.item(i).replaceWith(copy);
-        scroller.scrollTo({top: 0, left: 0, behavior: "instant"});
+        scroller.scrollTo({ top: 0, left: 0, behavior: "instant" });
     }
     scroller.children.item(2).firstElementChild.firstElementChild.classList.add('highlighted')
     while (scroller.children.length > 5) {
         scroller.lastChild.remove();
     }
 
+    scrollingStep = 0;
+
     if (scroller === WEAPON_WHEEL_SCROLLER) {
         const selected = scroller.children[2];
-        const selectedWeapon = selected.getAttribute('data-name');
         const selectedUse = selected.getAttribute('data-detail');
+        const selectedWeapon = selected.getAttribute('data-name');
         setContainerActive(OFFHAND_WHEEL_CONTAINER, selectedUse === '1H');
         setContainerActive(ASHES_WHEEL_CONTAINER, WEAPONS[selectedWeapon].infusible);
+        // this does not cover the possibility that there may not be ashes, even though a weapon is infusible
+        // if(NO_ASHES.checked){
+        //     setContainerActive(ASHES_WHEEL_CONTAINER, false);
+        //     return;
+        // }     
     }
-
-    scrollingStep = 0;
 }
 
 // I had a great day
@@ -326,8 +404,12 @@ function spin(scroller, fillFunction, isOffhand) {
     }
 
     if (fillFunction(scroller, TILE_COUNT, isOffhand)) {
-        playSpinningAnimation(scroller);
+        // setContainerActive(scroller, true);
+        playSpinningAnimation(scroller, fillFunction);
+        // return; //replaces else-statement
     }
+    //deactivates wheal, when fill returns false, cause its empty
+    // setContainerActive(scroller, false);
 }
 
 WEAPON_WHEEL_CONTAINER.addEventListener('click', e => {
@@ -379,7 +461,7 @@ TOGGLE_ALL.addEventListener('change', _ => {
 })
 
 GREENSCREEN.addEventListener('change', _ => {
-    console.log(GREENSCREEN);
+    //console.log(GREENSCREEN); //not sure why this is logged
     if (GREENSCREEN.checked) {
         BODY.classList.add('greenscreen');
         MAIN.classList.remove('drop-shadow');

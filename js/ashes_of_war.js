@@ -9,7 +9,8 @@ ASHES_OF_WAR = {
         "Axe",
         "Greataxe",
         "Flail",
-        "Colossal Weapon"
+        "Colossal Weapon",
+        
     ],
     "Stamp (Sweep)": [
         "Greatsword",
@@ -21,7 +22,8 @@ ASHES_OF_WAR = {
         "Axe",
         "Greataxe",
         "Flail",
-        "Colossal Weapon"
+        "Colossal Weapon",
+        "Great Katana",
     ],
     "Wild Strikes": [
         "Greatsword",
@@ -31,7 +33,8 @@ ASHES_OF_WAR = {
         "Great Hammer",
         "Axe",
         "Greataxe",
-        "Flail"
+        "Flail",
+        "Great Katana",
     ],
     "Lion's Claw": [
         "Straight Sword",
@@ -46,7 +49,9 @@ ASHES_OF_WAR = {
         "Axe",
         "Greataxe",
         "Flail",
-        "Colossal Weapon"
+        "Colossal Weapon",
+        "Light Greatsword",
+        "Great Katana",
     ],
     "Cragblade": [
         "Dagger",
@@ -70,7 +75,11 @@ ASHES_OF_WAR = {
         "Reaper",
         "Fist",
         "Claw",
-        "Colossal Weapon"
+        "Colossal Weapon",
+        "Backhand Blade",
+        "Beast Claw",
+        "Light Greatsword",
+        "Great Katana",
     ],
     "Kick": [
         "Dagger",
@@ -95,7 +104,15 @@ ASHES_OF_WAR = {
         "Fist",
         "Claw",
         "Whip",
-        "Colossal Weapon"
+        "Colossal Weapon",
+        "Thrusting Shield",
+        "Hand-to-Hand Art",
+        "Throwing Blade",
+        "Backhand Blade",
+        "Perfume Bottle",
+        "Beast Claw",
+        "Light Greatsword",
+        "Great Katana",
     ],
     "Endure": [
         "Dagger",
@@ -120,7 +137,15 @@ ASHES_OF_WAR = {
         "Fist",
         "Claw",
         "Whip",
-        "Colossal Weapon"
+        "Colossal Weapon",
+        "Thrusting Shield",
+        "Hand-to-Hand Art",
+        "Throwing Blade",
+        "Backhand Blade",
+        "Perfume Bottle",
+        "Beast Claw",
+        "Light Greatsword",
+        "Great Katana",
     ],
     "Ground Slam": [
         "Dagger",
@@ -145,7 +170,15 @@ ASHES_OF_WAR = {
         "Fist",
         "Claw",
         "Whip",
-        "Colossal Weapon"
+        "Colossal Weapon",
+        "Thrusting Shield",
+        "Hand-to-Hand Art",
+        "Throwing Blade",
+        "Backhand Blade",
+        "Perfume Bottle",
+        "Beast Claw",
+        "Light Greatsword",
+        "Great Katana",
     ],
     "Earthshaker": [
         "Colossal Sword",
@@ -177,7 +210,15 @@ ASHES_OF_WAR = {
         "Fist",
         "Claw",
         "Whip",
-        "Colossal Weapon"
+        "Colossal Weapon",
+        "Thrusting Shield",
+        "Hand-to-Hand Art",
+        "Throwing Blade",
+        "Backhand Blade",
+        "Perfume Bottle",
+        "Beast Claw",
+        "Light Greatsword",
+        "Great Katana",
     ],
     "War Cry": [
         "Straight Sword",
@@ -199,7 +240,11 @@ ASHES_OF_WAR = {
         "Reaper",
         "Fist",
         "Claw",
-        "Colossal Weapon"
+        "Colossal Weapon",
+        "Hand-to-Hand Art",
+        "Beast Claw",
+        "Light Greatsword",
+        "Great Katana",
     ],
     "Barbaric Roar": [
         "Straight Sword",
@@ -221,7 +266,11 @@ ASHES_OF_WAR = {
         "Reaper",
         "Fist",
         "Claw",
-        "Colossal Weapon"
+        "Colossal Weapon",
+        "Hand-to-Hand Art",
+        "Beast Claw",
+        "Light Greatsword",
+        "Great Katana",
     ],
     "Braggart's Roar": [
         "Straight Sword",
@@ -243,7 +292,11 @@ ASHES_OF_WAR = {
         "Reaper",
         "Fist",
         "Claw",
-        "Colossal Weapon"
+        "Colossal Weapon",
+        "Hand-to-Hand Art",
+        "Beast Claw",
+        "Light Greatsword",
+        "Great Katana",
     ],
     "Troll's Roar": [
         "Greatsword",
@@ -252,7 +305,8 @@ ASHES_OF_WAR = {
         "Heavy Thrusting Sword",
         "Great Hammer",
         "Greataxe",
-        "Colossal Weapon"
+        "Colossal Weapon",
+        "Great Katana",
     ],
     "Spinning Slash": [
         "Dagger",
@@ -267,7 +321,11 @@ ASHES_OF_WAR = {
         "Spear",
         "Great Spear",
         "Halberd",
-        "Reaper"
+        "Reaper",
+        "Throwing Blade",
+        "Backhand Blade",
+        "Light Greatsword",
+        "Great Katana",
     ],
     "Impaling Thrust": [
         "Dagger",
@@ -280,7 +338,11 @@ ASHES_OF_WAR = {
         "Spear",
         "Great Spear",
         "Halberd",
-        "Claw"
+        "Claw",
+        "Thrusting Shield",
+        "Throwing Blade",
+        "Light Greatsword",
+        "Great Katana",
     ],
     "Piercing Fang": [
         "Straight Sword",
@@ -291,7 +353,10 @@ ASHES_OF_WAR = {
         "Heavy Thrusting Sword",
         "Spear",
         "Great Spear",
-        "Halberd"
+        "Halberd",
+        "Thrusting Shield",
+        "Light Greatsword",
+        "Great Katana",
     ],
     "Repeating Thrust": [
         "Dagger",
@@ -303,7 +368,11 @@ ASHES_OF_WAR = {
         "Heavy Thrusting Sword",
         "Spear",
         "Great Spear",
-        "Halberd"
+        "Halberd",
+        "Thrusting Shield",
+        "Throwing Blade",
+        "Light Greatsword",
+        "Great Katana",
     ],
     "Double Slash": [
         "Dagger",
@@ -314,7 +383,10 @@ ASHES_OF_WAR = {
         "Katana",
         "Twinblade",
         "Halberd",
-        "Reaper"
+        "Reaper",
+        "Throwing Blade",
+        "Light Greatsword",
+        "Great Katana",
     ],
     "Sword Dance": [
         "Dagger",
@@ -328,7 +400,11 @@ ASHES_OF_WAR = {
         "Greataxe",
         "Spear",
         "Halberd",
-        "Reaper"
+        "Reaper",
+        "Throwing Blade",
+        "Backhand Blade",
+        "Light Greatsword",
+        "Great Katana",
     ],
     "Unsheathe": [
         "Katana"
@@ -356,7 +432,15 @@ ASHES_OF_WAR = {
         "Fist",
         "Claw",
         "Whip",
-        "Colossal Weapon"
+        "Colossal Weapon",
+        "Thrusting Shield",
+        "Hand-to-Hand Art",
+        "Throwing Blade",
+        "Backhand Blade",
+        "Perfume Bottle",
+        "Beast Claw",
+        "Light Greatsword",
+        "Great Katana",
     ],
     "Bloodhound's Step": [
         "Dagger",
@@ -381,7 +465,15 @@ ASHES_OF_WAR = {
         "Fist",
         "Claw",
         "Whip",
-        "Colossal Weapon"
+        "Colossal Weapon",
+        "Thrusting Shield",
+        "Hand-to-Hand Art",
+        "Throwing Blade",
+        "Backhand Blade",
+        "Perfume Bottle",
+        "Beast Claw",
+        "Light Greatsword",
+        "Great Katana",
     ],
     "Raptor of the Mists": [
         "Dagger",
@@ -406,7 +498,14 @@ ASHES_OF_WAR = {
         "Fist",
         "Claw",
         "Whip",
-        "Colossal Weapon"
+        "Colossal Weapon",
+        "Thrusting Shield",
+        "Hand-to-Hand Art",
+        "Throwing Blade",
+        "Backhand Blade",
+        "Perfume Bottle",
+        "Light Greatsword",
+        "Great Katana",
     ],
     "Beast's Roar": [
         "Dagger",
@@ -431,7 +530,14 @@ ASHES_OF_WAR = {
         "Fist",
         "Claw",
         "Whip",
-        "Colossal Weapon"
+        "Colossal Weapon",
+        "Thrusting Shield",
+        "Hand-to-Hand Art",
+        "Throwing Blade",
+        "Backhand Blade",
+        "Perfume Bottle",
+        "Light Greatsword",
+        "Great Katana",
     ],
     "Square Off": [
         "Straight Sword"
@@ -441,7 +547,8 @@ ASHES_OF_WAR = {
         "Heavy Thrusting Sword",
         "Spear",
         "Great Spear",
-        "Halberd"
+        "Halberd",
+        "Thrusting Shield",
     ],
     "Spinning Strikes": [
         "Spear",
@@ -455,7 +562,9 @@ ASHES_OF_WAR = {
         "Heavy Thrusting Sword",
         "Spear",
         "Great Spear",
-        "Halberd"
+        "Halberd",
+        "Thrusting Shield",
+        "Great Katana",
     ],
     "Storm Blade": [
         "Dagger",
@@ -465,14 +574,18 @@ ASHES_OF_WAR = {
         "Curved Greatsword",
         "Katana",
         "Thrusting Sword",
-        "Heavy Thrusting Sword"
+        "Heavy Thrusting Sword",
+        "Throwing Blade",
+        "Light Greatsword",
+        "Great Katana",
     ],
     "Storm Assault": [
         "Twinblade",
         "Heavy Thrusting Sword",
         "Spear",
         "Great Spear",
-        "Halberd"
+        "Halberd",
+        "Thrusting Shield",
     ],
     "Stormcaller": [
         "Straight Sword",
@@ -489,7 +602,9 @@ ASHES_OF_WAR = {
         "Spear",
         "Great Spear",
         "Halberd",
-        "Reaper"
+        "Reaper",
+        "Light Greatsword",
+        "Great Katana",
     ],
     "Storm Stomp": [
         "Dagger",
@@ -514,7 +629,15 @@ ASHES_OF_WAR = {
         "Fist",
         "Claw",
         "Whip",
-        "Colossal Weapon"
+        "Colossal Weapon",
+        "Thrusting Shield",
+        "Hand-to-Hand Art",
+        "Throwing Blade",
+        "Backhand Blade",
+        "Perfume Bottle",
+        "Beast Claw",
+        "Light Greatsword",
+        "Great Katana",
     ],
     "Vacuum Slice": [
         "Dagger",
@@ -528,7 +651,10 @@ ASHES_OF_WAR = {
         "Thrusting Sword",
         "Heavy Thrusting Sword",
         "Axe",
-        "Greataxe"
+        "Greataxe",
+        "Throwing Blade",
+        "Light Greatsword",
+        "Great Katana",
     ],
     "Phantom Slash": [
         "Twinblade",
@@ -559,7 +685,12 @@ ASHES_OF_WAR = {
         "Fist",
         "Claw",
         "Whip",
-        "Colossal Weapon"
+        "Colossal Weapon",
+        "Thrusting Shield",
+        "Backhand Blade",
+        "Beast Claw",
+        "Light Greatsword",
+        "Great Katana",
     ],
     "Royal Knight's Resolve": [
         "Dagger",
@@ -584,7 +715,12 @@ ASHES_OF_WAR = {
         "Fist",
         "Claw",
         "Whip",
-        "Colossal Weapon"
+        "Colossal Weapon",
+        "Thrusting Shield",
+        "Backhand Blade",
+        "Beast Claw",
+        "Light Greatsword",
+        "Great Katana",
     ],
     "Glintstone Pebble": [
         "Dagger",
@@ -598,7 +734,11 @@ ASHES_OF_WAR = {
         "Heavy Thrusting Sword",
         "Spear",
         "Great Spear",
-        "Halberd"
+        "Halberd",
+        "Thrusting Shield",
+        "Throwing Blade",
+        "Light Greatsword",
+        "Great Katana",
     ],
     "Glintblade Phalanx": [
         "Dagger",
@@ -612,7 +752,11 @@ ASHES_OF_WAR = {
         "Heavy Thrusting Sword",
         "Spear",
         "Great Spear",
-        "Halberd"
+        "Halberd",
+        "Thrusting Shield",
+        "Throwing Blade",
+        "Light Greatsword",
+        "Great Katana",
     ],
     "Carian Greatsword": [
         "Dagger",
@@ -623,7 +767,10 @@ ASHES_OF_WAR = {
         "Katana",
         "Twinblade",
         "Thrusting Sword",
-        "Heavy Thrusting Sword"
+        "Heavy Thrusting Sword",
+        "Throwing Blade",
+        "Light Greatsword",
+        "Great Katana",
     ],
     "Carian Grandeur": [
         "Dagger",
@@ -634,7 +781,10 @@ ASHES_OF_WAR = {
         "Katana",
         "Twinblade",
         "Thrusting Sword",
-        "Heavy Thrusting Sword"
+        "Heavy Thrusting Sword",
+        "Throwing Blade",
+        "Light Greatsword",
+        "Great Katana",
     ],
     "Spinning Weapon": [
         "Dagger",
@@ -647,7 +797,12 @@ ASHES_OF_WAR = {
         "Flail",
         "Spear",
         "Halberd",
-        "Reaper"
+        "Reaper",
+        "Thrusting Shield",
+        "Throwing Blade",
+        "Backhand Blade",
+        "Light Greatsword",
+        "Great Katana",
     ],
     "Loretta's Slash": [
         "Twinblade",
@@ -682,7 +837,11 @@ ASHES_OF_WAR = {
         "Great Spear",
         "Halberd",
         "Reaper",
-        "Colossal Weapon"
+        "Colossal Weapon",
+        "Thrusting Shield",
+        "Backhand Blade",
+        "Light Greatsword",
+        "Great Katana",
     ],
     "Flaming Strike": [
         "Dagger",
@@ -705,7 +864,12 @@ ASHES_OF_WAR = {
         "Halberd",
         "Reaper",
         "Fist",
-        "Claw"
+        "Claw",
+        "Thrusting Shield",
+        "Backhand Blade",
+        "Beast Claw",
+        "Light Greatsword",
+        "Great Katana",
     ],
     "Flame of the Redmanes": [
         "Dagger",
@@ -730,7 +894,14 @@ ASHES_OF_WAR = {
         "Fist",
         "Claw",
         "Whip",
-        "Colossal Weapon"
+        "Colossal Weapon",
+        "Thrusting Shield",
+        "Hand-to-Hand Art",
+        "Throwing Blade",
+        "Backhand Blade",
+        "Beast Claw",
+        "Light Greatsword",
+        "Great Katana",
     ],
     "Eruption": [
         "Greatsword",
@@ -739,7 +910,8 @@ ASHES_OF_WAR = {
         "Heavy Thrusting Sword",
         "Great Hammer",
         "Greataxe",
-        "Colossal Weapon"
+        "Colossal Weapon",
+        "Great Katana",
     ],
     "Prelate's Charge": [
         "Great Hammer",
@@ -776,7 +948,13 @@ ASHES_OF_WAR = {
         "Fist",
         "Claw",
         "Whip",
-        "Colossal Weapon"
+        "Colossal Weapon",
+        "Thrusting Shield",
+        "Throwing Blade",
+        "Backhand Blade",
+        "Beast Claw",
+        "Light Greatsword",
+        "Great Katana",
     ],
     "Lightning Slash": [
         "Dagger",
@@ -794,7 +972,9 @@ ASHES_OF_WAR = {
         "Axe",
         "Greataxe",
         "Flail",
-        "Colossal Weapon"
+        "Colossal Weapon",
+        "Light Greatsword",
+        "Great Katana",
     ],
     "Lightning Ram": [
         "Dagger",
@@ -819,7 +999,13 @@ ASHES_OF_WAR = {
         "Fist",
         "Claw",
         "Whip",
-        "Colossal Weapon"
+        "Colossal Weapon",
+        "Thrusting Shield",
+        "Hand-to-Hand Art",
+        "Throwing Blade",
+        "Backhand Blade",
+        "Beast Claw",
+        "Light Greatsword",
     ],
     "Sacred Blade": [
         "Dagger",
@@ -844,7 +1030,10 @@ ASHES_OF_WAR = {
         "Fist",
         "Claw",
         "Whip",
-        "Colossal Weapon"
+        "Colossal Weapon",
+        "Thrusting Shield",
+        "Light Greatsword",
+        "Great Katana",
     ],
     "Prayerful Strike": [
         "Hammer",
@@ -882,7 +1071,12 @@ ASHES_OF_WAR = {
         "Fist",
         "Claw",
         "Whip",
-        "Colossal Weapon"
+        "Colossal Weapon",
+        "Thrusting Shield",
+        "Backhand Blade",
+        "Beast Claw",
+        "Light Greatsword",
+        "Great Katana",
     ],
     "Shared Order": [
         "Dagger",
@@ -907,14 +1101,18 @@ ASHES_OF_WAR = {
         "Fist",
         "Claw",
         "Whip",
-        "Colossal Weapon"
+        "Colossal Weapon",
+        "Backhand Blade",
+        "Beast Claw",
+        "Light Greatsword",
+        "Great Katana",
     ],
     "Golden Land": [
         "Colossal Sword",
         "Great Hammer",
         "Greataxe",
         "Great Spear",
-        "Colossal Weapon"
+        "Colossal Weapon",
     ],
     "Golden Slam": [
         "Dagger",
@@ -936,7 +1134,14 @@ ASHES_OF_WAR = {
         "Great Spear",
         "Halberd",
         "Reaper",
-        "Colossal Weapon"
+        "Colossal Weapon",
+        "Thrusting Shield",
+        "Hand-to-Hand Art",
+        "Throwing Blade",
+        "Backhand Blade",
+        "Beast Claw",
+        "Light Greatsword",
+        "Great Katana",
     ],
     "Golden Vow": [
         "Dagger",
@@ -961,17 +1166,26 @@ ASHES_OF_WAR = {
         "Fist",
         "Claw",
         "Whip",
-        "Colossal Weapon"
+        "Colossal Weapon",
+        "Thrusting Shield",
+        "Hand-to-Hand Art",
+        "Throwing Blade",
+        "Backhand Blade",
+        "Beast Claw",
+        "Light Greatsword",
+        "Great Katana",
     ],
     "Vow of the Indomitable": [
         "Small Shield",
         "Medium Shield",
-        "Greatshield"
+        "Greatshield",
+        "Thrusting Shield",
     ],
     "Holy Ground": [
         "Small Shield",
         "Medium Shield",
-        "Greatshield"
+        "Greatshield",
+        "Thrusting Shield",
     ],
     "Poisonous Mist": [
         "Dagger",
@@ -993,14 +1207,20 @@ ASHES_OF_WAR = {
         "Great Spear",
         "Halberd",
         "Reaper",
-        "Colossal Weapon"
+        "Colossal Weapon",
+        "Thrusting Shield",
+        "Light Greatsword",
+        "Great Katana",
     ],
     "Poison Moth Flight": [
         "Dagger",
         "Straight Sword",
         "Curved Sword",
         "Katana",
-        "Thrusting Sword"
+        "Thrusting Sword",
+        "Throwing Blade",
+        "Backhand Blade",
+        "Light Greatsword",
     ],
     "Blood Blade": [
         "Dagger",
@@ -1008,7 +1228,10 @@ ASHES_OF_WAR = {
         "Curved Sword",
         "Katana",
         "Twinblade",
-        "Thrusting Sword"
+        "Thrusting Sword",
+        "Throwing Blade",
+        "Backhand Blade",
+        "Light Greatsword",
     ],
     "Bloody Slash": [
         "Dagger",
@@ -1019,7 +1242,10 @@ ASHES_OF_WAR = {
         "Katana",
         "Twinblade",
         "Thrusting Sword",
-        "Heavy Thrusting Sword"
+        "Heavy Thrusting Sword",
+        "Throwing Blade",
+        "Light Greatsword",
+        "Great Katana",
     ],
     "Blood Tax": [
         "Dagger",
@@ -1031,7 +1257,10 @@ ASHES_OF_WAR = {
         "Heavy Thrusting Sword",
         "Spear",
         "Great Spear",
-        "Halberd"
+        "Halberd",
+        "Thrusting Shield",
+        "Throwing Blade",
+        "Light Greatsword",
     ],
     "Ice Spear": [
         "Twinblade",
@@ -1059,7 +1288,10 @@ ASHES_OF_WAR = {
         "Great Spear",
         "Halberd",
         "Reaper",
-        "Colossal Weapon"
+        "Colossal Weapon",
+        "Thrusting Shield",
+        "Light Greatsword",
+        "Great Katana",
     ],
     "Hoarfrost Stomp": [
         "Dagger",
@@ -1084,7 +1316,14 @@ ASHES_OF_WAR = {
         "Fist",
         "Claw",
         "Whip",
-        "Colossal Weapon"
+        "Colossal Weapon",
+        "Thrusting Shield",
+        "Hand-to-Hand Art",
+        "Throwing Blade",
+        "Backhand Blade",
+        "Beast Claw",
+        "Light Greatsword",
+        "Great Katana",
     ],
     "Spectral Lance": [
         "Spear",
@@ -1093,7 +1332,9 @@ ASHES_OF_WAR = {
     ],
     "Lifesteal Fist": [
         "Fist",
-        "Claw"
+        "Claw",
+        "Hand-to-Hand Art",
+        "Beast Claw",
     ],
     "White Shadow's Lure": [
         "Dagger",
@@ -1118,13 +1359,22 @@ ASHES_OF_WAR = {
         "Fist",
         "Claw",
         "Whip",
-        "Colossal Weapon"
+        "Colossal Weapon",
+        "Thrusting Shield",
+        "Hand-to-Hand Art",
+        "Throwing Blade",
+        "Backhand Blade",
+        "Beast Claw",
+        "Light Greatsword",
+        "Great Katana",
     ],
     "Assassin's Gambit": [
         "Dagger",
         "Straight Sword",
         "Katana",
-        "Thrusting Sword"
+        "Thrusting Sword",
+        "Throwing Blade",
+        "Light Greatsword",
     ],
     "Mighty Shot": [
         "Light Bow",
@@ -1156,7 +1406,8 @@ ASHES_OF_WAR = {
         "Fist",
         "Claw",
         "Small Shield",
-        "Medium Shield"
+        "Medium Shield",
+        "Throwing Blade",
     ],
     "Golden Parry": [
         "Small Shield",
@@ -1169,17 +1420,20 @@ ASHES_OF_WAR = {
     "Shield Bash": [
         "Small Shield",
         "Medium Shield",
-        "Greatshield"
+        "Greatshield",
+        "Thrusting Shield",
     ],
     "Shield Crash": [
         "Small Shield",
         "Medium Shield",
-        "Greatshield"
+        "Greatshield",
+        "Thrusting Shield",
     ],
     "Barricade Shield": [
         "Small Shield",
         "Medium Shield",
-        "Greatshield"
+        "Greatshield",
+        "Thrusting Shield",
     ],
     "Thops's Barrier": [
         "Small Shield",
@@ -1193,6 +1447,300 @@ ASHES_OF_WAR = {
         "Small Shield",
         "Medium Shield",
         "Greatshield",
-        "Torch"
-    ]
+        "Torch",
+        "Thrusting Shield",
+    ],
+    //DLC Ashes of War
+    "Dryleaf Whirlwind": [
+        "Hand-to-Hand Art"
+    ],
+    "Aspects of the Crucible Wings": [
+        "Dagger",
+        "Straight Sword",
+        "Light Greatsword",
+        "Greatsword",
+        "Colossal Sword",
+        "Curved Sword",
+        "Curved Greatsword",
+        "Katanas",
+        "Great Katana",
+        "Twinblade",
+        "Thrusting Sword",
+        "Heavy Thrusting Sword",
+        "Spear",
+        "Great Spear",
+        "Halberd",
+        "Throwing Blade",
+    ],
+    "Spinning Gravity Thrust": [
+        "Greatsword",
+        "Colossal Sword",
+        "Curved Greatsword",
+        "Great Katana",
+        "Heavy Thrusting Sword",
+    ],
+    "Palm Blast": [
+        "Hand-to-Hand Art",
+    ],
+    "Piercing Throw": [
+        "Throwing Blade",
+    ],
+    "Scattershot Throw": [
+        "Throwing Blade",
+    ],
+    "Wall of Sparks": [
+        "Perfume Bottle",
+    ],
+    "Rolling Sparks": [
+        "Perfume Bottle",
+    ],
+    "Raging Beast": [
+        "Beast Claw",
+    ],
+    "Savage Claws": [
+        "Beast Claw",
+    ],
+    "Blind Spot": [
+        "Backhand Blade",
+        "Backhand Blade",
+    ],
+    "Swift Slash": [
+        "Backhand Blade",
+    ],
+    "Overhead Stance": [
+        "Great Katana",
+    ],
+    "Wing Stance": [
+        "Light Greatsword",
+    ],
+    "Blinkbolt": [
+        "Dagger",
+        "Straight Sword",
+        "Greatsword",
+        "Colossal Sword",
+        "Curved Sword",
+        "Curved Greatsword",
+        "Katana",
+        "Twinblade",
+        "Thrusting Sword",
+        "Heavy Thrusting Sword",
+        "Hammer",
+        "Great Hammer",
+        "Axe",
+        "Greataxe",
+        "Flail",
+        "Spear",
+        "Great Spear",
+        "Halberd",
+        "Reaper",
+        "Fist",
+        "Claw",
+        "Colossal Weapon",
+        "Whip",
+        "Beast Claw",
+        "Great Katana",
+        "Backhand Blade",
+        "Hand-to-Hand Art",
+        "Light Greatsword",
+        "Thrusting Shield",
+    ],
+    "Flame Skewer": [
+        "Straight Sword",
+        "Greatsword",
+        "Light Greatsword",
+        "Colossal Sword",
+        "Katana",
+        "Great Katana",
+        "Twinblade",
+        "Thrusting Sword",
+        "Heavy Thrusting Sword",
+        "Spears", "Great Spear",
+        "Halberd",
+        "Thrusting Shield",
+        "Great Katana",
+    ],
+    "Savage Lion's Claw": [
+        "Straight Sword",
+        "Greatsword",
+        "Colossal Sword",
+        "Curved Sword",
+        "Curved Greatsword",
+        "Katana",
+        "Twinblade",
+        "Hammer",
+        "Great Hammer",
+        "Axe",
+        "Greataxe",
+        "Flail",
+        "Colossal Weapon",
+        "Light Greatsword",
+        "Great Katana",
+    ],
+    "Divine Beast Frost Stomp": [
+        "Dagger",
+        "Straight Sword",
+        "Greatsword",
+        "Colossal Sword",
+        "Curved Sword",
+        "Curved Greatsword",
+        "Katana",
+        "Twinblade",
+        "Thrusting Sword",
+        "Heavy Thrusting Sword",
+        "Hammer",
+        "Great Hammer",
+        "Axe",
+        "Greataxe",
+        "Flail",
+        "Spear",
+        "Great Spear",
+        "Halberd",
+        "Reaper",
+        "Fist",
+        "Claw",
+        "Colossal Weapon",
+        "Whip",
+        "Beast Claw",
+        "Great Katana",
+        "Backhand Blade",
+        "Hand-to-Hand Art",
+        "Light Greatsword",
+        "Thrusting Shield",
+    ],
+    "Flame Spear": [
+        "Dagger",
+        "Straight Sword",
+        "Greatsword",
+        "Light Greatsword",
+        "Colossal Sword",
+        "Katana", 
+        "Great Katana",
+        "Twinblade",
+        "Thrusting Sword",
+        "Heavy Thrusting Sword",
+        "Spear",
+        "Great Spear",
+        "Halberd",
+        "Thrusting Shield",
+        "Light Greatsword",
+    ],
+    "Carian Sovereignty": [
+        "Dagger",
+        "Straight Sword",
+        "Greatsword",
+        "Curved Sword",
+        "Curved Greatsword",
+        "Katana",
+        "Twinblade",
+        "Thrusting Sword",
+        "Heavy Thrusting Sword",
+        "Light Greatsword",
+        "Great Katana",
+        "Throwing Blade",
+        "Great Katana",
+    ],
+    "Shriek of Sorrow": [
+        "Dagger",
+        "Straight Sword",
+        "Greatsword",
+        "Colossal Sword",
+        "Curved Sword",
+        "Curved Greatsword",
+        "Katana",
+        "Twinblade",
+        "Thrusting Sword",
+        "Heavy Thrusting Sword",
+        "Hammer",
+        "Great Hammer",
+        "Axe",
+        "Greataxe",
+        "Flail",
+        "Spear",
+        "Great Spear",
+        "Halberd",
+        "Reaper",
+        "Fist",
+        "Claw",
+        "Colossal Weapon",
+        "Whip",
+        "Beast Claw",
+        "Great Katana",
+        "Backhand Blade",
+        "Hand-to-Hand Art",
+        "Light Greatsword",
+        "Thrusting Shield",
+    ],
+    "Ghostflame Call": [
+        "Straight Sword",
+        "Light Greatsword",
+        "Greatsword",
+        "Colossal Sword",
+        "Curved Sword",
+        "Curved Greatsword",
+        "Katana",
+        "Great Katana",
+        "Thrusting Sword",
+        "Heavy Thrusting Sword",
+        "Spear",
+        "Great Spear",
+        "Halberd",
+        "Light Greatsword",
+        "Great Katana",
+    ],
+    "The Poison Flower Blooms Twice": [
+        "Dagger",
+        "Straight Sword",
+        "Greatsword",
+        "Colossal Sword",
+        "Curved Sword",
+        "Curved Greatsword",
+        "Katana",
+        "Twinblade",
+        "Thrusting Sword",
+        "Heavy Thrusting Sword",
+        "Hammer",
+        "Great Hammer",
+        "Axe",
+        "Greataxe",
+        "Flail",
+        "Spear",
+        "Great Spear",
+        "Halberd",
+        "Reaper",
+        "Fist",
+        "Claw",
+        "Colossal Weapon",
+        "Whip",
+        "Beast Claw",
+        "Great Katana",
+        "Backhand Blade",
+        "Hand-to-Hand Art",
+        "Light Greatsword",
+        "Thrusting Shield",
+    ],
+    "Igon's Drake Hunt": [
+        "Greatbow",
+    ],
+    "Shield Strike": [
+        "Small Shield",
+        "Medium Shield",
+        "Greatshield",
+        "Thrusting Shield",
+    ],
+    // seppuku was missing
+    "Seppuku": [
+        "Straight Sword",
+        "Greatsword",
+        "Curved Sword",
+        "Curved Greatsword",
+        "Katana",
+        "Twinblade",
+        "Thrusting Sword",
+        "Heavy Thrusting Sword",
+        "Spear",
+        "Great Spear",
+        "Halberd",
+        "Light Greatsword",
+        "Great Katana",
+    ],
 }

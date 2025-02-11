@@ -131,6 +131,13 @@ h1, h2, h3 {
     grid-template-columns: 25em 10em;
 }
 
+#dlc-container {
+    display: grid;
+    grid-template-columns: 12em 4em;
+    grid-gap: 0.5em;
+    padding-bottom: 2em;
+}
+
 #stats-container {
     display: grid;
     grid-template-columns: 1.5em 4em;
@@ -153,7 +160,7 @@ h1, h2, h3 {
 
 .category-container {
     display: grid;
-    grid-template-columns: 12em 4em;
+    grid-template-columns: 14em 4em;
     grid-gap: 0.5em;
 }
 
@@ -228,6 +235,8 @@ h1, h2, h3 {
 }
 
 input {
+    width: 16px;
+    height: 16px;
     background-color: #323232;
     color: #eeeeee;
     border: 2px solid #2b2b2b;
@@ -243,4 +252,9 @@ label {
     font-family: monospace;
     margin-left: 1em;
     width: 4em;
+}
+
+input[type="checkbox"]:disabled {
+    cursor: not-allowed;
+    opacity: 0.5; /* Makes the checkbox appear grayed out */
 }
