@@ -113,7 +113,7 @@ function toggleDLCWeaponCheckbox(isEnabled) {
 
 //checks both ashes and weapons, loaded in dlc-exclusives
 function isDLCExclusive(name) {
-    return INCLUDE_DLC.checked && DLC_EXCLUSIVES.has(name);
+    return !INCLUDE_DLC.checked && DLC_EXCLUSIVES.has(name);
 }
 
 function onlyDLCExclusives(name) {
